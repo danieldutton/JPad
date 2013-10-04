@@ -1,7 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="655e62db-12ca-485b-89a7-bf04fd60c421" name="Default" comment="" />
+    <list default="true" id="804c27c4-f922-4fa5-a06d-e0c9045dbe33" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/openFile.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/AboutDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/AppStart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/Console.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/CopyEditAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/CutEditAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/EditableConsole.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/FileReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/FontConsole.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GuiMenuBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GuiStatusBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GuiTextArea.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/GuiToolBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/NewFileAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/NonEditableConsole.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/PasteEditAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/PrintFileAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/SaveFileAction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/SysTray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/SysTrayMenu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/TextFileFilter.java" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\AboutDialog.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\Console.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\CopyEditAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\CutEditAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\EditableConsole.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\FileReader.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\FontConsole$CancelFontChange.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\FontConsole.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$CutText.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$ExitPad.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$LaunchHelpMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$OpenNewDoc.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$OpenNewFile.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$SelectAllText.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$SetFont.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar$ShowAboutFrame.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiMenuBar.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiStatusBar.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiTextArea.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\GuiToolBar.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\JPad160209.jar" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\META-INF\MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\NewFileAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\NonEditableConsole.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\PasteEditAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\PrintFileAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SaveFileAction.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTray$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTray.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTrayMenu$1.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTrayMenu$ClosePad.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTrayMenu$VisitHomePage.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\SysTrayMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\TestingClass.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\TextFileFilter.class" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\.idea\.idea.iml" afterPath="$PROJECT_DIR$/JPad.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="JPad.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,6 +128,107 @@
   <component name="FavoritesManager">
     <favorites_list name="JPad" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="GuiStatusBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/GuiStatusBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="1" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileReader.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/FileReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="21" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CutEditAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/CutEditAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="1" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiToolBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/GuiToolBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="36" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiMenuBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/GuiMenuBar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="40" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppStart.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gui/AppStart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.3967684">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/gui/NonEditableConsole.java" />
+        <option value="$PROJECT_DIR$/src/gui/TextFileFilter.java" />
+        <option value="$PROJECT_DIR$/src/gui/SysTrayMenu.java" />
+        <option value="$PROJECT_DIR$/src/gui/SysTray.java" />
+        <option value="$PROJECT_DIR$/src/gui/SaveFileAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/GuiTextArea.java" />
+        <option value="$PROJECT_DIR$/src/gui/PrintFileAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/PasteEditAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/Console.java" />
+        <option value="$PROJECT_DIR$/src/gui/GuiStatusBar.java" />
+        <option value="$PROJECT_DIR$/src/gui/FileReader.java" />
+        <option value="$PROJECT_DIR$/src/gui/CurEditAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/CutEditAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/GuiToolBar.java" />
+        <option value="$PROJECT_DIR$/src/gui/GuiMenuBar.java" />
+        <option value="$PROJECT_DIR$/src/gui/AppStart.java" />
+      </list>
+    </option>
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
@@ -68,7 +240,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -87,6 +259,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -95,22 +269,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Favorites" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dan\Documents\GitHub\JPad\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AppStart">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -177,39 +380,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="AppStart" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="gui.AppStart" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JPad" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.AppStart" />
+    </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration" maxAnnotateRevisions="500">
-    <option name="USER" value="" />
-    <option name="PASSWORD" value="" />
-    <option name="LAST_MERGED_REVISION" />
-    <option name="MERGE_DRY_RUN" value="false" />
-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
-    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
-    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
-    <option name="DETECT_NESTED_COPIES" value="true" />
-    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <option name="FORCE_UPDATE" value="false" />
-    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1380899277215</created>
+      <updated>1380899277215</updated>
+    </task>
+    <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295063" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2200489" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1761158" sideWeight="0.67049366" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -217,6 +430,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -252,6 +466,148 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/gui/TextFileFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="366" selection-end="366" vertical-scroll-proportion="0.4527845">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/SysTrayMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="70" selection-start="890" selection-end="890" vertical-scroll-proportion="0.80266345">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/SysTray.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="9" selection-start="594" selection-end="594" vertical-scroll-proportion="0.43601894">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/SaveFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="73" selection-start="1061" selection-end="1061" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/PrintFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="1" selection-start="714" selection-end="714" vertical-scroll-proportion="0.5841232">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/PasteEditAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.18127961">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="3" selection-start="227" selection-end="227" vertical-scroll-proportion="0.22156398">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/NonEditableConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="42" selection-start="387" selection-end="387" vertical-scroll-proportion="0.4028436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/NewFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.04028436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GuiTextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="54" selection-start="339" selection-end="339" vertical-scroll-proportion="0.28199053">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GuiStatusBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="1" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/FileReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="21" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/CutEditAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="1" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GuiToolBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/GuiMenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="40" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.3967684">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 
