@@ -1,5 +1,7 @@
 package gui;
 
+import gui.components.GuiTextArea;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

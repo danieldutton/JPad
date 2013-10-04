@@ -1,31 +1,24 @@
-package gui;
+import gui.EditableConsole;
+import gui.SysTray;
+import gui.components.GuiMenuBar;
+import gui.components.GuiStatusBar;
+import gui.components.GuiTextArea;
+import gui.components.GuiToolBar;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
 
-/**
- * Created by IntelliJ IDEA.
- * User: Dan
- * Date: 04/10/13
- * Time: 16:24
- * To change this template use File | Settings | File Templates.
- */
 public class AppStart {
+
     public static void main(String[] args)
   {
     JPanel mainPanel = new JPanel();
-
     JPanel headerPanel = new JPanel();
-
     GuiMenuBar menuBar = new GuiMenuBar();
-
     GuiToolBar toolBar = new GuiToolBar();
-
     JScrollPane scrollPane = new JScrollPane();
-
     JTabbedPane tabbedPane = new JTabbedPane();
-
     GuiStatusBar statusBar = new GuiStatusBar("");
 
     mainPanel.setLayout(new BorderLayout());

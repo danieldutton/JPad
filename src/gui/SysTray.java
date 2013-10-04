@@ -6,21 +6,13 @@ import java.io.FileNotFoundException;
 
 public class SysTray
 {
-  private SysTrayMenu popup = new SysTrayMenu("http://www.danieldutton.org.uk");
-  private String trayImage;
+  private SysTrayMenu popup = new SysTrayMenu("http://www.dannydutton.co.uk");
 
-  public SysTray()
-  {
-  }
+  private String trayImage;
 
   public SysTray(String trayImage)
   {
     this.trayImage = trayImage;
-  }
-
-  public SysTray(String trayImage, String URI)
-  {
-    this(trayImage);
   }
 
   public void startTray()
@@ -36,7 +28,7 @@ public class SysTray
 
           Image image = Toolkit.getDefaultToolkit().getImage(SysTray.this.trayImage);
 
-          TrayIcon trayIcon = new TrayIcon(image, "J-Pad ver 1.0", SysTray.this.popup.getSysTrayMenu());
+          TrayIcon trayIcon = new TrayIcon(image, "J-Pad", SysTray.this.popup.getSysTrayMenu());
           try
           {
             tray.add(trayIcon);

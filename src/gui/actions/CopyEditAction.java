@@ -1,4 +1,4 @@
-package gui;
+package gui.actions;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

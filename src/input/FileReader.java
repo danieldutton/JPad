@@ -1,4 +1,7 @@
-package gui;
+package input;
+
+import gui.EditableConsole;
+import gui.TextFileFilter;
 
 import javax.swing.*;
 import java.io.*;
@@ -10,18 +13,9 @@ public class FileReader extends EditableConsole
   private File file;
   private String filePath;
 
-  public FileReader()
-  {
-  }
-
   public FileReader(String title)
   {
     super(title);
-  }
-
-  public FileReader(boolean nativeLookAndFeel)
-  {
-    this.nativeLookAndFeel = nativeLookAndFeel;
   }
 
   public final void drawConsole()

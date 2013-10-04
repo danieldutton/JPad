@@ -1,4 +1,4 @@
-package gui;
+package gui.actions;
 
 
 public class NewFileAction {
