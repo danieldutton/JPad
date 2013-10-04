@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="804c27c4-f922-4fa5-a06d-e0c9045dbe33" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\NonEditableConsole.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\AppStart.java" afterPath="$PROJECT_DIR$/src/AppStart.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\CopyEditAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/CopyEditAction.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\CutEditAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/CutEditAction.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\FileReader.java" afterPath="$PROJECT_DIR$/src/input/FileReader.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\GuiMenuBar.java" afterPath="$PROJECT_DIR$/src/gui/components/GuiMenuBar.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\GuiStatusBar.java" afterPath="$PROJECT_DIR$/src/gui/components/GuiStatusBar.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\GuiTextArea.java" afterPath="$PROJECT_DIR$/src/gui/components/GuiTextArea.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\GuiToolBar.java" afterPath="$PROJECT_DIR$/src/gui/components/GuiToolBar.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\NewFileAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/NewFileAction.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\PasteEditAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/PasteEditAction.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\PrintFileAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/PrintFileAction.java" />
-      <change type="MOVED" beforePath="C:\Users\Dan\Documents\GitHub\JPad\src\gui\SaveFileAction.java" afterPath="$PROJECT_DIR$/src/gui/actions/SaveFileAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/FontConsole.java" afterPath="$PROJECT_DIR$/src/gui/FontConsole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/SysTray.java" afterPath="$PROJECT_DIR$/src/gui/SysTray.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/TextFileFilter.java" afterPath="$PROJECT_DIR$/src/gui/TextFileFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/AboutDialog.java" afterPath="$PROJECT_DIR$/src/gui/AboutDialog.java" />
     </list>
     <ignored path="JPad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,10 +138,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Console.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Console.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/Console.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="26" selection-start="231" selection-end="231" vertical-scroll-proportion="0.24170616">
+            <state line="13" column="26" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutDialog.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gui/AboutDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="36" selection-start="649" selection-end="649" vertical-scroll-proportion="0.5841232">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -179,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/gui/SaveFileAction.java" />
         <option value="$PROJECT_DIR$/src/gui/GuiTextArea.java" />
         <option value="$PROJECT_DIR$/src/gui/PrintFileAction.java" />
         <option value="$PROJECT_DIR$/src/gui/PasteEditAction.java" />
@@ -195,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/input/FileReader.java" />
         <option value="$PROJECT_DIR$/src/gui/TextFileFilter.java" />
         <option value="$PROJECT_DIR$/src/gui/NonEditableConsole.java" />
+        <option value="$PROJECT_DIR$/src/gui/AboutDialog.java" />
       </list>
     </option>
   </component>
@@ -581,7 +576,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/Console.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="26" selection-start="231" selection-end="231" vertical-scroll-proportion="0.24170616">
+        <state line="13" column="26" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/AboutDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="36" selection-start="649" selection-end="649" vertical-scroll-proportion="0.5841232">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

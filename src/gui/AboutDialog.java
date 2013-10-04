@@ -27,6 +27,7 @@ public class AboutDialog
     this.panel.add(new JLabel(aboutIcon));
     this.dialog.add(this.panel);
     this.dialog.setSize(305, 280);
+    this.dialog.setResizable(false);
     this.dialog.setDefaultCloseOperation(2);
     this.dialog.setTitle(this.title);
     this.dialog.setVisible(true);
