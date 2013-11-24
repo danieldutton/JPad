@@ -1,9 +1,8 @@
 import gui.EditableConsole;
 import gui.SysTray;
-import gui.components.GuiMenuBar;
-import gui.components.GuiStatusBar;
-import gui.components.GuiTextArea;
-import gui.components.GuiToolBar;
+import gui.components.*;
+import gui.components.MenuBar;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
@@ -14,7 +13,7 @@ public class AppStart {
   {
     JPanel mainPanel = new JPanel();
     JPanel headerPanel = new JPanel();
-    GuiMenuBar menuBar = new GuiMenuBar();
+    MenuBar menuBar = new gui.components.MenuBar();
     GuiToolBar toolBar = new GuiToolBar();
     JScrollPane scrollPane = new JScrollPane();
     JTabbedPane tabbedPane = new JTabbedPane();
