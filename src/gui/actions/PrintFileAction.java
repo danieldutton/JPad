@@ -1,6 +1,5 @@
 package gui.actions;
 
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.print.PageFormat;

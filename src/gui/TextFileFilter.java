@@ -5,12 +5,12 @@ import java.io.File;
 
 public class TextFileFilter extends FileFilter
 {
-  public boolean accept(File f)
+  public boolean accept(File file)
   {
-    if (f.isDirectory())
+    if (file.isDirectory())
     {
       return true;
-    }String name = f.getName();
+    }String name = file.getName();
 
     return name.matches(".*\\.txt");
   }

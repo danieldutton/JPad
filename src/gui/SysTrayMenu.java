@@ -1,6 +1,5 @@
 package gui;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -84,8 +83,7 @@ public class SysTrayMenu
     }
   }
 
-  public class ClosePad
-    implements ActionListener
+  public class ClosePad implements ActionListener
   {
     public ClosePad()
     {

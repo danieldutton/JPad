@@ -71,56 +71,5 @@ public abstract class Console extends JFrame
     return d1;
   }
 
-  public void consoleCentreRight()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 1, (d1.height - getSize().height) / 2);
-  }
 
-  public void consoleCentreLeft()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 30, (d1.height - getSize().height) / 2);
-  }
-
-  public void consoleCentreTop()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 2, (d1.height - getSize().height) / 20);
-  }
-
-  public void consoleCentreBottom()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 2, (d1.height - getSize().height) / 1);
-  }
-
-  public void consoleTopLeft()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 30, (d1.height - getSize().height) / 20);
-  }
-
-  public void consoleTopRight()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 1, (d1.height - getSize().height) / 20);
-  }
-
-  public void consoleBottomLeft()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 30, (d1.height - getSize().height) / 1);
-  }
-
-  public void consoleBottomRight()
-  {
-    Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-    setLocation((d1.width - getSize().width) / 1, (d1.height - getSize().height) / 1);
-  }
-
-  public void consolePositionAbsolute(int consoleXPos, int consoleYPos)
-  {
-    setLocation(consoleXPos, consoleYPos);
-  }
 }

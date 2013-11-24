@@ -34,7 +34,7 @@ public class GuiTextArea
 
       textArea.setEditable(true);
       textArea.setCaretColor(Color.LIGHT_GRAY);
-      textArea.setSelectedTextColor(Color.white);
+      textArea.setSelectedTextColor(Color.BLACK);
     }
 
     return textArea;

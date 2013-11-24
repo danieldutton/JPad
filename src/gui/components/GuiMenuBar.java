@@ -4,7 +4,6 @@ import gui.AboutDialog;
 import input.FileReader;
 import gui.FontConsole;
 import gui.actions.*;
-
 import javax.swing.*;
 import javax.swing.text.DefaultEditorKit;
 import java.awt.*;
@@ -16,11 +15,11 @@ import java.net.URISyntaxException;
 
 public class GuiMenuBar extends JMenuBar
 {
-  SaveFileAction saveAction = new SaveFileAction();
-  NewFileAction newFileAction = new NewFileAction();
-  CutEditAction cutEditAction = new CutEditAction();
-  CopyEditAction copyEditAction = new CopyEditAction();
-  PasteEditAction pasteEditAction = new PasteEditAction();
+  private SaveFileAction saveAction = new SaveFileAction();
+  private NewFileAction newFileAction = new NewFileAction();
+  private CutEditAction cutEditAction = new CutEditAction();
+  private CopyEditAction copyEditAction = new CopyEditAction();
+  private PasteEditAction pasteEditAction = new PasteEditAction();
   private JMenuBar menuBar;
   private JMenu fileMenu;
   private JMenu editMenu;
@@ -175,13 +174,8 @@ public class GuiMenuBar extends JMenuBar
     return this.menuBar;
   }
 
-  private class ShowAboutFrame
-    implements ActionListener
+  private class ShowAboutFrame implements ActionListener
   {
-    private ShowAboutFrame()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.help_About)
@@ -192,13 +186,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class LaunchHelpMenu
-    implements ActionListener
+  private class LaunchHelpMenu implements ActionListener
   {
-    private LaunchHelpMenu()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.help_Help)
@@ -220,13 +209,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class SetFont
-    implements ActionListener
+  private class SetFont implements ActionListener
   {
-    private SetFont()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.format_Font)
@@ -237,13 +221,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class SelectAllText
-    implements ActionListener
+  private class SelectAllText implements ActionListener
   {
-    private SelectAllText()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       JTextArea textArea;
@@ -254,13 +233,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class ExitPad
-    implements ActionListener
+  private class ExitPad implements ActionListener
   {
-    private ExitPad()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.file_Exit)
@@ -270,13 +244,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class CutText
-    implements ActionListener
+  private class CutText implements ActionListener
   {
-    private CutText()
-    {
-    }
-
     public void actionPerformed(ActionEvent e)
     {
       Action cutAction;
@@ -287,13 +256,8 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  protected class OpenNewFile
-    implements ActionListener
+  protected class OpenNewFile implements ActionListener
   {
-    protected OpenNewFile()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.file_Open)
@@ -305,18 +269,13 @@ public class GuiMenuBar extends JMenuBar
     }
   }
 
-  private class OpenNewDoc
-    implements ActionListener
+  private class OpenNewDoc implements ActionListener
   {
-    private OpenNewDoc()
-    {
-    }
-
     public void actionPerformed(ActionEvent c)
     {
       if (c.getSource() == GuiMenuBar.this.file_New)
       {
-        FileReader reader = new FileReader("Open");
+        FileReader reader = new FileReader(true);
         reader.drawConsole();
       }
     }

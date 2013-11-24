@@ -4,7 +4,6 @@ import gui.components.GuiMenuBar;
 import gui.components.GuiStatusBar;
 import gui.components.GuiTextArea;
 import gui.components.GuiToolBar;
-
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
