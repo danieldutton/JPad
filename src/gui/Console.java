@@ -4,9 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class Console extends JFrame {
+
     private int consoleWidth;
+
     private int consoleHeight;
-    private boolean consoleVisibility = true;
+
 
     public Console() {
     }
@@ -21,45 +23,22 @@ public abstract class Console extends JFrame {
         this.consoleHeight = consoleHeight;
     }
 
+
     public abstract void drawConsole();
 
-    public void frameBasics() {
+    public void initConsoleBasics() {
         setSize(this.consoleWidth, this.consoleHeight);
-        setVisible(this.consoleVisibility);
     }
 
-    public Image customiseFrameIcon(String file) {
-        Image img1 = Toolkit.getDefaultToolkit().getImage(file);
-
-        setIconImage(img1);
-        validateFrameIconSize(img1);
-        return img1;
-    }
-
-    private void validateFrameIconSize(Image img) {
-        MediaTracker tracker = new MediaTracker(this);
-        tracker.addImage(img, 1);
-        try {
-            tracker.waitForID(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        int w = img.getWidth(null);
-        int h = img.getHeight(null);
-
-        if (((w <= 25) && (h <= 25)) || (w > 25) || (h > 25)) {
-            setIconImage(img);
-        } else {
-            System.out.println("Frame Icon size is incorrect. Set x & y to 25px or less");
-        }
+    public void customiseFrameIcon(String file) {
+        Image frameIcon = Toolkit.getDefaultToolkit().getImage(file);
+        setIconImage(frameIcon);
     }
 
     public Dimension consoleCentre() {
-        Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-        setLocation((d1.width - getSize().width) / 2, (d1.height - getSize().height) / 2);
+        Dimension centreDimension = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation((centreDimension.width - getSize().width) / 2, (centreDimension.height - getSize().height) / 2);
 
-        return d1;
+        return centreDimension;
     }
-
-
 }

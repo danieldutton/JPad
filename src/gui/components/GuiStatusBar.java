@@ -22,11 +22,6 @@ public class GuiStatusBar {
         this.statusBarText = defaultText;
     }
 
-    public GuiStatusBar(String defaultText, Color col) {
-        this(defaultText);
-        this.col = col;
-    }
-
     public JTextArea getStatusBar() {
         this.statusBar.setEditable(false);
         this.statusBar.setBackground(this.col);

@@ -11,7 +11,7 @@ import java.awt.event.ItemListener;
 public class FontConsole extends EditableConsole {
 
     private JPanel panelMain;
-    private JPanel samplePanel;
+    private JPanel panelSample;
     private JComboBox comboBoxFont;
     private JButton btnOk;
     private JButton btnCancel;
@@ -28,7 +28,7 @@ public class FontConsole extends EditableConsole {
 
     private void InitConsole() {
         panelMain = new JPanel();
-        samplePanel = new JPanel();
+        panelSample = new JPanel();
         comboBoxFont = new JComboBox();
         btnOk = new JButton("OK");
         btnCancel = new JButton("Cancel");
@@ -44,17 +44,18 @@ public class FontConsole extends EditableConsole {
     }
 
     private void BuildConsole(){
-
+        panelSample.add(lblFont);
+        panelMain.add(BorderLayout.SOUTH, panelSample);
         panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
-        frameBasics();
+        initConsoleBasics();
         consoleCentre();
         setSize(250, 200);
         setResizable(false);
         comboBoxFont.setBackground(Color.white);
         panelMain.add(comboBoxFont);
-        panelMain.add(lblFont);
         panelMain.add(btnOk);
         panelMain.add(btnCancel);
+        panelMain.add(lblFont);
     }
 
     public void drawConsole() {
@@ -75,7 +76,7 @@ public class FontConsole extends EditableConsole {
     public void itemStateChanged(ItemEvent event) {
        if (event.getStateChange() == ItemEvent.SELECTED) {
           String chosenFont = (String)event.getItem();
-          lblFont.setFont(new Font(chosenFont, Font.BOLD, 30));
+          lblFont.setFont(new Font(chosenFont, Font.BOLD, 40));
        }
     }
 }

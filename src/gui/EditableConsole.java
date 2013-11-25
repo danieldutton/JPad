@@ -13,7 +13,7 @@ public class EditableConsole extends Console {
     }
 
     public void drawConsole() {
-        frameBasics();
+        initConsoleBasics();
         setDefaultCloseOperation(3);
         setVisible(true);
     }

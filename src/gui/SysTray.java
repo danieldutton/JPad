@@ -12,8 +12,8 @@ public class SysTray {
         this.trayImage = trayImage;
     }
 
-    public void startTray()
-            throws NullPointerException, FileNotFoundException {
+    public void startTray()throws NullPointerException, FileNotFoundException {
+
         Runnable runner = new Runnable() {
             public void run() {
                 if (SystemTray.isSupported()) {
