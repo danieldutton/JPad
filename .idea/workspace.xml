@@ -118,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PasteEditAction.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PasteEditAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/PasteEditAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="17" column="19" selection-start="460" selection-end="460" vertical-scroll-proportion="0.4257603">
               <folding />
             </state>
           </provider>
@@ -136,10 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CutEditAction.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CutEditAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/CutEditAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="32" selection-start="480" selection-end="480" vertical-scroll-proportion="0.5474061">
+            <state line="10" column="4" selection-start="248" selection-end="307" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,7 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/gui/FontConsole.java" />
         <option value="$PROJECT_DIR$/src/gui/TextFileFilter.java" />
         <option value="$PROJECT_DIR$/src/input/FileReader.java" />
         <option value="$PROJECT_DIR$/src/gui/components/GuiTextArea.java" />
@@ -188,6 +187,7 @@
         <option value="$PROJECT_DIR$/src/actions/AbstractAction.java" />
         <option value="$PROJECT_DIR$/src/actions/CopyEditAction.java" />
         <option value="$PROJECT_DIR$/src/actions/CutEditAction.java" />
+        <option value="$PROJECT_DIR$/src/actions/PasteEditAction.java" />
       </list>
     </option>
   </component>
@@ -619,23 +619,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/NewFileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/PrintFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="13" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/PasteEditAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -656,12 +642,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/NewFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/CutEditAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="32" selection-start="480" selection-end="480" vertical-scroll-proportion="0.5474061">
+        <state line="10" column="4" selection-start="248" selection-end="307" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/PasteEditAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="19" selection-start="460" selection-end="460" vertical-scroll-proportion="0.4257603">
+          <folding />
         </state>
       </provider>
     </entry>
