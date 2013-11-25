@@ -7,11 +7,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
-public class GuiTextArea {
+public class TextArea {
 
     private static JTextArea textArea = null;
 
-    private GuiTextArea() {
+    private TextArea() {
     }
 
     public static JTextArea getDefaultGuiTextArea() {

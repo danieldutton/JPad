@@ -1,7 +1,7 @@
 package actions;
 
 
-import gui.components.GuiTextArea;
+import gui.components.TextArea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -21,7 +21,7 @@ public class SaveFileAction extends AbstractAction {
     }
 
     public void actionPerformed(ActionEvent e) {
-        this.textArea = GuiTextArea.getDefaultGuiTextArea();
+        this.textArea = TextArea.getDefaultGuiTextArea();
 
         JFileChooser saveChooser = new JFileChooser();
         int result = saveChooser.showSaveDialog(null);

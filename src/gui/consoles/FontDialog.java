@@ -1,7 +1,5 @@
 package gui.consoles;
 
-import gui.components.GuiTextArea;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-public class FontConsole extends EditableConsole {
+public class FontDialog extends EditableConsole {
 
     private JPanel panelMain;
     private JPanel panelSample;
@@ -17,10 +15,10 @@ public class FontConsole extends EditableConsole {
     private JButton btnOk;
     private JButton btnCancel;
     private JLabel lblFont;
-    private JTextArea textArea = GuiTextArea.getDefaultGuiTextArea();
+    private JTextArea textArea = gui.components.TextArea.getDefaultGuiTextArea();
 
 
-    public FontConsole(String title) {
+    public FontDialog(String title) {
         super(title);
 
         InitConsole();
@@ -40,8 +38,8 @@ public class FontConsole extends EditableConsole {
 
     private void AddActionListeners(){
         comboBoxFont.addItemListener(new ItemChangeListener());
-        btnCancel.addActionListener(new FontConsole.CancelFontChange());
-        btnOk.addActionListener(new FontConsole.ConfirmFontChange());
+        btnCancel.addActionListener(new FontDialog.CancelFontChange());
+        btnOk.addActionListener(new FontDialog.ConfirmFontChange());
     }
 
     private void BuildConsole(){
@@ -84,17 +82,17 @@ public class FontConsole extends EditableConsole {
 
     public class ConfirmFontChange implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == FontConsole.this.btnOk) {
+            if (c.getSource() == FontDialog.this.btnOk) {
                 textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 30));
-                FontConsole.this.dispose();
+                FontDialog.this.dispose();
             }
         }
     }
 
     public class CancelFontChange implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == FontConsole.this.btnCancel) {
-                FontConsole.this.dispose();
+            if (c.getSource() == FontDialog.this.btnCancel) {
+                FontDialog.this.dispose();
             }
         }
     }

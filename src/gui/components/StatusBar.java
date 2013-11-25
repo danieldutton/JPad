@@ -3,7 +3,7 @@ package gui.components;
 import javax.swing.*;
 import java.awt.*;
 
-public class GuiStatusBar {
+public class StatusBar {
     private JTextArea statusBar;
     private String statusBarText;
     private int statusBarHeight;
@@ -13,11 +13,11 @@ public class GuiStatusBar {
     private int statusFontSize;
     private Color col = new Color(1, 4, 5, 8);
 
-    public GuiStatusBar() {
+    public StatusBar() {
         this.statusBar = new JTextArea(this.statusBarHeight, this.statusBarWidth);
     }
 
-    public GuiStatusBar(String defaultText) {
+    public StatusBar(String defaultText) {
         this();
         this.statusBarText = defaultText;
     }

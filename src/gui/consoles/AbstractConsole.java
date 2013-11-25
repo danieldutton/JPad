@@ -3,21 +3,21 @@ package gui.consoles;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class Console extends JFrame {
+public abstract class AbstractConsole extends JFrame {
 
     private int consoleWidth;
 
     private int consoleHeight;
 
 
-    public Console() {
+    public AbstractConsole() {
     }
 
-    public Console(String title) {
+    public AbstractConsole(String title) {
         super(title);
     }
 
-    public Console(String title, int consoleWidth, int consoleHeight) {
+    public AbstractConsole(String title, int consoleWidth, int consoleHeight) {
         this(title);
         this.consoleWidth = consoleWidth;
         this.consoleHeight = consoleHeight;

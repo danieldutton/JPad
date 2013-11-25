@@ -1,3 +1,4 @@
+import gui.components.TextArea;
 import gui.consoles.EditableConsole;
 import gui.tray.SystemTray;
 import gui.components.*;
@@ -13,10 +14,10 @@ public class AppStart {
     JPanel mainPanel = new JPanel();
     JPanel headerPanel = new JPanel();
     MenuBar menuBar = new gui.components.MenuBar();
-    GuiToolBar toolBar = new GuiToolBar();
+    ToolBar toolBar = new ToolBar();
     JScrollPane scrollPane = new JScrollPane();
     JTabbedPane tabbedPane = new JTabbedPane();
-    GuiStatusBar statusBar = new GuiStatusBar("");
+    StatusBar statusBar = new StatusBar("");
 
     mainPanel.setLayout(new BorderLayout());
     headerPanel.setLayout(new BorderLayout());
@@ -28,7 +29,7 @@ public class AppStart {
     headerPanel.add("Center", toolBar.GetGuiToolBar());
     mainPanel.add("North", headerPanel);
 
-    tabbedPane.add(GuiTextArea.getDefaultGuiTextArea());
+    tabbedPane.add(TextArea.getDefaultGuiTextArea());
     mainPanel.add("Center", tabbedPane);
     mainPanel.add("South", statusBar.getStatusBar());
 

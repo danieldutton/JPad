@@ -1,8 +1,6 @@
 package gui.consoles;
 
-import gui.consoles.Console;
-
-public class EditableConsole extends Console {
+public class EditableConsole extends AbstractConsole {
     public EditableConsole() {
     }
 

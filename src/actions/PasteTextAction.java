@@ -1,16 +1,16 @@
 package actions;
 
-import gui.components.GuiTextArea;
+import gui.components.TextArea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class PasteEditAction extends AbstractAction {
+public class PasteTextAction extends ApplicationAction {
 
     private static final ImageIcon pasteEditIcon = new ImageIcon("pasteFile.png");
-    private JTextArea ta = GuiTextArea.getDefaultGuiTextArea();
+    private JTextArea ta = TextArea.getDefaultGuiTextArea();
 
-    public PasteEditAction() {
+    public PasteTextAction() {
         super("Paste", pasteEditIcon);
     }
 

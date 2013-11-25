@@ -1,21 +1,20 @@
 package actions;
 
-import gui.components.GuiTextArea;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class CutEditAction extends AbstractAction {
+public class CutTextAction extends ApplicationAction {
 
     private static final ImageIcon cutEditIcon = new ImageIcon("cutFile.png");
 
-    private JTextArea ta = GuiTextArea.getDefaultGuiTextArea();
-
-    public CutEditAction() {
+    public CutTextAction() {
         super("Cut", cutEditIcon);
     }
 
     public void actionPerformed(ActionEvent e) {
-        ta.copy();
-        ta.replaceSelection("");
+
+        JTextArea textArea = getTextArea();
+        textArea.copy();
+        textArea.replaceSelection("");
     }
 }

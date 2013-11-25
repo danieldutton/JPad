@@ -1,21 +1,17 @@
 package actions;
 
-import gui.components.GuiTextArea;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class CopyEditAction extends AbstractAction {
+public class CopyTextAction extends ApplicationAction {
 
     private static final ImageIcon copyEditIcon = new ImageIcon("copyFile.png");
 
-    private JTextArea ta = GuiTextArea.getDefaultGuiTextArea();
-
-    public CopyEditAction() {
+    public CopyTextAction() {
         super("Copy", copyEditIcon);
     }
 
     public void actionPerformed(ActionEvent e) {
-        ta.copy();
+        getTextArea().copy();
     }
 }

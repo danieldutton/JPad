@@ -1,7 +1,7 @@
 package gui.components;
 
 import gui.consoles.AboutDialog;
-import gui.consoles.FontConsole;
+import gui.consoles.FontDialog;
 import actions.*;
 import input.readers.FileReader;
 
@@ -16,10 +16,10 @@ import java.net.URISyntaxException;
 
 public class MenuBar extends JMenuBar {
     private SaveFileAction saveAction = new SaveFileAction();
-    private NewFileAction newFileAction = new NewFileAction();
-    private CutEditAction cutEditAction = new CutEditAction();
-    private CopyEditAction copyEditAction = new CopyEditAction();
-    private PasteEditAction pasteEditAction = new PasteEditAction();
+    //private NewFileAction newFileAction = new NewFileAction();
+    private CutTextAction cutEditAction = new CutTextAction();
+    private CopyTextAction copyEditAction = new CopyTextAction();
+    private PasteTextAction pasteEditAction = new PasteTextAction();
     private JMenuBar menuBar;
     private JMenu fileMenu;
     private JMenu editMenu;
@@ -69,8 +69,8 @@ public class MenuBar extends JMenuBar {
 
 
     public JMenuBar getGuiMenuBar() {
-        this.fileMenu.add(this.file_Open);
         this.fileMenu.add(this.file_New);
+        this.fileMenu.add(this.file_Open);
 
         this.fileMenu.add(this.file_Save);
         this.fileMenu.add(new JSeparator());
@@ -202,7 +202,7 @@ public class MenuBar extends JMenuBar {
     private class SetFont implements ActionListener {
         public void actionPerformed(ActionEvent c) {
             if (c.getSource() == MenuBar.this.format_Font) {
-                FontConsole fontConsole = new FontConsole("J-Pad");
+                FontDialog fontConsole = new FontDialog("J-Pad");
                 fontConsole.drawConsole();
             }
         }
@@ -212,7 +212,7 @@ public class MenuBar extends JMenuBar {
         public void actionPerformed(ActionEvent c) {
             JTextArea textArea;
             if (c.getSource() == MenuBar.this.edit_SelectAll) {
-                textArea = GuiTextArea.getDefaultGuiTextArea();
+                textArea = TextArea.getDefaultGuiTextArea();
             }
         }
     }
@@ -229,7 +229,7 @@ public class MenuBar extends JMenuBar {
         public void actionPerformed(ActionEvent e) {
             Action cutAction;
             if (e.getSource() == MenuBar.this.edit_Cut) {
-                cutAction = GuiTextArea.getDefaultGuiTextArea().getActionMap().get("cut-to-clipboard");
+                cutAction = TextArea.getDefaultGuiTextArea().getActionMap().get("cut-to-clipboard");
             }
         }
     }
@@ -238,8 +238,8 @@ public class MenuBar extends JMenuBar {
         public void actionPerformed(ActionEvent c) {
             if (c.getSource() == MenuBar.this.file_Open) {
                 JTextArea textArea1 = null;
-                textArea1 = GuiTextArea.getDefaultGuiTextArea();
-                GuiTextArea.actionPerformed(c);
+                textArea1 = TextArea.getDefaultGuiTextArea();
+                TextArea.actionPerformed(c);
             }
         }
     }
