@@ -1,7 +1,5 @@
 package actions;
 
-import gui.components.TextArea;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 

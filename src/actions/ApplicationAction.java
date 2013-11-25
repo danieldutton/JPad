@@ -1,7 +1,6 @@
 package actions;
 
 import gui.components.TextArea;
-
 import javax.swing.*;
 
 

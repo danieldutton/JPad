@@ -24,6 +24,7 @@ public class MenuBar extends JMenuBar {
     private JMenu fileMenu;
     private JMenu editMenu;
     private JMenu formatMenu;
+    private JMenu viewMenu;
     private JMenu helpMenu;
     private JMenuItem file_New;
     private JMenuItem file_Open;
@@ -35,6 +36,7 @@ public class MenuBar extends JMenuBar {
     private JMenuItem edit_Paste;
     private JMenuItem edit_SelectAll;
     private JMenuItem format_Font;
+    private JMenuItem view_StatusBar;
     private JMenuItem help_Help;
     private JMenuItem help_About;
 
@@ -43,6 +45,7 @@ public class MenuBar extends JMenuBar {
         this.fileMenu = new JMenu("File");
         this.editMenu = new JMenu("Edit");
         this.formatMenu = new JMenu("Format");
+        this.viewMenu = new JMenu("View");
         this.helpMenu = new JMenu("Help");
 
         this.file_New = new JMenuItem("New");
@@ -62,6 +65,8 @@ public class MenuBar extends JMenuBar {
         this.edit_SelectAll.setText("Select All");
 
         this.format_Font = new JMenuItem("Font");
+
+        this.view_StatusBar = new JMenuItem("Status Bar");
 
         this.help_Help = new JMenuItem("Help");
         this.help_About = new JMenuItem("About");
@@ -104,10 +109,10 @@ public class MenuBar extends JMenuBar {
         this.edit_SelectAll.setAccelerator(KeyStroke.getKeyStroke(65, 2));
 
         this.formatMenu.add(this.format_Font);
-
         this.format_Font.setMnemonic('F');
-
         this.format_Font.setAccelerator(KeyStroke.getKeyStroke(70, 2));
+
+        this.viewMenu.add(this, view_StatusBar);
 
         this.helpMenu.add(this.help_Help);
         this.helpMenu.add(new JSeparator());
@@ -121,6 +126,7 @@ public class MenuBar extends JMenuBar {
         this.menuBar.add(this.fileMenu);
         this.menuBar.add(this.editMenu);
         this.menuBar.add(this.formatMenu);
+        this.menuBar.add(this.viewMenu);
         this.menuBar.add(this.helpMenu);
         this.menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
@@ -149,6 +155,9 @@ public class MenuBar extends JMenuBar {
 
         this.formatMenu.setFont(new Font("Verdana", 0, 12));
         this.format_Font.setFont(new Font("MS Sans Serif", 0, 12));
+
+        this.viewMenu.setFont(new Font("Verdana", 0, 12));
+        this.view_StatusBar.setFont(new Font("MS Sans Serif", 0, 12));
 
         this.helpMenu.setFont(new Font("Verdana", 0, 12));
         this.help_Help.setFont(new Font("MS Sans Serif", 0, 12));
