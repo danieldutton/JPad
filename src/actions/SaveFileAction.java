@@ -12,16 +12,15 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SaveFileAction extends AbstractAction {
-    private static final ImageIcon saveEditIcon = new ImageIcon("saveFile.png");
-    private JTextArea textArea;
+public class SaveFileAction extends ApplicationAction {
+    private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
     public SaveFileAction() {
         super("Save", saveEditIcon);
     }
 
     public void actionPerformed(ActionEvent e) {
-        this.textArea = TextArea.getDefaultGuiTextArea();
+        JTextArea textArea = getTextArea();
 
         JFileChooser saveChooser = new JFileChooser();
         int result = saveChooser.showSaveDialog(null);
@@ -33,7 +32,7 @@ public class SaveFileAction extends AbstractAction {
 
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
 
-                bw.write(this.textArea.getText());
+                bw.write(textArea.getText());
 
                 bw.close();
                 closeStream(bw);

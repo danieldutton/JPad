@@ -35,11 +35,11 @@ public class AppStart {
 
     mainGui.drawConsole();
 
-    mainGui.customiseFrameIcon("frameLogo.gif");
+    mainGui.customiseFrameIcon("images/frameLogo.gif");
 
     mainGui.consoleCentre();
 
-    SystemTray systemTray = new gui.tray.SystemTray("trayImage.gif");
+    SystemTray systemTray = new gui.tray.SystemTray("images/trayImage.gif");
     try {
       systemTray.loadSystemTray();
     } catch (NullPointerException ex) {

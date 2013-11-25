@@ -178,7 +178,7 @@ public class MenuBar extends JMenuBar {
     private class ShowAboutFrame implements ActionListener {
         public void actionPerformed(ActionEvent c) {
             if (c.getSource() == MenuBar.this.help_About) {
-                AboutDialog aboutDialog = new AboutDialog("J-Pad", "aboutScreen.gif");
+                AboutDialog aboutDialog = new AboutDialog("J-Pad", "images/aboutScreen.gif");
                 aboutDialog.drawConsole();
             }
         }

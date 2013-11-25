@@ -7,7 +7,7 @@ import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 
 public class PrintFileAction extends AbstractAction {
-    private static final ImageIcon printFileIcon = new ImageIcon("printFile.png");
+    private static final ImageIcon printFileIcon = new ImageIcon("images/printFile.png");
 
     public PrintFileAction() {
         super("Print", printFileIcon);

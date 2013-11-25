@@ -36,7 +36,7 @@ public class AboutDialog {
     }
 
     private void customiseFrameIcon() {
-        Image img1 = Toolkit.getDefaultToolkit().getImage("frameLogo.gif");
+        Image img1 = Toolkit.getDefaultToolkit().getImage("images/frameLogo.gif");
 
         this.dialog.setIconImage(img1);
     }

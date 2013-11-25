@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 
 public class CopyTextAction extends ApplicationAction {
 
-    private static final ImageIcon copyEditIcon = new ImageIcon("copyFile.png");
+    private static final ImageIcon copyEditIcon = new ImageIcon("images/copyFile.png");
 
     public CopyTextAction() {
         super("Copy", copyEditIcon);

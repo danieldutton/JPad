@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 
 public class CutTextAction extends ApplicationAction {
 
-    private static final ImageIcon cutEditIcon = new ImageIcon("cutFile.png");
+    private static final ImageIcon cutEditIcon = new ImageIcon("images/cutFile.png");
 
     public CutTextAction() {
         super("Cut", cutEditIcon);
