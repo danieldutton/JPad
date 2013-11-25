@@ -1,6 +1,6 @@
 import gui.components.TextArea;
 import gui.consoles.EditableConsole;
-import gui.tray.SystemTray;
+import gui.systemTray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
 
@@ -39,7 +39,7 @@ public class AppStart {
 
     mainGui.consoleCentre();
 
-    SystemTray systemTray = new gui.tray.SystemTray("images/trayImage.gif");
+    SystemTray systemTray = new gui.systemTray.SystemTray("images/trayImage.gif");
     try {
       systemTray.loadSystemTray();
     } catch (NullPointerException ex) {

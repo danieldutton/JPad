@@ -45,44 +45,44 @@ public class ToolBar {
     }
 
     private void initButtons(){
-        this.btnSave = new JButton(this.saveAction);
-        this.btnPrint = new JButton(this.printAction);
-        this.btnCut = new JButton(this.cutAction);
-        this.btnCopy = new JButton(this.copyAction);
-        this.btnPaste = new JButton(this.pasteAction);
+        btnSave = new JButton(this.saveAction);
+        btnPrint = new JButton(this.printAction);
+        btnCut = new JButton(this.cutAction);
+        btnCopy = new JButton(this.copyAction);
+        btnPaste = new JButton(this.pasteAction);
     }
 
     private void setButtonBorders(){
-        this.btnSave.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        this.btnPrint.setBorder(BorderFactory.createEmptyBorder(0, 2, 0, 10));
-        this.btnCut.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        this.btnCopy.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        this.btnPaste.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        this.toolBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
+        btnSave.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
+        btnPrint.setBorder(BorderFactory.createEmptyBorder(0, 2, 0, 10));
+        btnCut.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
+        btnCopy.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
+        btnPaste.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
+        toolBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
     }
 
     private void setButtonToolTips(){
-        this.btnSave.setToolTipText("Save");
-        this.btnPrint.setToolTipText("Print");
-        this.btnCut.setToolTipText("Cut");
-        this.btnCopy.setToolTipText("Copy");
-        this.btnPaste.setToolTipText("Paste");
+        btnSave.setToolTipText("Save");
+        btnPrint.setToolTipText("Print");
+        btnCut.setToolTipText("Cut");
+        btnCopy.setToolTipText("Copy");
+        btnPaste.setToolTipText("Paste");
     }
 
     private void removeTextValues(){
-        this.btnSave.setText(null);
-        this.btnPrint.setText(null);
-        this.btnCut.setText(null);
-        this.btnCopy.setText(null);
-        this.btnPaste.setText(null);
+        btnSave.setText(null);
+        btnPrint.setText(null);
+        btnCut.setText(null);
+        btnCopy.setText(null);
+        btnPaste.setText(null);
     }
 
     private void buildToolBar(){
-        this.toolBar.add(this.btnSave);
-        this.toolBar.add(this.btnPrint);
-        this.toolBar.add(this.btnCut);
-        this.toolBar.add(this.btnCopy);
-        this.toolBar.add(this.btnPaste);
-        this.toolBar.setFloatable(false);
+        toolBar.add(this.btnSave);
+        toolBar.add(this.btnPrint);
+        toolBar.add(this.btnCut);
+        toolBar.add(this.btnCopy);
+        toolBar.add(this.btnPaste);
+        toolBar.setFloatable(false);
     }
 }

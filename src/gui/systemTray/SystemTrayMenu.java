@@ -1,4 +1,4 @@
-package gui.tray;
+package gui.systemTray;
 
 import javax.swing.*;
 import java.awt.*;

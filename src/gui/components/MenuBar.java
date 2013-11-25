@@ -4,7 +4,6 @@ import gui.consoles.AboutDialog;
 import gui.consoles.FontDialog;
 import actions.*;
 import input.readers.FileReader;
-
 import javax.swing.*;
 import javax.swing.text.DefaultEditorKit;
 import java.awt.*;
@@ -15,178 +14,262 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class MenuBar extends JMenuBar {
-    private SaveFileAction saveAction = new SaveFileAction();
-    //private NewFileAction newFileAction = new NewFileAction();
-    private CutTextAction cutEditAction = new CutTextAction();
-    private CopyTextAction copyEditAction = new CopyTextAction();
-    private PasteTextAction pasteEditAction = new PasteTextAction();
+
+    //actions
+    private SaveFileAction actionSave;
+    private CutTextAction actionCut;
+    private CopyTextAction actionCopy;
+    private PasteTextAction actionPaste;
+    private DeleteTextAction actionDelete;
+
     private JMenuBar menuBar;
-    private JMenu fileMenu;
-    private JMenu editMenu;
-    private JMenu formatMenu;
-    private JMenu viewMenu;
-    private JMenu helpMenu;
-    private JMenuItem file_New;
-    private JMenuItem file_Open;
-    private JMenuItem file_Save;
-    private JMenuItem file_SaveAs;
-    private JMenuItem file_Exit;
-    private JMenuItem edit_Cut;
-    private JMenuItem edit_Copy;
-    private JMenuItem edit_Paste;
-    private JMenuItem edit_SelectAll;
-    private JMenuItem format_Font;
-    private JMenuItem view_StatusBar;
-    private JMenuItem help_Help;
-    private JMenuItem help_About;
+
+    //menu titles
+    private JMenu menuFile;
+    private JMenu menuEdit;
+    private JMenu menuFormat;
+    private JMenu menuView;
+    private JMenu menuHelp;
+
+    //menu items
+    private JMenuItem menuItemNew;
+    private JMenuItem menuItemOpen;
+    private JMenuItem menuItemSave;
+    private JMenuItem menuItemSaveAs;
+    private JMenuItem menuItemExit;
+    private JMenuItem menuItemCut;
+    private JMenuItem menuItemCopy;
+    private JMenuItem menuItemPaste;
+    private JMenuItem menuItemDelete;
+    private JMenuItem menuItemSelectAll;
+    private JMenuItem menuItemFont;
+    private JMenuItem menuItemWordWrap;
+    private JMenuItem menuItemStatusBar;
+    private JMenuItem menuItemHelp;
+    private JMenuItem menuItemAbout;
+
 
     public MenuBar() {
-        this.menuBar = new JMenuBar();
-        this.fileMenu = new JMenu("File");
-        this.editMenu = new JMenu("Edit");
-        this.formatMenu = new JMenu("Format");
-        this.viewMenu = new JMenu("View");
-        this.helpMenu = new JMenu("Help");
-
-        this.file_New = new JMenuItem("New");
-        this.file_Open = new JMenuItem("Open");
-        this.file_Save = new JMenuItem(this.saveAction);
-        this.file_SaveAs = new JMenuItem(copyEditAction);
-
-        this.file_Exit = new JMenuItem("Exit");
-
-        this.edit_Cut = new JMenuItem(new DefaultEditorKit.CutAction());
-        this.edit_Cut.setText("Cut");
-        this.edit_Copy = new JMenuItem(new DefaultEditorKit.CopyAction());
-        this.edit_Copy.setText("Copy");
-        this.edit_Paste = new JMenuItem(new DefaultEditorKit.PasteAction());
-        this.edit_Paste.setText("Paste");
-        this.edit_SelectAll = new JMenuItem("select-all");
-        this.edit_SelectAll.setText("Select All");
-
-        this.format_Font = new JMenuItem("Font");
-
-        this.view_StatusBar = new JMenuItem("Status Bar");
-
-        this.help_Help = new JMenuItem("Help");
-        this.help_About = new JMenuItem("About");
+        menuBar = new JMenuBar();
+        initFileMenuActions();
+        initMenus();
+        initMenuItems();
+        addMenuItemsToMenu();
+        setMenuItemMnemonics();
+        setMenuItemAccelerators();
+        addActionListeners();
+        buildMenuBar();
+        styleMenuBar();
+        menuBar.setVisible(true);
     }
 
+    private void initMenus(){
+
+        menuFile = new JMenu("File");
+        menuEdit = new JMenu("Edit");
+        menuFormat = new JMenu("Format");
+        menuView = new JMenu("View");
+        menuHelp = new JMenu("Help");
+    }
+
+    private void initFileMenuActions(){
+
+        actionSave = new SaveFileAction();
+        actionCut = new CutTextAction();
+        actionCopy = new CopyTextAction();
+        actionPaste = new PasteTextAction();
+        actionDelete = new DeleteTextAction();
+    }
+
+    private void initMenuItems(){
+
+        //file
+        menuItemNew = new JMenuItem("New");
+        menuItemOpen = new JMenuItem("Open");
+        menuItemSave = new JMenuItem(actionSave);
+        menuItemSaveAs = new JMenuItem(actionSave);
+        menuItemExit = new JMenuItem("Exit");
+
+        //edit
+        menuItemCut = new JMenuItem(new CutTextAction());
+        menuItemCut.setText("Cut");
+        menuItemCopy = new JMenuItem(new CopyTextAction());
+        menuItemCopy.setText("Copy");
+        menuItemPaste = new JMenuItem(new PasteTextAction());
+        menuItemPaste.setText("Paste");
+        menuItemDelete = new JMenuItem("Delete");
+        menuItemSelectAll = new JMenuItem("Select-All");
+        menuItemSelectAll.setText("Select All");
+
+        //format
+        menuItemFont = new JMenuItem("Font");
+        menuItemWordWrap = new JMenuItem("Word Wrap");
+
+        //view
+        menuItemStatusBar = new JMenuItem("Status Bar");
+
+        //help
+        menuItemHelp = new JMenuItem("Help");
+        menuItemAbout = new JMenuItem("About");
+    }
+
+    private void addMenuItemsToMenu(){
+
+        //file
+        menuFile.add(menuItemNew);
+        menuFile.add(menuItemOpen);
+        menuFile.add(menuItemSave);
+        menuFile.add(menuItemSaveAs);
+        menuFile.add(new JSeparator());
+        menuFile.add(menuItemExit);
+
+        //edit
+        menuEdit.add(new JSeparator(0));
+        menuEdit.add(actionCut);
+        menuEdit.add(actionCopy);
+        menuEdit.add(actionPaste);
+        menuEdit.add(actionDelete);
+        menuEdit.add(new JSeparator(0));
+        menuEdit.add(menuItemSelectAll);
+
+        //format
+        menuFormat.add(menuItemFont);
+        menuFormat.add(menuItemWordWrap);
+
+        //view
+        menuView.add(menuItemStatusBar);
+        //help
+        menuHelp.add(menuItemHelp);
+        menuHelp.add(new JSeparator());
+        menuHelp.add(menuItemAbout);
+    }
+
+    private void setMenuItemMnemonics(){
+
+        //file
+        menuItemNew.setMnemonic('N');
+        menuItemOpen.setMnemonic('O');
+        menuItemSave.setMnemonic('S');
+        menuItemExit.setMnemonic('E');
+
+        //edit
+        menuItemCut.setMnemonic('V');
+        menuItemCopy.setMnemonic('C');
+        menuItemPaste.setMnemonic('P');
+        menuItemSelectAll.setMnemonic('S');
+
+        //format
+        menuItemFont.setMnemonic('F');
+
+        //view
+
+        //help
+        menuItemAbout.setMnemonic('A');
+        menuItemHelp.setMnemonic('H');
+    }
+
+    private void setMenuItemAccelerators(){
+
+        //file
+        menuItemNew.setAccelerator(KeyStroke.getKeyStroke(78, 2));
+        menuItemOpen.setAccelerator(KeyStroke.getKeyStroke(79, 2));
+        menuItemSave.setAccelerator(KeyStroke.getKeyStroke(83, 2));
+        menuItemExit.setAccelerator(KeyStroke.getKeyStroke(69, 2));
+
+        //edit
+        menuItemCut.setAccelerator(KeyStroke.getKeyStroke(88, 2));
+        menuItemCopy.setAccelerator(KeyStroke.getKeyStroke(67, 2));
+        menuItemPaste.setAccelerator(KeyStroke.getKeyStroke(86, 2));
+        menuItemSelectAll.setAccelerator(KeyStroke.getKeyStroke(65, 2));
+
+        //format
+        menuItemFont.setAccelerator(KeyStroke.getKeyStroke(70, 2));
+
+        //view
+        menuView.add(this, menuItemStatusBar);
+
+        //help
+        menuItemHelp.setAccelerator(KeyStroke.getKeyStroke(72, 2));
+    }
+
+    private void addActionListeners(){
+
+        //file
+        menuItemNew.addActionListener(new MenuBar.OpenNewDoc());
+        menuItemOpen.addActionListener(new MenuBar.OpenNewFile());
+        menuItemExit.addActionListener(new MenuBar.ExitPad());
+
+        //edit
+        menuItemCut.addActionListener(new MenuBar.CutText());
+
+        //format
+        menuItemFont.addActionListener(new MenuBar.SetFont());
+
+        //view
+
+        //help
+        menuItemAbout.addActionListener(new MenuBar.ShowAboutFrame());
+        menuItemHelp.addActionListener(new MenuBar.LaunchHelpMenu());
+    }
+
+    private void buildMenuBar(){
+        menuBar.add(this.menuFile);
+        menuBar.add(this.menuEdit);
+        menuBar.add(this.menuFormat);
+        menuBar.add(this.menuView);
+        menuBar.add(this.menuHelp);
+    }
+
+    private void styleMenuBar(){
+        menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
+
+        menuFile.setFont(new Font("Verdana", 0, 12));
+        menuItemNew.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemOpen.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemSave.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemExit.setFont(new Font("MS Sans Serif", 0, 12));
+
+        menuEdit.setFont(new Font("Verdana", 0, 12));
+        menuItemCut.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemCopy.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemPaste.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemSelectAll.setFont(new Font("MS Sans Serif", 0, 12));
+
+        menuFormat.setFont(new Font("Verdana", 0, 12));
+        menuItemFont.setFont(new Font("MS Sans Serif", 0, 12));
+
+        menuView.setFont(new Font("Verdana", 0, 12));
+        menuItemStatusBar.setFont(new Font("MS Sans Serif", 0, 12));
+
+        menuHelp.setFont(new Font("Verdana", 0, 12));
+        menuItemHelp.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemAbout.setFont(new Font("MS Sans Serif", 0, 12));
+
+        menuItemNew.setBackground(Color.white);
+        menuItemOpen.setBackground(Color.white);
+        menuItemSave.setBackground(Color.white);
+        menuItemExit.setBackground(Color.white);
+
+        menuItemCut.setBackground(Color.white);
+        menuItemCopy.setBackground(Color.white);
+        menuItemPaste.setBackground(Color.white);
+        menuItemSelectAll.setBackground(Color.white);
+
+        menuItemFont.setBackground(Color.white);
+
+        menuItemHelp.setBackground(Color.white);
+        menuItemAbout.setBackground(Color.white);
+
+        menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    }
 
     public JMenuBar getGuiMenuBar() {
-        this.fileMenu.add(this.file_New);
-        this.fileMenu.add(this.file_Open);
-
-        this.fileMenu.add(this.file_Save);
-        this.fileMenu.add(new JSeparator());
-        this.fileMenu.add(this.file_Exit);
-
-        this.file_New.setMnemonic('N');
-        this.file_Open.setMnemonic('O');
-        this.file_Save.setMnemonic('S');
-        this.file_Exit.setMnemonic('E');
-
-        this.file_New.setAccelerator(KeyStroke.getKeyStroke(78, 2));
-        this.file_Open.setAccelerator(KeyStroke.getKeyStroke(79, 2));
-        this.file_Save.setAccelerator(KeyStroke.getKeyStroke(83, 2));
-        this.file_Exit.setAccelerator(KeyStroke.getKeyStroke(69, 2));
-
-        this.editMenu.add(new JSeparator(0));
-        this.editMenu.add(this.cutEditAction);
-        this.editMenu.add(this.copyEditAction);
-        this.editMenu.add(this.pasteEditAction);
-        this.editMenu.add(new JSeparator(0));
-        this.editMenu.add(this.edit_SelectAll);
-
-        this.edit_Cut.setMnemonic('V');
-        this.edit_Copy.setMnemonic('C');
-        this.edit_Paste.setMnemonic('P');
-        this.edit_SelectAll.setMnemonic('S');
-
-        this.edit_Cut.setAccelerator(KeyStroke.getKeyStroke(88, 2));
-        this.edit_Copy.setAccelerator(KeyStroke.getKeyStroke(67, 2));
-        this.edit_Paste.setAccelerator(KeyStroke.getKeyStroke(86, 2));
-        this.edit_SelectAll.setAccelerator(KeyStroke.getKeyStroke(65, 2));
-
-        this.formatMenu.add(this.format_Font);
-        this.format_Font.setMnemonic('F');
-        this.format_Font.setAccelerator(KeyStroke.getKeyStroke(70, 2));
-
-        this.viewMenu.add(this, view_StatusBar);
-
-        this.helpMenu.add(this.help_Help);
-        this.helpMenu.add(new JSeparator());
-        this.helpMenu.add(this.help_About);
-
-        this.help_About.setMnemonic('A');
-        this.help_Help.setMnemonic('H');
-
-        this.help_Help.setAccelerator(KeyStroke.getKeyStroke(72, 2));
-
-        this.menuBar.add(this.fileMenu);
-        this.menuBar.add(this.editMenu);
-        this.menuBar.add(this.formatMenu);
-        this.menuBar.add(this.viewMenu);
-        this.menuBar.add(this.helpMenu);
-        this.menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
-
-        this.file_New.addActionListener(new MenuBar.OpenNewDoc());
-        this.file_Open.addActionListener(new MenuBar.OpenNewFile());
-        this.file_Exit.addActionListener(new MenuBar.ExitPad());
-
-        this.edit_Cut.addActionListener(new MenuBar.CutText());
-
-        this.format_Font.addActionListener(new MenuBar.SetFont());
-
-        this.help_About.addActionListener(new MenuBar.ShowAboutFrame());
-        this.help_Help.addActionListener(new MenuBar.LaunchHelpMenu());
-
-        this.fileMenu.setFont(new Font("Verdana", 0, 12));
-        this.file_New.setFont(new Font("MS Sans Serif", 0, 12));
-        this.file_Open.setFont(new Font("MS Sans Serif", 0, 12));
-        this.file_Save.setFont(new Font("MS Sans Serif", 0, 12));
-        this.file_Exit.setFont(new Font("MS Sans Serif", 0, 12));
-
-        this.editMenu.setFont(new Font("Verdana", 0, 12));
-        this.edit_Cut.setFont(new Font("MS Sans Serif", 0, 12));
-        this.edit_Copy.setFont(new Font("MS Sans Serif", 0, 12));
-        this.edit_Paste.setFont(new Font("MS Sans Serif", 0, 12));
-        this.edit_SelectAll.setFont(new Font("MS Sans Serif", 0, 12));
-
-        this.formatMenu.setFont(new Font("Verdana", 0, 12));
-        this.format_Font.setFont(new Font("MS Sans Serif", 0, 12));
-
-        this.viewMenu.setFont(new Font("Verdana", 0, 12));
-        this.view_StatusBar.setFont(new Font("MS Sans Serif", 0, 12));
-
-        this.helpMenu.setFont(new Font("Verdana", 0, 12));
-        this.help_Help.setFont(new Font("MS Sans Serif", 0, 12));
-        this.help_About.setFont(new Font("MS Sans Serif", 0, 12));
-
-        this.file_New.setBackground(Color.white);
-        this.file_Open.setBackground(Color.white);
-        this.file_Save.setBackground(Color.white);
-        this.file_Exit.setBackground(Color.white);
-
-        this.edit_Cut.setBackground(Color.white);
-        this.edit_Copy.setBackground(Color.white);
-        this.edit_Paste.setBackground(Color.white);
-        this.edit_SelectAll.setBackground(Color.white);
-
-        this.format_Font.setBackground(Color.white);
-
-        this.help_Help.setBackground(Color.white);
-        this.help_About.setBackground(Color.white);
-
-        this.file_New.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-
-        this.menuBar.setVisible(true);
         return this.menuBar;
     }
 
     private class ShowAboutFrame implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.help_About) {
+            if (c.getSource() == MenuBar.this.menuItemAbout) {
                 AboutDialog aboutDialog = new AboutDialog("J-Pad", "images/aboutScreen.gif");
                 aboutDialog.drawConsole();
             }
@@ -195,7 +278,7 @@ public class MenuBar extends JMenuBar {
 
     private class LaunchHelpMenu implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.help_Help) {
+            if (c.getSource() == MenuBar.this.menuItemHelp) {
                 if (Desktop.isDesktopSupported())
                     try {
                         Desktop.getDesktop().browse(new URI("http://www.danieldutton.org.uk/userGuide1.html"));
@@ -210,7 +293,7 @@ public class MenuBar extends JMenuBar {
 
     private class SetFont implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.format_Font) {
+            if (c.getSource() == MenuBar.this.menuItemFont) {
                 FontDialog fontConsole = new FontDialog("J-Pad");
                 fontConsole.drawConsole();
             }
@@ -220,7 +303,7 @@ public class MenuBar extends JMenuBar {
     private class SelectAllText implements ActionListener {
         public void actionPerformed(ActionEvent c) {
             JTextArea textArea;
-            if (c.getSource() == MenuBar.this.edit_SelectAll) {
+            if (c.getSource() == MenuBar.this.menuItemSelectAll) {
                 textArea = TextArea.getDefaultGuiTextArea();
             }
         }
@@ -228,7 +311,7 @@ public class MenuBar extends JMenuBar {
 
     private class ExitPad implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.file_Exit) {
+            if (c.getSource() == MenuBar.this.menuItemExit) {
                 System.exit(0);
             }
         }
@@ -237,7 +320,7 @@ public class MenuBar extends JMenuBar {
     private class CutText implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             Action cutAction;
-            if (e.getSource() == MenuBar.this.edit_Cut) {
+            if (e.getSource() == MenuBar.this.menuItemCut) {
                 cutAction = TextArea.getDefaultGuiTextArea().getActionMap().get("cut-to-clipboard");
             }
         }
@@ -245,7 +328,7 @@ public class MenuBar extends JMenuBar {
 
     protected class OpenNewFile implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.file_Open) {
+            if (c.getSource() == MenuBar.this.menuItemOpen) {
                 JTextArea textArea1 = null;
                 textArea1 = TextArea.getDefaultGuiTextArea();
                 TextArea.actionPerformed(c);
@@ -255,7 +338,7 @@ public class MenuBar extends JMenuBar {
 
     private class OpenNewDoc implements ActionListener {
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.file_New) {
+            if (c.getSource() == MenuBar.this.menuItemNew) {
                 FileReader reader = new FileReader(true);
                 reader.drawConsole();
             }
