@@ -40,7 +40,7 @@ public class AppStart {
 
     SystemTray systemTray = new gui.tray.SystemTray("trayImage.gif");
     try {
-      systemTray.startTray();
+      systemTray.loadSystemTray();
     } catch (NullPointerException ex) {
       ex.printStackTrace();
     }

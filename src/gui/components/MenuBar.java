@@ -28,6 +28,7 @@ public class MenuBar extends JMenuBar {
     private JMenuItem file_New;
     private JMenuItem file_Open;
     private JMenuItem file_Save;
+    private JMenuItem file_SaveAs;
     private JMenuItem file_Exit;
     private JMenuItem edit_Cut;
     private JMenuItem edit_Copy;
@@ -47,6 +48,7 @@ public class MenuBar extends JMenuBar {
         this.file_New = new JMenuItem("New");
         this.file_Open = new JMenuItem("Open");
         this.file_Save = new JMenuItem(this.saveAction);
+        this.file_SaveAs = new JMenuItem(copyEditAction);
 
         this.file_Exit = new JMenuItem("Exit");
 

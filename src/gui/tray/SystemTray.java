@@ -12,7 +12,7 @@ public class SystemTray {
         this.trayImage = trayImage;
     }
 
-    public void startTray() {
+    public void loadSystemTray() {
 
         Runnable runner = new Runnable() {
             public void run() {
@@ -25,10 +25,10 @@ public class SystemTray {
                     try {
                         tray.add(trayIcon);
                     } catch (AWTException e) {
-                        System.err.println("Can't add to tray");
+                        System.err.println("System Tray cannot be added");
                     }
                 } else {
-                    System.err.println("Tray unavailable");
+                    return;
                 }
             }
         };

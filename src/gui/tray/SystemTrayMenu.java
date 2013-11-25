@@ -9,17 +9,20 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 public class SystemTrayMenu {
+
     private MenuItem closeItem;
+
     private MenuItem homePageItem;
+
     private PopupMenu popup;
-    private Desktop desktop;
+
     private String helpURI;
+
 
     public SystemTrayMenu() {
         this.closeItem = new MenuItem("Close");
         this.homePageItem = new MenuItem("Visit JPad.com");
         this.popup = new PopupMenu();
-        this.desktop = null;
     }
 
     public SystemTrayMenu(String helpURI) {
@@ -36,10 +39,8 @@ public class SystemTrayMenu {
         this.closeItem.addActionListener(new SystemTrayMenu.ClosePad());
 
         if (Desktop.isDesktopSupported()) {
-            this.desktop = Desktop.getDesktop();
             enableOptions();
         }
-
         return this.popup;
     }
 
@@ -63,7 +64,8 @@ public class SystemTrayMenu {
                         ex.printStackTrace();
                     }
                 } else
-                    JOptionPane.showMessageDialog(null, "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
+                    JOptionPane.showMessageDialog(null,
+                            "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
             }
         }
     }
