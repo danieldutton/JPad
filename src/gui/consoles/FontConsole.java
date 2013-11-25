@@ -1,6 +1,7 @@
-package gui;
+package gui.consoles;
 
 import gui.components.GuiTextArea;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

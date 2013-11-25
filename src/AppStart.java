@@ -1,11 +1,10 @@
-import gui.EditableConsole;
-import gui.SysTray;
+import gui.consoles.EditableConsole;
+import gui.tray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.FileNotFoundException;
 
 public class AppStart {
 
@@ -39,12 +38,10 @@ public class AppStart {
 
     mainGui.consoleCentre();
 
-    SysTray systemTray = new SysTray("trayImage.gif");
+    SystemTray systemTray = new gui.tray.SystemTray("trayImage.gif");
     try {
       systemTray.startTray();
     } catch (NullPointerException ex) {
-      ex.printStackTrace();
-    } catch (FileNotFoundException ex) {
       ex.printStackTrace();
     }
   }

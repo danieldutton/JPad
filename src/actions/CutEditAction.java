@@ -1,4 +1,4 @@
-package gui.actions;
+package actions;
 
 import gui.components.GuiTextArea;
 

@@ -1,6 +1,6 @@
 package gui.components;
 
-import gui.actions.*;
+import actions.*;
 
 import javax.swing.*;
 import java.awt.*;

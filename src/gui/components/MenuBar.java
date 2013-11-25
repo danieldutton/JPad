@@ -1,9 +1,9 @@
 package gui.components;
 
-import gui.AboutDialog;
-import gui.FontConsole;
-import gui.actions.*;
-import input.FileReader;
+import gui.consoles.AboutDialog;
+import gui.consoles.FontConsole;
+import actions.*;
+import input.readers.FileReader;
 
 import javax.swing.*;
 import javax.swing.text.DefaultEditorKit;

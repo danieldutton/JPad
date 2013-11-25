@@ -1,7 +1,8 @@
-package input;
+package input.readers;
 
-import gui.EditableConsole;
-import gui.TextFileFilter;
+import gui.consoles.EditableConsole;
+import input.filters.TextFileFilter;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;

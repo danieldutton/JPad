@@ -1,4 +1,4 @@
-package gui;
+package gui.tray;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,21 +8,21 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class SysTrayMenu {
+public class SystemTrayMenu {
     private MenuItem closeItem;
     private MenuItem homePageItem;
     private PopupMenu popup;
     private Desktop desktop;
     private String helpURI;
 
-    public SysTrayMenu() {
+    public SystemTrayMenu() {
         this.closeItem = new MenuItem("Close");
         this.homePageItem = new MenuItem("Visit JPad.com");
         this.popup = new PopupMenu();
         this.desktop = null;
     }
 
-    public SysTrayMenu(String helpURI) {
+    public SystemTrayMenu(String helpURI) {
         this();
         this.helpURI = helpURI;
     }
@@ -32,8 +32,8 @@ public class SysTrayMenu {
         this.popup.add(this.closeItem);
         this.popup.add(this.homePageItem);
 
-        this.homePageItem.addActionListener(new SysTrayMenu.VisitHomePage());
-        this.closeItem.addActionListener(new SysTrayMenu.ClosePad());
+        this.homePageItem.addActionListener(new SystemTrayMenu.VisitHomePage());
+        this.closeItem.addActionListener(new SystemTrayMenu.ClosePad());
 
         if (Desktop.isDesktopSupported()) {
             this.desktop = Desktop.getDesktop();
@@ -53,10 +53,10 @@ public class SysTrayMenu {
         }
 
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == SysTrayMenu.this.homePageItem) {
+            if (c.getSource() == SystemTrayMenu.this.homePageItem) {
                 if (Desktop.isDesktopSupported()) {
                     try {
-                        Desktop.getDesktop().browse(new URI(SysTrayMenu.this.helpURI));
+                        Desktop.getDesktop().browse(new URI(SystemTrayMenu.this.helpURI));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     } catch (URISyntaxException ex) {
@@ -73,7 +73,7 @@ public class SysTrayMenu {
         }
 
         public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == SysTrayMenu.this.closeItem) {
+            if (c.getSource() == SystemTrayMenu.this.closeItem) {
                 System.exit(0);
             }
         }
