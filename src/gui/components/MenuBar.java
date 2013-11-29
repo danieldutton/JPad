@@ -357,7 +357,6 @@ public class MenuBar extends JMenuBar {
                 TextArea.getDefaultGuiTextArea().setWrapStyleWord(true);
                 isWrapped = true;
             }
-
         }
     }
 
