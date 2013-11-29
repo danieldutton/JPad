@@ -195,7 +195,6 @@ public class MenuBar extends JMenuBar {
         menuItemExit.addActionListener(new MenuBar.ExitPad());
 
         //edit
-        menuItemCut.addActionListener(new MenuBar.CutText());
         menuItemSelectAll.addActionListener(new SelectAllText());
 
         //format
@@ -313,17 +312,7 @@ public class MenuBar extends JMenuBar {
         }
     }
 
-    private class CutText implements ActionListener
-    {
-        public void actionPerformed(ActionEvent e)
-        {
-            Action cutAction;
-            if (e.getSource() == MenuBar.this.menuItemCut)
-            {
-                cutAction = TextArea.getDefaultGuiTextArea().getActionMap().get("cut-to-clipboard");
-            }
-        }
-    }
+
 
     protected class OpenNewFile implements ActionListener
     {
