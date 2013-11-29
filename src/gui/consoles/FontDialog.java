@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-public class FontDialog extends EditableConsole {
+public class FontDialog extends CustomConsole {
 
     private JPanel panelMain;
     private JPanel panelSample;

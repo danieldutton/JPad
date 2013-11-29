@@ -1,13 +1,13 @@
 package input.readers;
 
-import gui.consoles.EditableConsole;
+import gui.consoles.CustomConsole;
 import input.filters.TextFileFilter;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 
-public class FileReader extends EditableConsole
+public class FileReader extends CustomConsole
 {
   private JFileChooser fileChooser = new JFileChooser();
   private boolean nativeLookAndFeel = true;

@@ -48,10 +48,7 @@ public class SystemTrayMenu {
         this.homePageItem.setEnabled(true);
     }
 
-    private class VisitHomePage
-            implements ActionListener {
-        private VisitHomePage() {
-        }
+    private class VisitHomePage implements ActionListener {
 
         public void actionPerformed(ActionEvent c) {
             if (c.getSource() == SystemTrayMenu.this.homePageItem) {
@@ -71,8 +68,6 @@ public class SystemTrayMenu {
     }
 
     public class ClosePad implements ActionListener {
-        public ClosePad() {
-        }
 
         public void actionPerformed(ActionEvent c) {
             if (c.getSource() == SystemTrayMenu.this.closeItem) {

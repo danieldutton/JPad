@@ -1,5 +1,5 @@
 import gui.components.TextArea;
-import gui.consoles.EditableConsole;
+import gui.consoles.CustomConsole;
 import gui.systemTray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
@@ -22,7 +22,7 @@ public class AppStart {
     mainPanel.setLayout(new BorderLayout());
     headerPanel.setLayout(new BorderLayout());
 
-    EditableConsole mainGui = new EditableConsole("J-Pad", 850, 700);
+    CustomConsole mainGui = new CustomConsole("J-Pad", 850, 700);
 
     mainGui.add(mainPanel);
     headerPanel.add("North", menuBar.getGuiMenuBar());

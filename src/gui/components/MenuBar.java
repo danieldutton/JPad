@@ -49,7 +49,8 @@ public class MenuBar extends JMenuBar {
     private JMenuItem menuItemAbout;
 
 
-    public MenuBar() {
+    public MenuBar()
+    {
         menuBar = new JMenuBar();
         initFileMenuActions();
         initMenus();
@@ -63,8 +64,8 @@ public class MenuBar extends JMenuBar {
         menuBar.setVisible(true);
     }
 
-    private void initMenus(){
-
+    private void initMenus()
+    {
         menuFile = new JMenu("File");
         menuEdit = new JMenu("Edit");
         menuFormat = new JMenu("Format");
@@ -72,8 +73,8 @@ public class MenuBar extends JMenuBar {
         menuHelp = new JMenu("Help");
     }
 
-    private void initFileMenuActions(){
-
+    private void initFileMenuActions()
+    {
         actionSave = new SaveFileAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
@@ -81,8 +82,8 @@ public class MenuBar extends JMenuBar {
         actionDelete = new DeleteTextAction();
     }
 
-    private void initMenuItems(){
-
+    private void initMenuItems()
+    {
         //file
         menuItemNew = new JMenuItem("New");
         menuItemOpen = new JMenuItem("Open");
@@ -113,8 +114,8 @@ public class MenuBar extends JMenuBar {
         menuItemAbout = new JMenuItem("About");
     }
 
-    private void addMenuItemsToMenu(){
-
+    private void addMenuItemsToMenu()
+    {
         //file
         menuFile.add(menuItemNew);
         menuFile.add(menuItemOpen);
@@ -144,8 +145,8 @@ public class MenuBar extends JMenuBar {
         menuHelp.add(menuItemAbout);
     }
 
-    private void setMenuItemMnemonics(){
-
+    private void setMenuItemMnemonics()
+    {
         //file
         menuItemNew.setMnemonic('N');
         menuItemOpen.setMnemonic('O');
@@ -168,8 +169,8 @@ public class MenuBar extends JMenuBar {
         menuItemHelp.setMnemonic('H');
     }
 
-    private void setMenuItemAccelerators(){
-
+    private void setMenuItemAccelerators()
+    {
         //file
         menuItemNew.setAccelerator(KeyStroke.getKeyStroke(78, 2));
         menuItemOpen.setAccelerator(KeyStroke.getKeyStroke(79, 2));
@@ -192,8 +193,8 @@ public class MenuBar extends JMenuBar {
         menuItemHelp.setAccelerator(KeyStroke.getKeyStroke(72, 2));
     }
 
-    private void addActionListeners(){
-
+    private void addActionListeners()
+    {
         //file
         menuItemNew.addActionListener(new MenuBar.OpenNewDoc());
         menuItemOpen.addActionListener(new MenuBar.OpenNewFile());
@@ -204,7 +205,7 @@ public class MenuBar extends JMenuBar {
 
         //format
         menuItemFont.addActionListener(new MenuBar.SetFont());
-
+        menuItemWordWrap.addActionListener(new MenuBar.ToggleWordWrap());
         //view
 
         //help
@@ -212,7 +213,8 @@ public class MenuBar extends JMenuBar {
         menuItemHelp.addActionListener(new MenuBar.LaunchHelpMenu());
     }
 
-    private void buildMenuBar(){
+    private void buildMenuBar()
+    {
         menuBar.add(this.menuFile);
         menuBar.add(this.menuEdit);
         menuBar.add(this.menuFormat);
@@ -220,7 +222,8 @@ public class MenuBar extends JMenuBar {
         menuBar.add(this.menuHelp);
     }
 
-    private void styleMenuBar(){
+    private void styleMenuBar()
+    {
         menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
         menuFile.setFont(new Font("Verdana", 0, 12));
@@ -263,27 +266,37 @@ public class MenuBar extends JMenuBar {
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
     }
 
-    public JMenuBar getGuiMenuBar() {
+    public JMenuBar getGuiMenuBar()
+    {
         return this.menuBar;
     }
 
-    private class ShowAboutFrame implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemAbout) {
+    private class ShowAboutFrame implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemAbout)
+            {
                 AboutDialog aboutDialog = new AboutDialog("J-Pad", "images/aboutScreen.gif");
                 aboutDialog.drawConsole();
             }
         }
     }
 
-    private class LaunchHelpMenu implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemHelp) {
+    private class LaunchHelpMenu implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemHelp)
+            {
                 if (Desktop.isDesktopSupported())
-                    try {
+                    try
+                    {
                         Desktop.getDesktop().browse(new URI("http://www.danieldutton.org.uk/userGuide1.html"));
-                    } catch (IOException ex) {
-                    } catch (URISyntaxException ex) {
+                    } catch (IOException ex)
+                    {
+                    } catch (URISyntaxException ex)
+                    {
                     }
                 else
                     JOptionPane.showMessageDialog(null, "Default system browser not found.  Please manually navigate to ");
@@ -291,44 +304,59 @@ public class MenuBar extends JMenuBar {
         }
     }
 
-    private class SetFont implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemFont) {
+    private class SetFont implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemFont)
+            {
                 FontDialog fontConsole = new FontDialog("J-Pad");
                 fontConsole.drawConsole();
             }
         }
     }
 
-    private class SelectAllText implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
+    private class SelectAllText implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
             JTextArea textArea;
-            if (c.getSource() == MenuBar.this.menuItemSelectAll) {
+            if (c.getSource() == MenuBar.this.menuItemSelectAll)
+            {
                 textArea = TextArea.getDefaultGuiTextArea();
             }
         }
     }
 
-    private class ExitPad implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemExit) {
+    private class ExitPad implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemExit)
+            {
                 System.exit(0);
             }
         }
     }
 
-    private class CutText implements ActionListener {
-        public void actionPerformed(ActionEvent e) {
+    private class CutText implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
             Action cutAction;
-            if (e.getSource() == MenuBar.this.menuItemCut) {
+            if (e.getSource() == MenuBar.this.menuItemCut)
+            {
                 cutAction = TextArea.getDefaultGuiTextArea().getActionMap().get("cut-to-clipboard");
             }
         }
     }
 
-    protected class OpenNewFile implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemOpen) {
+    protected class OpenNewFile implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemOpen)
+            {
                 JTextArea textArea1 = null;
                 textArea1 = TextArea.getDefaultGuiTextArea();
                 TextArea.actionPerformed(c);
@@ -336,12 +364,37 @@ public class MenuBar extends JMenuBar {
         }
     }
 
-    private class OpenNewDoc implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == MenuBar.this.menuItemNew) {
+    private class OpenNewDoc implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == MenuBar.this.menuItemNew)
+            {
                 FileReader reader = new FileReader(true);
                 reader.drawConsole();
             }
+        }
+    }
+
+    private class ToggleWordWrap implements ActionListener
+    {
+        private boolean isWrapped = false;
+
+        public void actionPerformed(ActionEvent e)
+        {
+            if(isWrapped)
+            {
+                TextArea.getDefaultGuiTextArea().setLineWrap(false);
+                TextArea.getDefaultGuiTextArea().setWrapStyleWord(false);
+                isWrapped = false;
+            }
+            else
+            {
+                TextArea.getDefaultGuiTextArea().setLineWrap(true);
+                TextArea.getDefaultGuiTextArea().setWrapStyleWord(true);
+                isWrapped = true;
+            }
+
         }
     }
 }
