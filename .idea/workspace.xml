@@ -98,10 +98,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuBar.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MenuBar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="139" column="14" selection-start="3979" selection-end="3979" vertical-scroll-proportion="-2.9907408">
+            <state line="152" column="16" selection-start="4272" selection-end="4275" vertical-scroll-proportion="-95.88">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CutTextAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/CutTextAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="12" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteTextAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="28" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewFileAction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/actions/NewFileAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="0.15178572">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PasteTextAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/PasteTextAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CopyTextAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/CopyTextAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,13 +186,13 @@
         <option value="$PROJECT_DIR$/src/actions/CutTextAction.java" />
         <option value="$PROJECT_DIR$/src/actions/PasteTextAction.java" />
         <option value="$PROJECT_DIR$/src/actions/SaveFileAction.java" />
-        <option value="$PROJECT_DIR$/src/actions/DeleteTextAction.java" />
         <option value="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/CustomConsole.java" />
         <option value="$PROJECT_DIR$/src/gui/components/ToolBar.java" />
         <option value="$PROJECT_DIR$/src/gui/components/StatusBar.java" />
         <option value="$PROJECT_DIR$/src/AppStart.java" />
         <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
+        <option value="$PROJECT_DIR$/src/actions/DeleteTextAction.java" />
       </list>
     </option>
   </component>
@@ -402,15 +447,15 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32032147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32032147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17490953" sideWeight="0.67967856" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17490953" sideWeight="0.673938" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39150402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.326062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.326062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -454,26 +499,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/actions/PasteTextAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/SaveFileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="17" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/CutTextAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="136" selection-end="281" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/consoles/AboutDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="66" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="20" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0" />
@@ -502,13 +527,6 @@
     <entry file="file://$PROJECT_DIR$/src/actions/PrintFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="73" selection-start="311" selection-end="311" vertical-scroll-proportion="0.27079645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.030088495">
           <folding />
         </state>
       </provider>
@@ -545,7 +563,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="139" column="14" selection-start="3979" selection-end="3979" vertical-scroll-proportion="-2.9907408">
+        <state line="152" column="16" selection-start="4272" selection-end="4275" vertical-scroll-proportion="-95.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/PasteTextAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/CopyTextAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/CutTextAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="12" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/NewFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="90" selection-end="90" vertical-scroll-proportion="0.15178572">
           <folding />
         </state>
       </provider>
