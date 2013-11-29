@@ -12,6 +12,7 @@ public class DeleteTextAction extends ApplicationAction {
     }
 
     public void actionPerformed(ActionEvent e) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        JTextArea textArea = getTextArea();
+        textArea.replaceSelection("");
     }
 }
