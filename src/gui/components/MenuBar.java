@@ -45,7 +45,6 @@ public class MenuBar extends JMenuBar {
     private JMenuItem menuItemFont;
     private JMenuItem menuItemWordWrap;
     private JMenuItem menuItemStatusBar;
-    private JMenuItem menuItemHelp;
     private JMenuItem menuItemAbout;
 
 
@@ -110,7 +109,6 @@ public class MenuBar extends JMenuBar {
         menuItemStatusBar = new JMenuItem("Status Bar");
 
         //help
-        menuItemHelp = new JMenuItem("Help");
         menuItemAbout = new JMenuItem("About");
     }
 
@@ -140,8 +138,6 @@ public class MenuBar extends JMenuBar {
         //view
         menuView.add(menuItemStatusBar);
         //help
-        menuHelp.add(menuItemHelp);
-        menuHelp.add(new JSeparator());
         menuHelp.add(menuItemAbout);
     }
 
@@ -166,7 +162,6 @@ public class MenuBar extends JMenuBar {
 
         //help
         menuItemAbout.setMnemonic('A');
-        menuItemHelp.setMnemonic('H');
     }
 
     private void setMenuItemAccelerators()
@@ -190,7 +185,6 @@ public class MenuBar extends JMenuBar {
         menuView.add(this, menuItemStatusBar);
 
         //help
-        menuItemHelp.setAccelerator(KeyStroke.getKeyStroke(72, 2));
     }
 
     private void addActionListeners()
@@ -209,9 +203,9 @@ public class MenuBar extends JMenuBar {
 
         //view
         menuItemStatusBar.addActionListener(new ToggleStatusBar());
+
         //help
         menuItemAbout.addActionListener(new MenuBar.ShowAboutFrame());
-        menuItemHelp.addActionListener(new MenuBar.LaunchHelpMenu());
     }
 
     private void buildMenuBar()
@@ -246,7 +240,6 @@ public class MenuBar extends JMenuBar {
         menuItemStatusBar.setFont(new Font("MS Sans Serif", 0, 12));
 
         menuHelp.setFont(new Font("Verdana", 0, 12));
-        menuItemHelp.setFont(new Font("MS Sans Serif", 0, 12));
         menuItemAbout.setFont(new Font("MS Sans Serif", 0, 12));
 
         menuItemNew.setBackground(Color.white);
@@ -261,7 +254,6 @@ public class MenuBar extends JMenuBar {
 
         menuItemFont.setBackground(Color.white);
 
-        menuItemHelp.setBackground(Color.white);
         menuItemAbout.setBackground(Color.white);
 
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -280,27 +272,6 @@ public class MenuBar extends JMenuBar {
             {
                 AboutDialog aboutDialog = new AboutDialog("J-Pad", "images/aboutScreen.gif");
                 aboutDialog.drawConsole();
-            }
-        }
-    }
-
-    private class LaunchHelpMenu implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemHelp)
-            {
-                if (Desktop.isDesktopSupported())
-                    try
-                    {
-                        Desktop.getDesktop().browse(new URI("http://www.danieldutton.org.uk/userGuide1.html"));
-                    } catch (IOException ex)
-                    {
-                    } catch (URISyntaxException ex)
-                    {
-                    }
-                else
-                    JOptionPane.showMessageDialog(null, "Default system browser not found.  Please manually navigate to ");
             }
         }
     }
