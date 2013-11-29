@@ -4,34 +4,33 @@ import javax.swing.*;
 import java.awt.*;
 
 public class StatusBar {
-    private JTextArea statusBar;
+    private static JTextArea statusBar;
     private String statusBarText;
     private int statusBarHeight;
     private int statusBarWidth;
     private static boolean VisibilityStatus = true;
     private Font statusFont;
     private int statusFontSize;
-    private Color col = new Color(1, 4, 5, 8);
 
-    public StatusBar() {
+    private StatusBar() {
         this.statusBar = new JTextArea(this.statusBarHeight, this.statusBarWidth);
     }
 
-    public StatusBar(String defaultText) {
-        this();
-        this.statusBarText = defaultText;
-    }
-
-    public JTextArea getStatusBar() {
-        this.statusBar.setEditable(false);
-        this.statusBar.setBackground(this.col);
-        this.statusBar.setText(this.statusBarText);
-
-        return this.statusBar;
+    public static JTextArea getStatusBar() {
+        if (statusBar == null) {
+            statusBar = new JTextArea();
+            statusBar.setEditable(false);
+            statusBar.setBackground(new Color(1, 4, 5, 8));
+            statusBar.setText("status bar");
+        }
+        return statusBar;
     }
 
     public void hideStatusBar() {
-        this.statusBar.setVisible(false);
+        statusBar.setVisible(false);
     }
 
+    public void showStatusBar(){
+        statusBar.setVisible(true);
+    }
 }

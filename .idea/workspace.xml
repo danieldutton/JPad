@@ -71,55 +71,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SystemTray.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTray.java">
+      <file leaf-file-name="TextArea.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+            <state line="16" column="4" selection-start="309" selection-end="473" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SystemTrayMenu.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java">
+      <file leaf-file-name="ToolBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/components/ToolBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="32" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0">
+            <state line="8" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppStart.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppStart.java">
+      <file leaf-file-name="StatusBar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/components/StatusBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FontDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/consoles/FontDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="18" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomConsole.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/consoles/CustomConsole.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileReader.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/input/readers/FileReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
+            <state line="16" column="5" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,35 +101,19 @@
       <file leaf-file-name="MenuBar.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="4" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.85103786">
+            <state line="402" column="68" selection-start="12253" selection-end="12253" vertical-scroll-proportion="0.5750916">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextArea.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
+      <file leaf-file-name="AppStart.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppStart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="52" selection-start="1034" selection-end="1318" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintFileAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/PrintFileAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="73" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteTextAction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="33" column="36" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,7 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/gui/components/StatusBar.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/FontDialog.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/AbstractConsole.java" />
         <option value="$PROJECT_DIR$/src/actions/PrintFileAction.java" />
@@ -186,10 +142,11 @@
         <option value="$PROJECT_DIR$/src/actions/PasteTextAction.java" />
         <option value="$PROJECT_DIR$/src/actions/SaveFileAction.java" />
         <option value="$PROJECT_DIR$/src/actions/DeleteTextAction.java" />
-        <option value="$PROJECT_DIR$/src/gui/components/ToolBar.java" />
-        <option value="$PROJECT_DIR$/src/AppStart.java" />
         <option value="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/CustomConsole.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/ToolBar.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/StatusBar.java" />
+        <option value="$PROJECT_DIR$/src/AppStart.java" />
         <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
       </list>
     </option>
@@ -512,16 +469,6 @@
         <state line="7" column="4" selection-start="136" selection-end="281" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/StatusBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="384" selection-end="384" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/ToolBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="8" selection-start="2560" selection-end="2560" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/consoles/AboutDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="66" selection-start="1192" selection-end="1192" vertical-scroll-proportion="0.0" />
@@ -535,11 +482,6 @@
     <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="50" column="32" selection-start="1226" selection-end="1226" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/consoles/FontDialog.java">
@@ -557,24 +499,53 @@
         <state line="9" column="16" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="52" selection-start="1034" selection-end="1318" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/PrintFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="73" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0" />
+        <state line="9" column="73" selection-start="311" selection-end="311" vertical-scroll-proportion="0.27079645">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
+        <state line="1" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.030088495">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="36" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="4" selection-start="309" selection-end="473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/ToolBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/StatusBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="4" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.85103786">
+        <state line="402" column="68" selection-start="12253" selection-end="12253" vertical-scroll-proportion="0.5750916">
           <folding />
         </state>
       </provider>

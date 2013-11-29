@@ -206,8 +206,9 @@ public class MenuBar extends JMenuBar {
         //format
         menuItemFont.addActionListener(new MenuBar.SetFont());
         menuItemWordWrap.addActionListener(new MenuBar.ToggleWordWrap());
-        //view
 
+        //view
+        menuItemStatusBar.addActionListener(new ToggleStatusBar());
         //help
         menuItemAbout.addActionListener(new MenuBar.ShowAboutFrame());
         menuItemHelp.addActionListener(new MenuBar.LaunchHelpMenu());
@@ -395,6 +396,24 @@ public class MenuBar extends JMenuBar {
                 isWrapped = true;
             }
 
+        }
+    }
+
+    private class ToggleStatusBar implements ActionListener{
+
+        private boolean isVisible = true;
+
+        public void actionPerformed(ActionEvent e)
+        {
+            if(isVisible)
+            {
+                StatusBar.getStatusBar().setVisible(false);
+                isVisible = false;
+            }
+            else{
+                StatusBar.getStatusBar().setVisible(true);
+                isVisible = true;
+            }
         }
     }
 }

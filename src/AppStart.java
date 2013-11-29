@@ -17,7 +17,7 @@ public class AppStart {
     ToolBar toolBar = new ToolBar();
     JScrollPane scrollPane = new JScrollPane();
     JTabbedPane tabbedPane = new JTabbedPane();
-    StatusBar statusBar = new StatusBar("");
+    JTextArea statusBar = StatusBar.getStatusBar();
 
     mainPanel.setLayout(new BorderLayout());
     headerPanel.setLayout(new BorderLayout());
@@ -31,7 +31,7 @@ public class AppStart {
 
     tabbedPane.add(TextArea.getDefaultGuiTextArea());
     mainPanel.add("Center", tabbedPane);
-    mainPanel.add("South", statusBar.getStatusBar());
+    mainPanel.add("South", statusBar);
 
     mainGui.drawConsole();
 
