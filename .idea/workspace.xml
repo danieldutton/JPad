@@ -74,7 +74,7 @@
       <file leaf-file-name="TextArea.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="4" selection-start="309" selection-end="473" vertical-scroll-proportion="0.0">
+            <state line="22" column="29" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuBar.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MenuBar.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="16" selection-start="4272" selection-end="4275" vertical-scroll-proportion="-95.88">
+            <state line="198" column="65" selection-start="5750" selection-end="5750" vertical-scroll-proportion="0.7888889">
               <folding />
             </state>
           </provider>
@@ -116,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteTextAction.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DeleteTextAction.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="43" selection-start="377" selection-end="377" vertical-scroll-proportion="0.42123893">
+            <state line="14" column="43" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -193,8 +193,8 @@
         <option value="$PROJECT_DIR$/src/gui/components/ToolBar.java" />
         <option value="$PROJECT_DIR$/src/gui/components/StatusBar.java" />
         <option value="$PROJECT_DIR$/src/AppStart.java" />
-        <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
         <option value="$PROJECT_DIR$/src/actions/DeleteTextAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
       </list>
     </option>
   </component>
@@ -447,9 +447,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32032147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32032147" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -542,13 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="4" selection-start="309" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/ToolBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
@@ -559,13 +552,6 @@
     <entry file="file://$PROJECT_DIR$/src/gui/components/StatusBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="5" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="16" selection-start="4272" selection-end="4275" vertical-scroll-proportion="-95.88">
           <folding />
         </state>
       </provider>
@@ -598,10 +584,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/DeleteTextAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="43" selection-start="377" selection-end="377" vertical-scroll-proportion="0.42123893">
+        <state line="14" column="43" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="29" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="65" selection-start="5750" selection-end="5750" vertical-scroll-proportion="0.7888889">
+          <folding />
         </state>
       </provider>
     </entry>

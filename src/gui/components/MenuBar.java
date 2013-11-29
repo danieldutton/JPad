@@ -196,6 +196,7 @@ public class MenuBar extends JMenuBar {
 
         //edit
         menuItemCut.addActionListener(new MenuBar.CutText());
+        menuItemSelectAll.addActionListener(new SelectAllText());
 
         //format
         menuItemFont.addActionListener(new MenuBar.SetFont());
@@ -296,6 +297,7 @@ public class MenuBar extends JMenuBar {
             if (c.getSource() == MenuBar.this.menuItemSelectAll)
             {
                 textArea = TextArea.getDefaultGuiTextArea();
+                textArea.selectAll();
             }
         }
     }
