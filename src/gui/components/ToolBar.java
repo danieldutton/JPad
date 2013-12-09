@@ -27,6 +27,7 @@ public class ToolBar {
         initButtons();
         setButtonBorders();
         setButtonToolTips();
+        styleToolBar();
         removeTextValues();
         buildToolBar();
     }
@@ -53,11 +54,11 @@ public class ToolBar {
     }
 
     private void setButtonBorders(){
-        btnSave.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        btnPrint.setBorder(BorderFactory.createEmptyBorder(0, 2, 0, 10));
-        btnCut.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        btnCopy.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
-        btnPaste.setBorder(BorderFactory.createEmptyBorder(0, 0, 2, 10));
+        btnSave.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
+        btnPrint.setBorder(BorderFactory.createEmptyBorder(2, 2, 0, 10));
+        btnCut.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
+        btnCopy.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
+        btnPaste.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
         toolBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
     }
 
@@ -67,6 +68,10 @@ public class ToolBar {
         btnCut.setToolTipText("Cut");
         btnCopy.setToolTipText("Copy");
         btnPaste.setToolTipText("Paste");
+    }
+
+    private void styleToolBar(){
+        toolBar.setBackground(new Color(238, 238, 238));
     }
 
     private void removeTextValues(){
