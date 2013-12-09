@@ -242,20 +242,6 @@ public class MenuBar extends JMenuBar {
         menuHelp.setFont(new Font("Verdana", 0, 12));
         menuItemAbout.setFont(new Font("MS Sans Serif", 0, 12));
 
-        menuItemNew.setBackground(Color.white);
-        menuItemOpen.setBackground(Color.white);
-        menuItemSave.setBackground(Color.white);
-        menuItemExit.setBackground(Color.white);
-
-        menuItemCut.setBackground(Color.white);
-        menuItemCopy.setBackground(Color.white);
-        menuItemPaste.setBackground(Color.white);
-        menuItemSelectAll.setBackground(Color.white);
-
-        menuItemFont.setBackground(Color.white);
-
-        menuItemAbout.setBackground(Color.white);
-
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
     }
 
