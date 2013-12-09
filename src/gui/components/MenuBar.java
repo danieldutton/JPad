@@ -182,7 +182,7 @@ public class MenuBar extends JMenuBar {
         menuItemFont.setAccelerator(KeyStroke.getKeyStroke(70, 2));
 
         //view
-        menuView.add(this, menuItemStatusBar);
+
 
         //help
     }
