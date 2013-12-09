@@ -180,11 +180,6 @@ public class MenuBar extends JMenuBar {
 
         //format
         menuItemFont.setAccelerator(KeyStroke.getKeyStroke(70, 2));
-
-        //view
-
-
-        //help
     }
 
     private void addActionListeners()
@@ -219,30 +214,47 @@ public class MenuBar extends JMenuBar {
 
     private void styleMenuBar()
     {
+        final String Font = "Ms Sans Serif";
+        final int FontStyle = 0;
+        final int FontSize = 12;
+
+
         menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
-        menuFile.setFont(new Font("Verdana", 0, 12));
-        menuItemNew.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemOpen.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemSave.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemExit.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemNew.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemOpen.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemSave.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemSaveAs.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemExit.setFont(new Font(Font, FontStyle, FontSize));
 
-        menuEdit.setFont(new Font("Verdana", 0, 12));
-        menuItemCut.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemCopy.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemPaste.setFont(new Font("MS Sans Serif", 0, 12));
-        menuItemSelectAll.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemCut.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemCopy.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemPaste.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemDelete.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemSelectAll.setFont(new Font(Font, FontStyle, FontSize));
 
-        menuFormat.setFont(new Font("Verdana", 0, 12));
-        menuItemFont.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemFont.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemWordWrap.setFont(new Font(Font, FontStyle, FontSize));
 
-        menuView.setFont(new Font("Verdana", 0, 12));
-        menuItemStatusBar.setFont(new Font("MS Sans Serif", 0, 12));
-
-        menuHelp.setFont(new Font("Verdana", 0, 12));
-        menuItemAbout.setFont(new Font("MS Sans Serif", 0, 12));
+        menuItemStatusBar.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemAbout.setFont(new Font(Font, FontStyle, FontSize));
 
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        styleMenuText();
+
+    }
+
+    private void styleMenuText(){
+
+        final String Font = "Verdana";
+        final int FontStyle = 0;
+        final int FontSize = 12;
+
+        menuFile.setFont(new Font(Font, FontStyle, FontSize));
+        menuEdit.setFont(new Font(Font, FontStyle, FontSize));
+        menuFormat.setFont(new Font(Font, FontStyle, FontSize));
+        menuView.setFont(new Font(Font, FontStyle, FontSize));
+        menuHelp.setFont(new Font(Font, FontStyle, FontSize));
     }
 
     public JMenuBar getGuiMenuBar()
@@ -297,8 +309,6 @@ public class MenuBar extends JMenuBar {
             }
         }
     }
-
-
 
     protected class OpenNewFile implements ActionListener
     {

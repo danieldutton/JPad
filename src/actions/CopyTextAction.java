@@ -9,6 +9,7 @@ public class CopyTextAction extends ApplicationAction {
 
     public CopyTextAction() {
         super("Copy", copyEditIcon);
+
     }
 
     public void actionPerformed(ActionEvent e) {
