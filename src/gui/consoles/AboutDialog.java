@@ -30,6 +30,7 @@ public class AboutDialog {
         this.dialog.setVisible(true);
     }
 
+
     private void centreConsole() {
         Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
         this.dialog.setLocation((d1.width - this.dialog.getSize().width) / 2, (d1.height - this.dialog.getSize().height) / 2);

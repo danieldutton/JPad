@@ -17,22 +17,22 @@ public class AppStart {
     ToolBar toolBar = new ToolBar();
     JScrollPane scrollPane = new JScrollPane();
     JTabbedPane tabbedPane = new JTabbedPane();
-    JTextArea statusBar = StatusBar.getStatusBar();
+    JPanel statusBar = StatusBar.getStatusBar();
 
     mainPanel.setLayout(new BorderLayout());
     headerPanel.setLayout(new BorderLayout());
 
     CustomConsole mainGui = new CustomConsole("J-Pad", 850, 700);
 
-    mainGui.add(mainPanel);
-    headerPanel.add("North", menuBar.getGuiMenuBar());
-    headerPanel.add("Center", toolBar.GetGuiToolBar());
-    mainPanel.add("North", headerPanel);
+
+    headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
+    headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
+    mainPanel.add(BorderLayout.NORTH, headerPanel);
 
     tabbedPane.add(TextArea.getDefaultGuiTextArea());
-    mainPanel.add("Center", tabbedPane);
-    mainPanel.add("South", statusBar);
-
+    mainPanel.add(BorderLayout.CENTER, tabbedPane);
+    mainPanel.add(BorderLayout.SOUTH, statusBar);
+    mainGui.add(mainPanel);
     mainGui.drawConsole();
 
     mainGui.customiseFrameIcon("images/frameLogo.gif");
