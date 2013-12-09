@@ -27,6 +27,7 @@ public class ToolBar {
         initButtons();
         setButtonBorders();
         setButtonToolTips();
+        removeButtonFocus();
         styleToolBar();
         removeTextValues();
         buildToolBar();
@@ -68,6 +69,20 @@ public class ToolBar {
         btnCut.setToolTipText("Cut");
         btnCopy.setToolTipText("Copy");
         btnPaste.setToolTipText("Paste");
+    }
+
+    private void removeButtonFocus(){
+        btnSave.setFocusPainted(false);
+        btnPrint.setFocusPainted(false);
+        btnCut.setFocusPainted(false);
+        btnCopy.setFocusPainted(false);
+        btnPaste.setFocusPainted(false);
+
+        btnSave.setContentAreaFilled(false);
+        btnPrint.setContentAreaFilled(false);
+        btnCut.setContentAreaFilled(false);
+        btnCopy.setContentAreaFilled(false);
+        btnPaste.setContentAreaFilled(false);
     }
 
     private void styleToolBar(){
