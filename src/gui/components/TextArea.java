@@ -21,6 +21,7 @@ public class TextArea {
     public static JTextArea getDefaultGuiTextArea() {
         if (textArea == null) {
               textArea = new JTextArea();
+            textArea.setLineWrap(true);
             //textArea.addCaretListener(new Thing());
         }
         return textArea;
