@@ -1,22 +1,19 @@
 package gui.components;
 
+import actions.*;
 import gui.consoles.AboutDialog;
 import gui.consoles.FontDialog;
-import actions.*;
 import input.readers.FileReader;
 import javax.swing.*;
-import javax.swing.text.DefaultEditorKit;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 
 public class MenuBar extends JMenuBar {
 
     //actions
     private SaveFileAction actionSave;
+    private SaveAsFileAction actionSaveAs;
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
@@ -75,6 +72,7 @@ public class MenuBar extends JMenuBar {
     private void initFileMenuActions()
     {
         actionSave = new SaveFileAction();
+        actionSaveAs = new SaveAsFileAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
         actionPaste = new PasteTextAction();
@@ -87,7 +85,7 @@ public class MenuBar extends JMenuBar {
         menuItemNew = new JMenuItem("New");
         menuItemOpen = new JMenuItem("Open");
         menuItemSave = new JMenuItem(actionSave);
-        menuItemSaveAs = new JMenuItem(actionSave);
+        menuItemSaveAs = new JMenuItem(actionSaveAs);
         menuItemExit = new JMenuItem("Exit");
 
         //edit
@@ -218,7 +216,6 @@ public class MenuBar extends JMenuBar {
         final int FontStyle = 0;
         final int FontSize = 12;
 
-
         menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
         menuItemNew.setFont(new Font(Font, FontStyle, FontSize));
@@ -337,7 +334,7 @@ public class MenuBar extends JMenuBar {
 
     private class ToggleWordWrap implements ActionListener
     {
-        private boolean isWrapped = false;
+        private boolean isWrapped = true;
 
         public void actionPerformed(ActionEvent e)
         {

@@ -23,6 +23,7 @@ public class FontDialog extends CustomConsole {
 
         InitConsole();
         AddActionListeners();
+
     }
 
     private void InitConsole() {
