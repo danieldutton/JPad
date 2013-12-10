@@ -22,7 +22,7 @@ public class TextArea {
         if (textArea == null) {
               textArea = new JTextArea();
             textArea.setLineWrap(true);
-            //textArea.addCaretListener(new Thing());
+            textArea.addCaretListener(new TextTypeListener());
         }
         return textArea;
     }
@@ -54,7 +54,7 @@ public class TextArea {
         }
     }
 
-    public static class Thing implements CaretListener{
+    public static class TextTypeListener implements CaretListener{
 
         public void caretUpdate(CaretEvent e) {
             int linenum = 1;

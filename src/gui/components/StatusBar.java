@@ -17,9 +17,11 @@ public class StatusBar {
         if (statusBar == null) {
             statusBar = new JPanel();
             statusBar.setBorder(new BevelBorder(BevelBorder.LOWERED));
-            statusBar.setBackground(new Color(1, 4, 5, 8));
+            statusBar.setOpaque(true);
 
             label.setHorizontalAlignment(SwingConstants.LEFT);
+            label.setOpaque(true);
+
             statusBar.add(label);
    }
         return statusBar;
@@ -27,6 +29,5 @@ public class StatusBar {
 
     public static void updateStatus(int a, int b){
         label.setText("Line: " + a + " Column: " + b);
-        label.repaint();
     }
 }
