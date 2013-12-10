@@ -1,33 +1,45 @@
 package gui.components;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import java.awt.*;
 
 public class StatusBar {
 
     private static JPanel statusBar;
 
-    private static JLabel label = new JLabel();
+    private static JLabel lblRowColCount = new JLabel();
 
-    private StatusBar() {
+    private StatusBar()
+    {
+        lblRowColCount = new JLabel();
     }
 
-    public static JPanel getStatusBar() {
+    public static JPanel getStatusBar()
+    {
         if (statusBar == null) {
             statusBar = new JPanel();
-            statusBar.setBorder(new BevelBorder(BevelBorder.LOWERED));
-            statusBar.setOpaque(true);
 
-            label.setHorizontalAlignment(SwingConstants.LEFT);
-            label.setOpaque(true);
-
-            statusBar.add(label);
-   }
+            initStatusBar();
+            initRowColCountLabel();
+        }
         return statusBar;
     }
 
-    public static void updateStatus(int a, int b){
-        label.setText("Line: " + a + " Column: " + b);
+     private static void initStatusBar(){
+        statusBar.setOpaque(true);
+        statusBar.add(lblRowColCount);
+     }
+
+    private static void initRowColCountLabel()
+    {
+        lblRowColCount.setHorizontalAlignment(SwingConstants.LEFT);
+        lblRowColCount.setOpaque(true);
+        lblRowColCount.setFont(new Font("", 0, 10));
+        lblRowColCount.setText("Line: 0" + " Column: 0");
+    }
+
+    public static void updateStatus(int a, int b)
+    {
+        lblRowColCount.setText("Line: " + a + " Column: " + b);
     }
 }

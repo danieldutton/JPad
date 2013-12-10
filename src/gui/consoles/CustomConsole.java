@@ -16,6 +16,5 @@ public class CustomConsole extends AbstractConsole {
         initConsoleBasics();
         setDefaultCloseOperation(3);
         setVisible(true);
-
     }
 }
