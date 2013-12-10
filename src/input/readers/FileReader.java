@@ -24,12 +24,10 @@ public class FileReader extends CustomConsole
     consoleCentre();
 
     int result = this.fileChooser.showOpenDialog(null);
-      FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files", ".txt", ".gif", ".jpeg", ".dll");
 
     this.fileChooser.setDialogTitle("J-Pad - Open");
     this.file = null;
 
-    int result1 = 0;
     this.fileChooser.addChoosableFileFilter(new TextFileFilter());
 
     if (result == 0)

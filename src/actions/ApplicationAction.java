@@ -4,15 +4,17 @@ import gui.components.TextArea;
 import javax.swing.*;
 
 
-public abstract class ApplicationAction extends AbstractAction {
-
+public abstract class ApplicationAction extends AbstractAction
+{
     private JTextArea textArea = TextArea.getDefaultGuiTextArea();
 
-    public ApplicationAction(String name, ImageIcon icon) {
+    public ApplicationAction(String name, ImageIcon icon)
+    {
         super(name, icon) ;
     }
 
-    protected JTextArea getTextArea(){
+    protected JTextArea getTextArea()
+    {
         return textArea;
     }
 }

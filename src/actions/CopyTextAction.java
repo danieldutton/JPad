@@ -3,16 +3,17 @@ package actions;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-public class CopyTextAction extends ApplicationAction {
-
+public class CopyTextAction extends ApplicationAction
+{
     private static final ImageIcon copyEditIcon = new ImageIcon("images/copyFile.png");
 
-    public CopyTextAction() {
+    public CopyTextAction()
+    {
         super("Copy", copyEditIcon);
-
     }
 
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+    {
         getTextArea().copy();
     }
 }

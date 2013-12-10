@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class SystemTrayMenu {
-
+public class SystemTrayMenu
+{
     private MenuItem closeItem;
 
     private MenuItem homePageItem;
@@ -19,24 +19,27 @@ public class SystemTrayMenu {
     private String helpURI;
 
 
-    public SystemTrayMenu() {
+    public SystemTrayMenu()
+    {
         this.closeItem = new MenuItem("Close");
         this.homePageItem = new MenuItem("Visit JPad.com");
         this.popup = new PopupMenu();
     }
 
-    public SystemTrayMenu(String helpURI) {
+    public SystemTrayMenu(String helpURI)
+    {
         this();
         this.helpURI = helpURI;
     }
 
-    public PopupMenu getSysTrayMenu() {
+    public PopupMenu getSysTrayMenu()
+    {
         this.homePageItem.setEnabled(false);
         this.popup.add(this.closeItem);
         this.popup.add(this.homePageItem);
 
         this.homePageItem.addActionListener(new SystemTrayMenu.VisitHomePage());
-        this.closeItem.addActionListener(new SystemTrayMenu.ClosePad());
+        this.closeItem.addActionListener(new ExitApplicationListener());
 
         if (Desktop.isDesktopSupported()) {
             enableOptions();
@@ -44,20 +47,27 @@ public class SystemTrayMenu {
         return this.popup;
     }
 
-    private void enableOptions() {
+    private void enableOptions()
+    {
         this.homePageItem.setEnabled(true);
     }
 
-    private class VisitHomePage implements ActionListener {
-
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == SystemTrayMenu.this.homePageItem) {
-                if (Desktop.isDesktopSupported()) {
-                    try {
+    private class VisitHomePage implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == SystemTrayMenu.this.homePageItem)
+            {
+                if (Desktop.isDesktopSupported())
+                {
+                    try
+                    {
                         Desktop.getDesktop().browse(new URI(SystemTrayMenu.this.helpURI));
-                    } catch (IOException ex) {
+                    } catch (IOException ex)
+                    {
                         ex.printStackTrace();
-                    } catch (URISyntaxException ex) {
+                    } catch (URISyntaxException ex)
+                    {
                         ex.printStackTrace();
                     }
                 } else
@@ -67,12 +77,12 @@ public class SystemTrayMenu {
         }
     }
 
-    public class ClosePad implements ActionListener {
-
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == SystemTrayMenu.this.closeItem) {
+    public class ExitApplicationListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == SystemTrayMenu.this.closeItem)
                 System.exit(0);
-            }
         }
     }
 }

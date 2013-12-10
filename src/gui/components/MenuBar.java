@@ -9,7 +9,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MenuBar extends JMenuBar {
+public class MenuBar extends JMenuBar
+{
 
     //actions
     private SaveFileAction actionSave;

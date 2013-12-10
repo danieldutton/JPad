@@ -4,8 +4,8 @@ import actions.*;
 import javax.swing.*;
 import java.awt.*;
 
-public class ToolBar {
-
+public class ToolBar
+{
     private JToolBar toolBar;
     private NewFileAction newFileAction;
     private SaveFileAction saveAction;
@@ -20,7 +20,8 @@ public class ToolBar {
     private JButton btnCopy;
     private JButton btnPaste;
 
-    public ToolBar() {
+    public ToolBar()
+    {
         this.toolBar = new JToolBar();
 
         initActions();
@@ -33,11 +34,13 @@ public class ToolBar {
         buildToolBar();
     }
 
-    public JToolBar GetGuiToolBar() {
+    public JToolBar GetGuiToolBar()
+    {
         return this.toolBar;
     }
 
-    private void initActions(){
+    private void initActions()
+    {
         newFileAction = new NewFileAction();
         saveAction = new SaveFileAction();
         printAction = new PrintFileAction();
@@ -46,7 +49,8 @@ public class ToolBar {
         pasteAction = new PasteTextAction();
     }
 
-    private void initButtons(){
+    private void initButtons()
+    {
         btnSave = new JButton(this.saveAction);
         btnPrint = new JButton(this.printAction);
         btnCut = new JButton(this.cutAction);
@@ -54,7 +58,8 @@ public class ToolBar {
         btnPaste = new JButton(this.pasteAction);
     }
 
-    private void setButtonBorders(){
+    private void setButtonBorders()
+    {
         btnSave.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
         btnPrint.setBorder(BorderFactory.createEmptyBorder(2, 2, 0, 10));
         btnCut.setBorder(BorderFactory.createEmptyBorder(2, 0, 2, 10));
@@ -63,7 +68,8 @@ public class ToolBar {
         toolBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
     }
 
-    private void setButtonToolTips(){
+    private void setButtonToolTips()
+    {
         btnSave.setToolTipText("Save");
         btnPrint.setToolTipText("Print");
         btnCut.setToolTipText("Cut");
@@ -71,7 +77,8 @@ public class ToolBar {
         btnPaste.setToolTipText("Paste");
     }
 
-    private void removeButtonFocus(){
+    private void removeButtonFocus()
+    {
         btnSave.setFocusPainted(false);
         btnPrint.setFocusPainted(false);
         btnCut.setFocusPainted(false);
@@ -85,11 +92,13 @@ public class ToolBar {
         btnPaste.setContentAreaFilled(false);
     }
 
-    private void styleToolBar(){
+    private void styleToolBar()
+    {
         toolBar.setBackground(new Color(238, 238, 238));
     }
 
-    private void removeTextValues(){
+    private void removeTextValues()
+    {
         btnSave.setText(null);
         btnPrint.setText(null);
         btnCut.setText(null);
@@ -97,7 +106,8 @@ public class ToolBar {
         btnPaste.setText(null);
     }
 
-    private void buildToolBar(){
+    private void buildToolBar()
+    {
         toolBar.add(this.btnSave);
         toolBar.add(this.btnPrint);
         toolBar.add(this.btnCut);

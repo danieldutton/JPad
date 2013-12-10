@@ -7,8 +7,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-public class FontDialog extends CustomConsole {
-
+public class FontDialog extends CustomConsole
+{
     private JPanel panelMain;
     private JPanel panelSample;
     private JComboBox comboBoxFont;
@@ -18,15 +18,16 @@ public class FontDialog extends CustomConsole {
     private JTextArea textArea = gui.components.TextArea.getDefaultGuiTextArea();
 
 
-    public FontDialog(String title) {
+    public FontDialog(String title)
+    {
         super(title);
 
         InitConsole();
         AddActionListeners();
-
     }
 
-    private void InitConsole() {
+    private void InitConsole()
+    {
         panelMain = new JPanel();
         panelSample = new JPanel();
         comboBoxFont = new JComboBox();
@@ -37,13 +38,15 @@ public class FontDialog extends CustomConsole {
         add(panelMain);
     }
 
-    private void AddActionListeners(){
+    private void AddActionListeners()
+    {
         comboBoxFont.addItemListener(new ItemChangeListener());
         btnCancel.addActionListener(new FontDialog.CancelFontChange());
         btnOk.addActionListener(new FontDialog.ConfirmFontChange());
     }
 
-    private void BuildConsole(){
+    private void BuildConsole()
+    {
         panelSample.add(lblFont);
         panelMain.add(BorderLayout.SOUTH, panelSample);
         panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
@@ -58,10 +61,13 @@ public class FontDialog extends CustomConsole {
         panelMain.add(lblFont);
     }
 
-    public void drawConsole() {
+    public void drawConsole()
+    {
 
-        Runnable runner = new Runnable() {
-            public void run() {
+        Runnable runner = new Runnable()
+        {
+            public void run()
+            {
                 GraphicsEnvironment e = GraphicsEnvironment.getLocalGraphicsEnvironment();
                 Font[] fonts = e.getAllFonts();
                 for (Font f : fonts)
@@ -71,28 +77,37 @@ public class FontDialog extends CustomConsole {
         EventQueue.invokeLater(runner);
     }
 
-    public class ItemChangeListener implements ItemListener {
+    public class ItemChangeListener implements ItemListener
+    {
 
-    public void itemStateChanged(ItemEvent event) {
-       if (event.getStateChange() == ItemEvent.SELECTED) {
+    public void itemStateChanged(ItemEvent event)
+    {
+       if (event.getStateChange() == ItemEvent.SELECTED)
+       {
           String chosenFont = (String)event.getItem();
           lblFont.setFont(new Font(chosenFont, Font.BOLD, 40));
        }
     }
 }
 
-    public class ConfirmFontChange implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == FontDialog.this.btnOk) {
+    public class ConfirmFontChange implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == FontDialog.this.btnOk)
+            {
                 textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 30));
                 FontDialog.this.dispose();
             }
         }
     }
 
-    public class CancelFontChange implements ActionListener {
-        public void actionPerformed(ActionEvent c) {
-            if (c.getSource() == FontDialog.this.btnCancel) {
+    public class CancelFontChange implements ActionListener
+    {
+        public void actionPerformed(ActionEvent c)
+        {
+            if (c.getSource() == FontDialog.this.btnCancel)
+            {
                 FontDialog.this.dispose();
             }
         }

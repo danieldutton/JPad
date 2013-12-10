@@ -4,8 +4,8 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class StatusBar {
-
+public class StatusBar
+{
     private static JPanel statusBar;
 
     private static JLabel lblRowColCount = new JLabel();
@@ -17,7 +17,8 @@ public class StatusBar {
 
     public static JPanel getStatusBar()
     {
-        if (statusBar == null) {
+        if (statusBar == null)
+        {
             statusBar = new JPanel();
 
             initStatusBar();
@@ -26,7 +27,8 @@ public class StatusBar {
         return statusBar;
     }
 
-     private static void initStatusBar(){
+     private static void initStatusBar()
+     {
         statusBar.setOpaque(true);
         statusBar.setLayout(new GridLayout());
         statusBar.add(lblRowColCount);

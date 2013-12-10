@@ -9,22 +9,27 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SaveFileAction extends ApplicationAction {
+public class SaveFileAction extends ApplicationAction
+{
     private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
-    public SaveFileAction() {
+    public SaveFileAction()
+    {
         super("Save", saveEditIcon);
     }
 
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e)
+    {
         JTextArea textArea = getTextArea();
 
         JFileChooser saveChooser = new JFileChooser();
         int result = saveChooser.showSaveDialog(null);
         saveChooser.setDialogTitle("J-Pad Save");
 
-        if (result == 0) {
-            try {
+        if (result == 0)
+        {
+            try
+            {
                 File file = saveChooser.getSelectedFile();
 
                 BufferedWriter bw = new BufferedWriter(new FileWriter(file));
@@ -33,16 +38,22 @@ public class SaveFileAction extends ApplicationAction {
 
                 bw.close();
                 closeStream(bw);
-            } catch (IOException d) {
+            }
+            catch (IOException d)
+            {
                 d.printStackTrace();
             }
         }
     }
 
-    public void closeStream(BufferedWriter buff) {
-        try {
+    public void closeStream(BufferedWriter buff)
+    {
+        try
+        {
             buff.close();
-        } catch (IOException ex) {
+        }
+        catch (IOException ex)
+        {
             Logger.getLogger(SaveFileAction.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
