@@ -1,23 +1,25 @@
 package gui.components;
 
 import actions.*;
-import gui.consoles.AboutDialog;
-import gui.consoles.FontDialog;
-import input.readers.FileReader;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MenuBar extends JMenuBar
 {
     //actions
+    private OpenFileAction actionOpenFile;
     private SaveFileAction actionSave;
     private SaveAsFileAction actionSaveAs;
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
     private DeleteTextAction actionDelete;
+    private WordWrapAction actionWordWrap;
+    private OpenAboutDialogAction actionAboutDialog;
+    private SelectAllTextAction actionSelectAllText;
+    private ChooseFontAction actionChooseFont;
+    private ToggleStatusBarAction actionToggleStatusBar;
+    private ExitApplicationAction actionExitApplication;
 
     private JMenuBar menuBar;
 
@@ -54,7 +56,6 @@ public class MenuBar extends JMenuBar
         addMenuItemsToMenu();
         setMenuItemMnemonics();
         setMenuItemAccelerators();
-        addActionListeners();
         buildMenuBar();
         styleMenuBar();
         menuBar.setVisible(true);
@@ -71,43 +72,46 @@ public class MenuBar extends JMenuBar
 
     private void initFileMenuActions()
     {
+        actionOpenFile = new OpenFileAction();
         actionSave = new SaveFileAction();
         actionSaveAs = new SaveAsFileAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
         actionPaste = new PasteTextAction();
         actionDelete = new DeleteTextAction();
+        actionWordWrap = new WordWrapAction();
+        actionAboutDialog = new OpenAboutDialogAction();
+        actionSelectAllText = new SelectAllTextAction();
+        actionChooseFont = new ChooseFontAction();
+        actionToggleStatusBar = new ToggleStatusBarAction();
+        actionExitApplication = new ExitApplicationAction();
     }
 
     private void initMenuItems()
     {
         //file
         menuItemNew = new JMenuItem("New");
-        menuItemOpen = new JMenuItem("Open");
+        menuItemOpen = new JMenuItem(actionOpenFile);
         menuItemSave = new JMenuItem(actionSave);
         menuItemSaveAs = new JMenuItem(actionSaveAs);
-        menuItemExit = new JMenuItem("Exit");
+        menuItemExit = new JMenuItem(actionExitApplication);
 
         //edit
-        menuItemCut = new JMenuItem(new CutTextAction());
-        menuItemCut.setText("Cut");
-        menuItemCopy = new JMenuItem(new CopyTextAction());
-        menuItemCopy.setText("Copy");
-        menuItemPaste = new JMenuItem(new PasteTextAction());
-        menuItemPaste.setText("Paste");
-        menuItemDelete = new JMenuItem("Delete");
-        menuItemSelectAll = new JMenuItem("Select-All");
-        menuItemSelectAll.setText("Select All");
+        menuItemCut = new JMenuItem(actionCut);
+        menuItemCopy = new JMenuItem(actionCopy);
+        menuItemPaste = new JMenuItem(actionPaste);
+        menuItemDelete = new JMenuItem(actionDelete);
+        menuItemSelectAll = new JMenuItem(actionSelectAllText);
 
         //format
-        menuItemFont = new JMenuItem("Font");
-        menuItemWordWrap = new JMenuItem("Word Wrap");
+        menuItemFont = new JMenuItem(actionChooseFont);
+        menuItemWordWrap = new JMenuItem(actionWordWrap);
 
         //view
-        menuItemStatusBar = new JMenuItem("Status Bar");
+        menuItemStatusBar = new JMenuItem(actionToggleStatusBar);
 
         //help
-        menuItemAbout = new JMenuItem("About");
+        menuItemAbout = new JMenuItem(actionAboutDialog);
     }
 
     private void addMenuItemsToMenu()
@@ -120,12 +124,10 @@ public class MenuBar extends JMenuBar
         menuFile.add(new JSeparator());
         menuFile.add(menuItemExit);
 
-        //edit
-        menuEdit.add(new JSeparator(0));
-        menuEdit.add(actionCut);
-        menuEdit.add(actionCopy);
-        menuEdit.add(actionPaste);
-        menuEdit.add(actionDelete);
+        menuEdit.add(menuItemCut);
+        menuEdit.add(menuItemCopy);
+        menuEdit.add(menuItemPaste);
+        menuEdit.add(menuItemDelete);
         menuEdit.add(new JSeparator(0));
         menuEdit.add(menuItemSelectAll);
 
@@ -178,27 +180,6 @@ public class MenuBar extends JMenuBar
 
         //format
         menuItemFont.setAccelerator(KeyStroke.getKeyStroke(70, 2));
-    }
-
-    private void addActionListeners()
-    {
-        //file
-        menuItemNew.addActionListener(new MenuBar.OpenNewDoc());
-        menuItemOpen.addActionListener(new MenuBar.OpenNewFile());
-        menuItemExit.addActionListener(new MenuBar.ExitPad());
-
-        //edit
-        menuItemSelectAll.addActionListener(new SelectAllText());
-
-        //format
-        menuItemFont.addActionListener(new MenuBar.SetFont());
-        menuItemWordWrap.addActionListener(new MenuBar.ToggleWordWrap());
-
-        //view
-        menuItemStatusBar.addActionListener(new ToggleStatusBar());
-
-        //help
-        menuItemAbout.addActionListener(new MenuBar.ShowAboutFrame());
     }
 
     private void buildMenuBar()
@@ -257,115 +238,5 @@ public class MenuBar extends JMenuBar
     public JMenuBar getGuiMenuBar()
     {
         return this.menuBar;
-    }
-
-    private class ShowAboutFrame implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemAbout)
-            {
-                AboutDialog aboutDialog = new AboutDialog("J-Pad", "images/aboutScreen.gif");
-                aboutDialog.drawConsole();
-            }
-        }
-    }
-
-    private class SetFont implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemFont)
-            {
-                FontDialog fontConsole = new FontDialog("J-Pad");
-                fontConsole.drawConsole();
-            }
-        }
-    }
-
-    private class SelectAllText implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            JTextArea textArea;
-            if (c.getSource() == MenuBar.this.menuItemSelectAll)
-            {
-                textArea = TextArea.getDefaultGuiTextArea();
-                textArea.selectAll();
-            }
-        }
-    }
-
-    private class ExitPad implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemExit)
-            {
-                System.exit(0);
-            }
-        }
-    }
-
-    protected class OpenNewFile implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemOpen)
-            {
-                TextArea.actionPerformed(c);
-            }
-        }
-    }
-
-    private class OpenNewDoc implements ActionListener
-    {
-        public void actionPerformed(ActionEvent c)
-        {
-            if (c.getSource() == MenuBar.this.menuItemNew)
-            {
-                FileReader reader = new FileReader(true);
-                reader.drawConsole();
-            }
-        }
-    }
-
-    private class ToggleWordWrap implements ActionListener
-    {
-        private boolean isWrapped = true;
-
-        public void actionPerformed(ActionEvent e)
-        {
-            if(isWrapped)
-            {
-                TextArea.getDefaultGuiTextArea().setLineWrap(false);
-                TextArea.getDefaultGuiTextArea().setWrapStyleWord(false);
-                isWrapped = false;
-            }
-            else
-            {
-                TextArea.getDefaultGuiTextArea().setLineWrap(true);
-                TextArea.getDefaultGuiTextArea().setWrapStyleWord(true);
-                isWrapped = true;
-            }
-        }
-    }
-
-    private class ToggleStatusBar implements ActionListener{
-
-        private boolean isVisible = true;
-
-        public void actionPerformed(ActionEvent e)
-        {
-            if(isVisible)
-            {
-                StatusBar.getStatusBar().setVisible(false);
-                isVisible = false;
-            }
-            else{
-                StatusBar.getStatusBar().setVisible(true);
-                isVisible = true;
-            }
-        }
     }
 }

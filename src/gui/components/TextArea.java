@@ -36,14 +36,6 @@ public class TextArea
         int option = chooser.showOpenDialog(chooser);
         if (option == 0)
         {
-            File[] sf = chooser.getSelectedFiles();
-            String filelist = "";
-            if (sf.length > 0) filelist = sf[0].getName();
-            for (int i = 1; i < sf.length; i++)
-            {
-                filelist = filelist + ", " + sf[i].getName();
-            }
-
             try
             {
                 File selectedFile = chooser.getSelectedFile();
