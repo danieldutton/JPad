@@ -1,14 +1,12 @@
 package actions;
 
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
 public class NewFileAction extends ApplicationAction
 {
     public NewFileAction()
     {
-        super("Cut", null);
+        super("New File", null);
     }
 
     public void actionPerformed(ActionEvent e)

@@ -7,7 +7,6 @@ import java.awt.*;
 public class ToolBar
 {
     private JToolBar toolBar;
-    private NewFileAction newFileAction;
     private SaveFileAction saveAction;
     private PrintFileAction printAction;
     private CutTextAction cutAction;
@@ -22,7 +21,7 @@ public class ToolBar
 
     public ToolBar()
     {
-        this.toolBar = new JToolBar();
+        toolBar = new JToolBar();
 
         initActions();
         initButtons();
@@ -36,12 +35,11 @@ public class ToolBar
 
     public JToolBar GetGuiToolBar()
     {
-        return this.toolBar;
+        return toolBar;
     }
 
     private void initActions()
     {
-        newFileAction = new NewFileAction();
         saveAction = new SaveFileAction();
         printAction = new PrintFileAction();
         cutAction = new CutTextAction();
@@ -51,11 +49,11 @@ public class ToolBar
 
     private void initButtons()
     {
-        btnSave = new JButton(this.saveAction);
-        btnPrint = new JButton(this.printAction);
-        btnCut = new JButton(this.cutAction);
-        btnCopy = new JButton(this.copyAction);
-        btnPaste = new JButton(this.pasteAction);
+        btnSave = new JButton(saveAction);
+        btnPrint = new JButton(printAction);
+        btnCut = new JButton(cutAction);
+        btnCopy = new JButton(copyAction);
+        btnPaste = new JButton(pasteAction);
     }
 
     private void setButtonBorders()
@@ -108,11 +106,11 @@ public class ToolBar
 
     private void buildToolBar()
     {
-        toolBar.add(this.btnSave);
-        toolBar.add(this.btnPrint);
-        toolBar.add(this.btnCut);
-        toolBar.add(this.btnCopy);
-        toolBar.add(this.btnPaste);
+        toolBar.add(btnSave);
+        toolBar.add(btnPrint);
+        toolBar.add(btnCut);
+        toolBar.add(btnCopy);
+        toolBar.add(btnPaste);
         toolBar.setFloatable(false);
     }
 }

@@ -38,7 +38,7 @@ public class SystemTrayMenu
         this.popup.add(this.closeItem);
         this.popup.add(this.homePageItem);
 
-        this.homePageItem.addActionListener(new SystemTrayMenu.VisitHomePage());
+        this.homePageItem.addActionListener(new WebLinklistener());
         this.closeItem.addActionListener(new ExitApplicationListener());
 
         if (Desktop.isDesktopSupported()) {
@@ -52,7 +52,7 @@ public class SystemTrayMenu
         this.homePageItem.setEnabled(true);
     }
 
-    private class VisitHomePage implements ActionListener
+    private class WebLinklistener implements ActionListener
     {
         public void actionPerformed(ActionEvent c)
         {

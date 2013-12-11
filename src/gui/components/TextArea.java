@@ -66,23 +66,23 @@ public class TextArea
     {
         public void caretUpdate(CaretEvent e)
         {
-            int linenum = 1;
+            int lineNum = 1;
                 int columnnum = 1;
 
                 try
                 {
                     int caretpos = textArea.getCaretPosition();
-                    linenum = textArea.getLineOfOffset(caretpos);
+                    lineNum = textArea.getLineOfOffset(caretpos);
 
-                    columnnum = caretpos - textArea.getLineStartOffset(linenum);
+                    columnnum = caretpos - textArea.getLineStartOffset(lineNum);
 
-                    linenum += 1;
+                    lineNum += 1;
                 }
                 catch(Exception ex)
                 {
+                    StatusBar.updateStatus(0, 0);
                 }
-
-                StatusBar.updateStatus(linenum, columnnum);
+                StatusBar.updateStatus(lineNum, columnnum);
         }
     }
 }

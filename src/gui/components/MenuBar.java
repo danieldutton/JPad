@@ -11,7 +11,6 @@ import java.awt.event.ActionListener;
 
 public class MenuBar extends JMenuBar
 {
-
     //actions
     private SaveFileAction actionSave;
     private SaveAsFileAction actionSaveAs;
@@ -314,8 +313,6 @@ public class MenuBar extends JMenuBar
         {
             if (c.getSource() == MenuBar.this.menuItemOpen)
             {
-                JTextArea textArea1 = null;
-                textArea1 = TextArea.getDefaultGuiTextArea();
                 TextArea.actionPerformed(c);
             }
         }

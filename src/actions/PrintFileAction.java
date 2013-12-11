@@ -23,9 +23,9 @@ public class PrintFileAction extends AbstractAction
         if (printJob.printDialog()) try
         {
             printJob.print();
-        } catch (PrinterException exc)
+        } catch (PrinterException ex)
         {
-            System.out.println(exc);
+            System.out.println(ex);
         }
     }
 }

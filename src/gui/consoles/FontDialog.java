@@ -63,7 +63,6 @@ public class FontDialog extends CustomConsole
 
     public void drawConsole()
     {
-
         Runnable runner = new Runnable()
         {
             public void run()
