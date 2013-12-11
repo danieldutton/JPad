@@ -2,6 +2,7 @@ package actions;
 
 import input.readers.FileReader;
 import input.readers.IFileReader;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
@@ -24,9 +25,9 @@ public class OpenFileAction extends ApplicationAction
         {
             File selectedFile = chooser.getSelectedFile();
 
-            String result = fileReader.readFile(selectedFile.getName());
+            String result = fileReader.readFile(selectedFile.getAbsolutePath());
 
-            getTextArea().setText(result);
+            getTextArea().append(result);
         }
 
     }

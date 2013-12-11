@@ -27,13 +27,13 @@ public class StatusBar
         return statusBar;
     }
 
-     private static void initStatusBar()
-     {
+    private static void initStatusBar()
+    {
         statusBar.setOpaque(true);
         statusBar.setLayout(new GridLayout());
         statusBar.add(lblRowColCount);
         statusBar.setBorder(new EmptyBorder(2, 2, 2, 5));
-     }
+    }
 
     private static void initRowColCountLabel()
     {

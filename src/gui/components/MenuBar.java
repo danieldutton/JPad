@@ -1,6 +1,7 @@
 package gui.components;
 
 import actions.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -222,7 +223,8 @@ public class MenuBar extends JMenuBar
 
     }
 
-    private void styleMenuText(){
+    private void styleMenuText()
+    {
 
         final String Font = "Verdana";
         final int FontStyle = 0;

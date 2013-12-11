@@ -41,7 +41,8 @@ public class SystemTrayMenu
         this.homePageItem.addActionListener(new WebLinklistener());
         this.closeItem.addActionListener(new ExitApplicationListener());
 
-        if (Desktop.isDesktopSupported()) {
+        if (Desktop.isDesktopSupported())
+        {
             enableOptions();
         }
         return this.popup;

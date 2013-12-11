@@ -7,23 +7,23 @@ public class FileReader implements IFileReader
     public String readFile(String filePath)
     {
         String strLine = null;
-
+        StringBuilder sb = null;
         try
             {
                 FileInputStream in = new FileInputStream(filePath);
 
                 BufferedReader br = new BufferedReader(new InputStreamReader(in));
 
-                StringBuilder sb = new StringBuilder();
+                sb = new StringBuilder();
                 while ((strLine = br.readLine()) != null)
                 {
-                    sb.append(strLine);
+                    sb.append(strLine + "\n");
                 }
             } catch (Exception e)
             {
-                e.printStackTrace();
+                //Dialog display here
             }
 
-        return strLine.toString();
+        return sb.toString();
     }
 }

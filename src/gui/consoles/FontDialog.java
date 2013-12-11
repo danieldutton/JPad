@@ -15,7 +15,7 @@ public class FontDialog extends CustomConsole
     private JButton btnOk;
     private JButton btnCancel;
     private JLabel lblFont;
-    private JTextArea textArea = gui.components.TextArea.getDefaultGuiTextArea();
+    private JTextArea textArea = gui.components.TextArea.getTextArea();
 
 
     public FontDialog(String title)
@@ -79,15 +79,15 @@ public class FontDialog extends CustomConsole
     public class ItemChangeListener implements ItemListener
     {
 
-    public void itemStateChanged(ItemEvent event)
-    {
-       if (event.getStateChange() == ItemEvent.SELECTED)
-       {
-          String chosenFont = (String)event.getItem();
-          lblFont.setFont(new Font(chosenFont, Font.BOLD, 40));
-       }
+        public void itemStateChanged(ItemEvent event)
+        {
+            if (event.getStateChange() == ItemEvent.SELECTED)
+            {
+                String chosenFont = (String) event.getItem();
+                lblFont.setFont(new Font(chosenFont, Font.BOLD, 40));
+            }
+        }
     }
-}
 
     public class ConfirmFontChange implements ActionListener
     {

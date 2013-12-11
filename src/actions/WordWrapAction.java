@@ -14,17 +14,16 @@ public class WordWrapAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        if(isWrapped)
-            {
-                TextArea.getDefaultGuiTextArea().setLineWrap(false);
-                TextArea.getDefaultGuiTextArea().setWrapStyleWord(false);
-                isWrapped = false;
-            }
-            else
-            {
-                TextArea.getDefaultGuiTextArea().setLineWrap(true);
-                TextArea.getDefaultGuiTextArea().setWrapStyleWord(true);
-                isWrapped = true;
-            }
+        if (isWrapped)
+        {
+            TextArea.getTextArea().setLineWrap(false);
+            TextArea.getTextArea().setWrapStyleWord(false);
+            isWrapped = false;
+        } else
+        {
+            TextArea.getTextArea().setLineWrap(true);
+            TextArea.getTextArea().setWrapStyleWord(true);
+            isWrapped = true;
+        }
     }
 }

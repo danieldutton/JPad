@@ -13,19 +13,21 @@ public class TextArea
 {
     private static JTextArea textArea = null;
 
-    private TextArea()
-    {
-    }
 
-    public static JTextArea getDefaultGuiTextArea()
+    public static JTextArea getTextArea()
     {
         if (textArea == null)
         {
             textArea = new JTextArea();
-            textArea.setLineWrap(true);
-            textArea.addCaretListener(new TextTypeListener());
+            initTextArea();
         }
         return textArea;
+    }
+
+    private static void initTextArea()
+    {
+        textArea.setLineWrap(true);
+        textArea.addCaretListener(new TextTypeListener());
     }
 
     //ToDo - SRP - move to another class
@@ -49,7 +51,7 @@ public class TextArea
                 }
             } catch (Exception e)
             {
-                e.printStackTrace();
+                //show error dialog
             }
         }
     }
@@ -59,22 +61,21 @@ public class TextArea
         public void caretUpdate(CaretEvent e)
         {
             int lineNum = 1;
-                int columnnum = 1;
+            int columnnum = 1;
 
-                try
-                {
-                    int caretpos = textArea.getCaretPosition();
-                    lineNum = textArea.getLineOfOffset(caretpos);
+            try
+            {
+                int caretpos = textArea.getCaretPosition();
+                lineNum = textArea.getLineOfOffset(caretpos);
 
-                    columnnum = caretpos - textArea.getLineStartOffset(lineNum);
+                columnnum = caretpos - textArea.getLineStartOffset(lineNum);
 
-                    lineNum += 1;
-                }
-                catch(Exception ex)
-                {
-                    StatusBar.updateStatus(0, 0);
-                }
-                StatusBar.updateStatus(lineNum, columnnum);
+                lineNum += 1;
+            } catch (Exception ex)
+            {
+                StatusBar.updateStatus(0, 0);
+            }
+            StatusBar.updateStatus(lineNum, columnnum);
         }
     }
 }

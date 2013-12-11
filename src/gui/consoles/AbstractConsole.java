@@ -3,7 +3,8 @@ package gui.consoles;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class AbstractConsole extends JFrame {
+public abstract class AbstractConsole extends JFrame
+{
 
     private int consoleWidth;
 

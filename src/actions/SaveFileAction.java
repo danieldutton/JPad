@@ -38,8 +38,7 @@ public class SaveFileAction extends ApplicationAction
 
                 bw.close();
                 closeStream(bw);
-            }
-            catch (IOException d)
+            } catch (IOException d)
             {
                 d.printStackTrace();
             }
@@ -51,8 +50,7 @@ public class SaveFileAction extends ApplicationAction
         try
         {
             buff.close();
-        }
-        catch (IOException ex)
+        } catch (IOException ex)
         {
             Logger.getLogger(SaveFileAction.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -1,6 +1,7 @@
 package actions;
 
 import gui.components.StatusBar;
+
 import java.awt.event.ActionEvent;
 
 public class ToggleStatusBarAction extends ApplicationAction
@@ -14,14 +15,14 @@ public class ToggleStatusBarAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        if(isVisible)
-            {
-                StatusBar.getStatusBar().setVisible(false);
-                isVisible = false;
-            }
-            else{
-                StatusBar.getStatusBar().setVisible(true);
-                isVisible = true;
-            }
+        if (isVisible)
+        {
+            StatusBar.getStatusBar().setVisible(false);
+            isVisible = false;
+        } else
+        {
+            StatusBar.getStatusBar().setVisible(true);
+            isVisible = true;
+        }
     }
 }

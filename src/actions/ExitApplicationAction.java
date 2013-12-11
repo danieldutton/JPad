@@ -2,7 +2,7 @@ package actions;
 
 import java.awt.event.ActionEvent;
 
-public class ExitApplicationAction  extends ApplicationAction
+public class ExitApplicationAction extends ApplicationAction
 {
     public ExitApplicationAction()
     {
