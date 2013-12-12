@@ -3,7 +3,6 @@ import gui.consoles.ParentFrame;
 import gui.systemTray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -31,7 +30,6 @@ public class AppStart {
     JTextArea ta = TextArea.getTextArea();
       JScrollPane scrollPane = new JScrollPane(ta);
      tabbedPane.addTab("new.txt", scrollPane);
-    ta.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
     mainPanel.add(BorderLayout.SOUTH, statusBar);

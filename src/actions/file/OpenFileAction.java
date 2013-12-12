@@ -2,7 +2,6 @@ package actions.file;
 
 import actions.ApplicationAction;
 import gui.components.TabbedPane;
-
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
@@ -14,7 +13,7 @@ public class OpenFileAction extends ApplicationAction
 {
     public OpenFileAction()
     {
-        super("Open File", null);
+        super("Open", null);
     }
 
     public void actionPerformed(ActionEvent e)
@@ -34,7 +33,7 @@ public class OpenFileAction extends ApplicationAction
             try
             {
                 reader = new FileReader(selectedFile);
-                getTextArea().read(reader, null);
+                getTextArea().read(reader, "/r/n");
                 reader.close();
             } catch (FileNotFoundException e1)
             {
