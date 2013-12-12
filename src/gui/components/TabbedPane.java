@@ -18,7 +18,6 @@ public class TabbedPane
             tabbedPane = new JTabbedPane();
             initDefaultTab();
         }
-
         return tabbedPane;
     }
 
@@ -29,6 +28,6 @@ public class TabbedPane
 
     public static void setTabText(String text)
     {
-        tabbedPane.setTitleAt(0, text + ".txt");
+        tabbedPane.setTitleAt(0, text);
     }
 }

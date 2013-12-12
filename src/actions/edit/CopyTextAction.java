@@ -6,11 +6,11 @@ import java.awt.event.ActionEvent;
 
 public class CopyTextAction extends ApplicationAction
 {
-    private static final ImageIcon copyEditIcon = new ImageIcon("images/copyFile.png");
+    private static final ImageIcon copyTextIcon = new ImageIcon("images/copyFile.png");
 
     public CopyTextAction()
     {
-        super("Copy", copyEditIcon);
+        super("Copy", copyTextIcon);
     }
 
     public void actionPerformed(ActionEvent e)

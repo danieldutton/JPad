@@ -1,6 +1,7 @@
 package actions.file;
 
 import actions.ApplicationAction;
+import gui.components.TabbedPane;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -20,7 +21,7 @@ public class OpenFileAction extends ApplicationAction
     {
         FileReader reader = null;
         JFileChooser chooser = new JFileChooser();
-         FileNameExtensionFilter filter = new FileNameExtensionFilter("text Files", "txt", "text");
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("text Files", "txt", "text");
         chooser.setFileFilter(filter);
         chooser.setAcceptAllFileFilterUsed(false);
         int option = chooser.showOpenDialog(chooser);
@@ -28,8 +29,10 @@ public class OpenFileAction extends ApplicationAction
         if (option == 0)
         {
             String selectedFile = chooser.getSelectedFile().getAbsolutePath();
-
-            try{
+            String fileName = chooser.getSelectedFile().getName();
+             TabbedPane.setTabText(fileName);
+            try
+            {
                 reader = new FileReader(selectedFile);
                 getTextArea().read(reader, null);
                 reader.close();
@@ -42,6 +45,6 @@ public class OpenFileAction extends ApplicationAction
             }
         }
 
-
+       //ToDo - Tidy up
     }
 }

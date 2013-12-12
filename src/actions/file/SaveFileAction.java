@@ -4,7 +4,6 @@ import actions.ApplicationAction;
 import gui.components.TabbedPane;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -38,20 +37,22 @@ public class SaveFileAction extends ApplicationAction
             try
             {
                 File file = new File(saveChooser.getSelectedFile() + ".txt");
-                String fileName = saveChooser.getSelectedFile().getName();
+                String fileName = saveChooser.getSelectedFile().getName() + ".txt";
                 TabbedPane.setTabText(fileName);
-                if(file.exists()){
+                if (file.exists())
+                {
                     int selectedOption = JOptionPane.showConfirmDialog(null,
-                                  "File already Exists, Are you sure you wish to overwrite?",
-                                  "Choose",
-                                  JOptionPane.YES_NO_OPTION);
-                if (selectedOption == JOptionPane.YES_OPTION) {
-                    BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-                    bw.write(textArea.getText());
-                    closeStream(bw);
-                }
-                }
-                else{
+                            "File already Exists, Are you sure you wish to overwrite?",
+                            "Choose",
+                            JOptionPane.YES_NO_OPTION);
+                    if (selectedOption == JOptionPane.YES_OPTION)
+                    {
+                        BufferedWriter bw = new BufferedWriter(new FileWriter(file));
+                        bw.write(textArea.getText());
+                        closeStream(bw);
+                    }
+                } else
+                {
                     BufferedWriter bw = new BufferedWriter(new FileWriter(file));
                     bw.write(textArea.getText());
                     closeStream(bw);

@@ -6,11 +6,11 @@ import java.awt.event.ActionEvent;
 
 public class PasteTextAction extends ApplicationAction
 {
-    private static final ImageIcon pasteEditIcon = new ImageIcon("images/pasteFile.png");
+    private static final ImageIcon pasteTextAction = new ImageIcon("images/pasteFile.png");
 
     public PasteTextAction()
     {
-        super("Paste", pasteEditIcon);
+        super("Paste", pasteTextAction);
     }
 
     public void actionPerformed(ActionEvent e)
