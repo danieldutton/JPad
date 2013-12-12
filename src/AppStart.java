@@ -15,7 +15,7 @@ public class AppStart {
     JPanel headerPanel = new JPanel();
     MenuBar menuBar = new gui.components.MenuBar();
     ToolBar toolBar = new ToolBar();
-    JScrollPane scrollPane = new JScrollPane();
+
     JTabbedPane tabbedPane = TabbedPane.getTabbedPane();
     JPanel statusBar = StatusBar.getStatusBar();
 
@@ -29,6 +29,8 @@ public class AppStart {
     mainPanel.add(BorderLayout.NORTH, headerPanel);
 
     JTextArea ta = TextArea.getTextArea();
+      JScrollPane scrollPane = new JScrollPane(ta);
+     tabbedPane.addTab("new.txt", scrollPane);
     ta.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
