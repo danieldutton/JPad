@@ -3,6 +3,7 @@ package actions.file;
 import actions.ApplicationAction;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -19,7 +20,9 @@ public class OpenFileAction extends ApplicationAction
     {
         FileReader reader = null;
         JFileChooser chooser = new JFileChooser();
-
+         FileNameExtensionFilter filter = new FileNameExtensionFilter("text Files", "txt", "text");
+        chooser.setFileFilter(filter);
+        chooser.setAcceptAllFileFilterUsed(false);
         int option = chooser.showOpenDialog(chooser);
 
         if (option == 0)

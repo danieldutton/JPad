@@ -1,6 +1,5 @@
 package gui.components;
 
-
 import javax.swing.*;
 
 public class TabbedPane

@@ -4,6 +4,7 @@ import actions.ApplicationAction;
 import gui.components.TabbedPane;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -31,6 +32,7 @@ public class SaveFileAction extends ApplicationAction
 
         saveChooser.setDialogTitle("J-Pad Save");
         saveChooser.setSelectedFile(new File("new.txt"));
+
         if (saveChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
         {
             try
