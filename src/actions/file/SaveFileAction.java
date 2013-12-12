@@ -31,11 +31,11 @@ public class SaveFileAction extends ApplicationAction
 
         saveChooser.setDialogTitle("J-Pad Save");
         saveChooser.setSelectedFile(new File("new.txt"));
-        if (saveChooser.showSaveDialog(null) == 0)
+        if (saveChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
         {
             try
             {
-                File file = saveChooser.getSelectedFile();
+                File file = new File(saveChooser.getSelectedFile() + ".txt");
                 String fileName = saveChooser.getSelectedFile().getName();
                 TabbedPane.setTabText(fileName);
                 if(file.exists()){
@@ -48,6 +48,11 @@ public class SaveFileAction extends ApplicationAction
                     bw.write(textArea.getText());
                     closeStream(bw);
                 }
+                }
+                else{
+                    BufferedWriter bw = new BufferedWriter(new FileWriter(file));
+                    bw.write(textArea.getText());
+                    closeStream(bw);
                 }
 
             } catch (IOException d)
