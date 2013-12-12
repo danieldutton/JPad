@@ -62,7 +62,7 @@ public class SaveFileAction extends ApplicationAction
         }
     }
 
-
+    //ToDo Get rid of duplicate code
 
     public void closeStream(BufferedWriter buff)
     {
