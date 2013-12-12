@@ -1,6 +1,7 @@
 package actions.file;
 
 import actions.ApplicationAction;
+import gui.components.TabbedPane;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -35,6 +36,8 @@ public class SaveFileAction extends ApplicationAction
             try
             {
                 File file = saveChooser.getSelectedFile();
+                String fileName = saveChooser.getSelectedFile().getName();
+                TabbedPane.setTabText(fileName);
                 if(file.exists()){
                     int selectedOption = JOptionPane.showConfirmDialog(null,
                                   "File already Exists, Are you sure you wish to overwrite?",

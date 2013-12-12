@@ -27,4 +27,9 @@ public class TabbedPane
     {
         tabbedPane.addTab("new.txt", TextArea.getTextArea());
     }
+
+    public static void setTabText(String text)
+    {
+        tabbedPane.setTitleAt(0, text);
+    }
 }

@@ -80,10 +80,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveFileAction.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SaveFileAction.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="8" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
+            <state line="38" column="74" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.81646657">
               <folding />
             </state>
           </provider>
@@ -109,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TabbedPane.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TabbedPane.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gui/components/TabbedPane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="29" selection-start="356" selection-end="356" vertical-scroll-proportion="0.38270143">
+            <state line="30" column="10" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,10 +193,10 @@
         <option value="$PROJECT_DIR$/src/actions/format/FontSelectAction.java" />
         <option value="$PROJECT_DIR$/src/gui/components/TextArea.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/FontDialog.java" />
-        <option value="$PROJECT_DIR$/src/actions/file/SaveFileAction.java" />
         <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
         <option value="$PROJECT_DIR$/src/AppStart.java" />
         <option value="$PROJECT_DIR$/src/gui/components/TabbedPane.java" />
+        <option value="$PROJECT_DIR$/src/actions/file/SaveFileAction.java" />
       </list>
     </option>
   </component>
@@ -609,9 +609,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29965556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29965556" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -744,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="8" selection-start="807" selection-end="807" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/MenuBar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="159" column="69" selection-start="4878" selection-end="4878" vertical-scroll-proportion="0.0">
@@ -778,7 +771,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/TabbedPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="29" selection-start="356" selection-end="356" vertical-scroll-proportion="0.38270143">
+        <state line="30" column="10" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="74" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.81646657">
           <folding />
         </state>
       </provider>
