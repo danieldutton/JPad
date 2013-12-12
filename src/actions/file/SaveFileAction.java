@@ -16,7 +16,7 @@ public class SaveFileAction extends ApplicationAction
 {
     private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
-    private String lastSaveFilePath;
+    private File lastSaveFilePath;
 
     private boolean wasPrevSaved = false;
 
@@ -29,59 +29,64 @@ public class SaveFileAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        JTextArea textArea = getTextArea();
-
-        saveChooser = new JFileChooser();
-
-        if(lastSaveFilePath != null)
-           saveChooser.setCurrentDirectory(new File(lastSaveFilePath));
-        saveChooser.setDialogTitle("J-Pad Save");
-        saveChooser.setSelectedFile(new File("new.txt"));
-
-        if (saveChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
+        if (!wasPrevSaved)
         {
-            try
+            initFileChooser();
+
+            if (saveChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
             {
                 File file = new File(saveChooser.getSelectedFile() + ".txt");
                 String fileName = saveChooser.getSelectedFile().getName();
-                lastSaveFilePath = saveChooser.getSelectedFile().getAbsolutePath();
+                lastSaveFilePath = file;
                 TabbedPane.setTabText(fileName);
+
                 if (file.exists())
                 {
-                    int selectedOption = JOptionPane.showConfirmDialog(null,
-                            "File already Exists, Are you sure you wish to overwrite?",
-                            "Choose",
-                            JOptionPane.YES_NO_OPTION);
-                    if (selectedOption == JOptionPane.YES_OPTION)
-                    {
-                        BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-                        bw.write(textArea.getText());
-                        closeStream(bw);
-                    }
+                    displayFileOverwriteOptionDialog(file);
                 } else
-                {
-                    BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-                    bw.write(textArea.getText());
-                    closeStream(bw);
-                }
-
-            } catch (IOException d)
-            {
-                d.printStackTrace();
+                    saveToFile(file);
             }
+        } else
+            saveToFile(lastSaveFilePath);
+    }
+
+
+    private void initFileChooser()
+    {
+        saveChooser = new JFileChooser();
+
+        if (lastSaveFilePath != null)
+            saveChooser.setCurrentDirectory(lastSaveFilePath);
+
+        saveChooser.setDialogTitle("J-Pad Save");
+        saveChooser.setSelectedFile(new File("new.txt"));
+    }
+
+    private void displayFileOverwriteOptionDialog(File file)
+    {
+        int selectedOption = JOptionPane.showConfirmDialog(null,
+                "File already Exists, Are you sure you wish to overwrite?",
+                "Choose",
+                JOptionPane.YES_NO_OPTION);
+        if (selectedOption == JOptionPane.YES_OPTION)
+        {
+            saveToFile(file);
         }
     }
 
-    //ToDo Get rid of duplicate code
-
-    public void closeStream(BufferedWriter buff)
+    private void saveToFile(File file)
     {
+        BufferedWriter bw = null;
+
         try
         {
-            buff.close();
-        } catch (IOException ex)
+            bw = new BufferedWriter(new FileWriter(file));
+            bw.write(getTextArea().getText());
+            bw.close();
+            wasPrevSaved = true;
+        } catch (IOException e)
         {
-            Logger.getLogger(SaveFileAction.class.getName()).log(Level.SEVERE, null, ex);
+            //add try again warning
         }
     }
 }
