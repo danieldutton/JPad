@@ -32,7 +32,7 @@ public class FontDialog
         panelMain = new JPanel();
         panelSample = new JPanel();
         comboBoxFont = new JComboBox();
-        btnOk = new JButton("OK");
+        btnOk = new JButton("Select");
         btnCancel = new JButton("Cancel");
         lblFont = new JLabel("Sample");
         BuildConsole();
@@ -49,10 +49,10 @@ public class FontDialog
     {
         panelSample.add(lblFont);
         panelMain.add(BorderLayout.SOUTH, panelSample);
-        panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
-        fontDialog.setSize(250, 200);
+        fontDialog.setSize(225, 155);
         fontDialog.setResizable(false);
         comboBoxFont.setBackground(Color.white);
+        comboBoxFont.setPrototypeDisplayValue("***********************************");
         panelMain.add(comboBoxFont);
         panelMain.add(btnOk);
         panelMain.add(btnCancel);
@@ -87,14 +87,15 @@ public class FontDialog
             public void run()
             {
                 GraphicsEnvironment e = GraphicsEnvironment.getLocalGraphicsEnvironment();
-                Font[] fonts = e.getAllFonts();
-                for (Font f : fonts)
-                    comboBoxFont.addItem(f.getFontName());
+                String[] fonts = e.getAvailableFontFamilyNames();
+                for (String f : fonts)
+                    comboBoxFont.addItem(f);
             }
         };
         EventQueue.invokeLater(runner);
         panelMain.setVisible(true);
         fontDialog.setVisible(true);
+        fontDialog.pack();
 
     }
 
@@ -105,7 +106,7 @@ public class FontDialog
             if (event.getStateChange() == ItemEvent.SELECTED)
             {
                 String chosenFont = (String) event.getItem();
-                lblFont.setFont(new Font(chosenFont, Font.BOLD, 40));
+                lblFont.setFont(new Font(chosenFont, Font.BOLD, 30));
             }
         }
     }
