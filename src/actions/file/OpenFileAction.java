@@ -5,12 +5,15 @@ import gui.components.TabbedPane;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 public class OpenFileAction extends ApplicationAction
 {
+    private String lastFilePathChosen;
+
     public OpenFileAction()
     {
         super("Open", null);
@@ -23,11 +26,14 @@ public class OpenFileAction extends ApplicationAction
         FileNameExtensionFilter filter = new FileNameExtensionFilter("text Files", "txt", "text");
         chooser.setFileFilter(filter);
         chooser.setAcceptAllFileFilterUsed(false);
+        if(lastFilePathChosen!= null)
+            chooser.setCurrentDirectory(new File(lastFilePathChosen));
         int option = chooser.showOpenDialog(chooser);
 
         if (option == 0)
         {
             String selectedFile = chooser.getSelectedFile().getAbsolutePath();
+            lastFilePathChosen = selectedFile;
             String fileName = chooser.getSelectedFile().getName();
              TabbedPane.setTabText(fileName);
             try

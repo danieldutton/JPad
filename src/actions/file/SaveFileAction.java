@@ -16,6 +16,10 @@ public class SaveFileAction extends ApplicationAction
 {
     private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
+    private String lastSaveFilePath;
+
+    private boolean wasPrevSaved = false;
+
     private JFileChooser saveChooser;
 
     public SaveFileAction()
@@ -29,6 +33,8 @@ public class SaveFileAction extends ApplicationAction
 
         saveChooser = new JFileChooser();
 
+        if(lastSaveFilePath != null)
+           saveChooser.setCurrentDirectory(new File(lastSaveFilePath));
         saveChooser.setDialogTitle("J-Pad Save");
         saveChooser.setSelectedFile(new File("new.txt"));
 
@@ -37,7 +43,8 @@ public class SaveFileAction extends ApplicationAction
             try
             {
                 File file = new File(saveChooser.getSelectedFile() + ".txt");
-                String fileName = saveChooser.getSelectedFile().getName() + ".txt";
+                String fileName = saveChooser.getSelectedFile().getName();
+                lastSaveFilePath = saveChooser.getSelectedFile().getAbsolutePath();
                 TabbedPane.setTabText(fileName);
                 if (file.exists())
                 {
