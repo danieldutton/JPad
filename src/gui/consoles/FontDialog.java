@@ -7,8 +7,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-public class FontDialog extends AbstractConsole
+public class FontDialog
 {
+    private JDialog fontDialog;
     private JPanel panelMain;
     private JPanel panelSample;
     private JComboBox comboBoxFont;
@@ -16,17 +17,18 @@ public class FontDialog extends AbstractConsole
     private JButton btnCancel;
     private JLabel lblFont;
     private JTextArea textArea = gui.components.TextArea.getTextArea();
+    private String title = "";
 
-
-    public FontDialog(String title, int consoleWidth, int consoleHeight)
+    public FontDialog(String title)
     {
-        super(title, consoleWidth, consoleHeight);
+        this.title = title;
         InitConsole();
-        AddActionListeners();
     }
 
     private void InitConsole()
     {
+        fontDialog = new JDialog();
+        fontDialog.setTitle(title);
         panelMain = new JPanel();
         panelSample = new JPanel();
         comboBoxFont = new JComboBox();
@@ -34,7 +36,6 @@ public class FontDialog extends AbstractConsole
         btnCancel = new JButton("Cancel");
         lblFont = new JLabel("Sample");
         BuildConsole();
-        add(panelMain);
     }
 
     private void AddActionListeners()
@@ -46,21 +47,43 @@ public class FontDialog extends AbstractConsole
 
     private void BuildConsole()
     {
+
         panelSample.add(lblFont);
         panelMain.add(BorderLayout.SOUTH, panelSample);
         panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
-        consoleCentre();
-        setSize(250, 200);
-        setResizable(false);
+        fontDialog.setSize(250, 200);
+        fontDialog.setResizable(false);
         comboBoxFont.setBackground(Color.white);
         panelMain.add(comboBoxFont);
         panelMain.add(btnOk);
         panelMain.add(btnCancel);
         panelMain.add(lblFont);
+        fontDialog.setVisible(true);
+        fontDialog.add(panelMain);
+
+        fontDialog.setModal(true);
+        AddActionListeners();
+        centreConsole();
+        customiseFrameIcon();
+
+    }
+
+    private void centreConsole()
+    {
+        Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
+        fontDialog.setLocation((d1.width - this.fontDialog.getSize().width) / 2, (d1.height - this.fontDialog.getSize().height) / 2);
+    }
+
+    private void customiseFrameIcon()
+    {
+        Image img1 = Toolkit.getDefaultToolkit().getImage("images/frameLogo.gif");
+
+        fontDialog.setIconImage(img1);
     }
 
     public void drawConsole()
     {
+
         Runnable runner = new Runnable()
         {
             public void run()
@@ -76,7 +99,6 @@ public class FontDialog extends AbstractConsole
 
     public class ItemChangeListener implements ItemListener
     {
-
         public void itemStateChanged(ItemEvent event)
         {
             if (event.getStateChange() == ItemEvent.SELECTED)
@@ -94,7 +116,7 @@ public class FontDialog extends AbstractConsole
             if (c.getSource() == FontDialog.this.btnOk)
             {
                 textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 30));
-                FontDialog.this.dispose();
+
             }
         }
     }
@@ -105,7 +127,7 @@ public class FontDialog extends AbstractConsole
         {
             if (c.getSource() == FontDialog.this.btnCancel)
             {
-                FontDialog.this.dispose();
+
             }
         }
     }

@@ -6,7 +6,7 @@ import actions.edit.DeleteTextAction;
 import actions.edit.PasteTextAction;
 
 import actions.file.*;
-import actions.format.ChooseFontAction;
+import actions.format.FontSelectAction;
 import actions.format.WordWrapAction;
 import actions.help.OpenAboutDialogAction;
 import actions.view.ToggleStatusBarAction;
@@ -27,7 +27,7 @@ public class MenuBar extends JMenuBar
     private WordWrapAction actionWordWrap;
     private OpenAboutDialogAction actionAboutDialog;
     private SelectAllTextAction actionSelectAllText;
-    private ChooseFontAction actionChooseFont;
+    private FontSelectAction actionSelectFont;
     private ToggleStatusBarAction actionToggleStatusBar;
     private ExitApplicationAction actionExitApplication;
 
@@ -92,7 +92,7 @@ public class MenuBar extends JMenuBar
         actionWordWrap = new WordWrapAction();
         actionAboutDialog = new OpenAboutDialogAction();
         actionSelectAllText = new SelectAllTextAction();
-        actionChooseFont = new ChooseFontAction();
+        actionSelectFont = new FontSelectAction();
         actionToggleStatusBar = new ToggleStatusBarAction();
         actionExitApplication = new ExitApplicationAction();
     }
@@ -114,7 +114,7 @@ public class MenuBar extends JMenuBar
         menuItemSelectAll = new JMenuItem(actionSelectAllText);
 
         //format
-        menuItemFont = new JMenuItem(actionChooseFont);
+        menuItemFont = new JMenuItem(actionSelectFont);
         menuItemWordWrap = new JMenuItem(actionWordWrap);
 
         //view

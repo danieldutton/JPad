@@ -2,21 +2,18 @@ package actions.format;
 
 import actions.ApplicationAction;
 import gui.consoles.FontDialog;
-
-import javax.swing.*;
 import java.awt.event.ActionEvent;
 
-
-public class ChooseFontAction extends ApplicationAction
+public class FontSelectAction extends ApplicationAction
 {
-    public ChooseFontAction()
+    public FontSelectAction()
     {
         super("Font", null);
     }
 
     public void actionPerformed(ActionEvent e)
     {
-        FontDialog fontConsole = new FontDialog("Choose Font", 200, 200);
+        FontDialog fontConsole = new FontDialog("Choose Font");
         fontConsole.drawConsole();
     }
 }
