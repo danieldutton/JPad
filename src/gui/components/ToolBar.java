@@ -1,6 +1,10 @@
 package gui.components;
 
-import actions.*;
+import actions.edit.CopyTextAction;
+import actions.edit.CutTextAction;
+import actions.edit.PasteTextAction;
+import actions.file.PrintFileAction;
+import actions.file.SaveFileAction;
 
 import javax.swing.*;
 import java.awt.*;

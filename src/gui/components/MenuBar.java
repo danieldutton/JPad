@@ -1,6 +1,15 @@
 package gui.components;
 
-import actions.*;
+import actions.edit.CopyTextAction;
+import actions.edit.CutTextAction;
+import actions.edit.DeleteTextAction;
+import actions.edit.PasteTextAction;
+
+import actions.file.*;
+import actions.format.ChooseFontAction;
+import actions.format.WordWrapAction;
+import actions.help.OpenAboutDialogAction;
+import actions.view.ToggleStatusBarAction;
 
 import javax.swing.*;
 import java.awt.*;

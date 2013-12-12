@@ -18,13 +18,12 @@ public class FontDialog extends CustomConsole
     private JTextArea textArea = gui.components.TextArea.getTextArea();
 
 
-    public FontDialog(String title)
+    public FontDialog()
     {
-        super(title);
-
         InitConsole();
         AddActionListeners();
     }
+
 
     private void InitConsole()
     {

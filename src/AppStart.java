@@ -29,7 +29,8 @@ public class AppStart {
     headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
     mainPanel.add(BorderLayout.NORTH, headerPanel);
 
-    tabbedPane.add(TextArea.getTextArea());
+    tabbedPane.addTab("new.txt",TextArea.getTextArea());
+
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
     mainPanel.add(BorderLayout.SOUTH, statusBar);
     mainGui.add(mainPanel);

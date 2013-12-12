@@ -1,5 +1,6 @@
 package input.readers;
 
+import javax.swing.*;
 import java.io.*;
 
 public class FileReader implements IFileReader
@@ -21,7 +22,7 @@ public class FileReader implements IFileReader
                 }
             } catch (Exception e)
             {
-                //Dialog display here
+                JOptionPane.showMessageDialog(null, "Error Reading From File");
             }
 
         return sb.toString();
