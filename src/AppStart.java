@@ -16,7 +16,7 @@ public class AppStart {
     MenuBar menuBar = new gui.components.MenuBar();
     ToolBar toolBar = new ToolBar();
     JScrollPane scrollPane = new JScrollPane();
-    JTabbedPane tabbedPane = new JTabbedPane();
+    JTabbedPane tabbedPane = TabbedPane.getTabbedPane();
     JPanel statusBar = StatusBar.getStatusBar();
 
     mainPanel.setLayout(new BorderLayout());
@@ -24,15 +24,12 @@ public class AppStart {
 
     ParentFrame mainGui = new ParentFrame("J-Pad", 850, 700);
 
-
     headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
     headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
     mainPanel.add(BorderLayout.NORTH, headerPanel);
 
     JTextArea ta = TextArea.getTextArea();
-      ta.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-    tabbedPane.addTab("new.txt",ta);
-
+    ta.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
     mainPanel.add(BorderLayout.SOUTH, statusBar);
