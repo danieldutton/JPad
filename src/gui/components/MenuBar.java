@@ -160,18 +160,13 @@ public class MenuBar extends JMenuBar
         menuItemExit.setMnemonic('E');
 
         //edit
-        menuItemCut.setMnemonic('V');
+        menuItemCut.setMnemonic('C');
         menuItemCopy.setMnemonic('C');
         menuItemPaste.setMnemonic('P');
         menuItemSelectAll.setMnemonic('S');
 
         //format
         menuItemFont.setMnemonic('F');
-
-        //view
-
-        //help
-        menuItemAbout.setMnemonic('A');
     }
 
     private void setMenuItemAccelerators()

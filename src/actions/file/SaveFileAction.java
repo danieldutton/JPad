@@ -15,6 +15,8 @@ public class SaveFileAction extends ApplicationAction
 {
     private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
+    private JFileChooser saveChooser;
+
     public SaveFileAction()
     {
         super("Save", saveEditIcon);
@@ -24,12 +26,11 @@ public class SaveFileAction extends ApplicationAction
     {
         JTextArea textArea = getTextArea();
 
-        JFileChooser saveChooser = new JFileChooser();
-        saveChooser.setSelectedFile(new File("new.txt"));
-        int result = saveChooser.showSaveDialog(null);
-        saveChooser.setDialogTitle("J-Pad Save");
+        saveChooser = new JFileChooser();
 
-        if (result == 0)
+        saveChooser.setDialogTitle("J-Pad Save");
+        saveChooser.setSelectedFile(new File("new.txt"));
+        if (saveChooser.showSaveDialog(null) == 0)
         {
             try
             {
@@ -52,6 +53,8 @@ public class SaveFileAction extends ApplicationAction
             }
         }
     }
+
+
 
     public void closeStream(BufferedWriter buff)
     {
