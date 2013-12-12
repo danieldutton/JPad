@@ -106,7 +106,7 @@ public class FontDialog
             if (event.getStateChange() == ItemEvent.SELECTED)
             {
                 String chosenFont = (String) event.getItem();
-                lblFont.setFont(new Font(chosenFont, Font.BOLD, 30));
+                lblFont.setFont(new Font(chosenFont, Font.BOLD, 32));
             }
         }
     }
@@ -117,7 +117,7 @@ public class FontDialog
         {
             if (c.getSource() == FontDialog.this.btnOk)
             {
-                textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 16));
+                textArea.setFont(new Font(comboBoxFont.getSelectedItem().toString(), Font.PLAIN, 16));
                 fontDialog.dispose();
             }
         }

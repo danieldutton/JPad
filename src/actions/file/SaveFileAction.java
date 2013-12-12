@@ -25,6 +25,7 @@ public class SaveFileAction extends ApplicationAction
         JTextArea textArea = getTextArea();
 
         JFileChooser saveChooser = new JFileChooser();
+        saveChooser.setSelectedFile(new File("new.txt"));
         int result = saveChooser.showSaveDialog(null);
         saveChooser.setDialogTitle("J-Pad Save");
 
@@ -33,13 +34,18 @@ public class SaveFileAction extends ApplicationAction
             try
             {
                 File file = saveChooser.getSelectedFile();
+                if(file.exists()){
+                    int selectedOption = JOptionPane.showConfirmDialog(null,
+                                  "File already Exists, Are you sure you wish to overwrite?",
+                                  "Choose",
+                                  JOptionPane.YES_NO_OPTION);
+                if (selectedOption == JOptionPane.YES_OPTION) {
+                    BufferedWriter bw = new BufferedWriter(new FileWriter(file));
+                    bw.write(textArea.getText());
+                    closeStream(bw);
+                }
+                }
 
-                BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-
-                bw.write(textArea.getText());
-
-                bw.close();
-                closeStream(bw);
             } catch (IOException d)
             {
                 d.printStackTrace();
