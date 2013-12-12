@@ -16,7 +16,7 @@ public class ChooseFontAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        FontDialog fontConsole = new FontDialog();
+        FontDialog fontConsole = new FontDialog("Choose Font", 200, 200);
         fontConsole.drawConsole();
     }
 }

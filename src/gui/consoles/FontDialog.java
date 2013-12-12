@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-public class FontDialog extends CustomConsole
+public class FontDialog extends AbstractConsole
 {
     private JPanel panelMain;
     private JPanel panelSample;
@@ -18,12 +18,12 @@ public class FontDialog extends CustomConsole
     private JTextArea textArea = gui.components.TextArea.getTextArea();
 
 
-    public FontDialog()
+    public FontDialog(String title, int consoleWidth, int consoleHeight)
     {
+        super(title, consoleWidth, consoleHeight);
         InitConsole();
         AddActionListeners();
     }
-
 
     private void InitConsole()
     {
@@ -49,7 +49,6 @@ public class FontDialog extends CustomConsole
         panelSample.add(lblFont);
         panelMain.add(BorderLayout.SOUTH, panelSample);
         panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
-        initConsoleBasics();
         consoleCentre();
         setSize(250, 200);
         setResizable(false);

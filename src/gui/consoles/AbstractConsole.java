@@ -3,18 +3,8 @@ package gui.consoles;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class AbstractConsole extends JFrame
+public class AbstractConsole extends JFrame
 {
-
-    private int consoleWidth;
-
-    private int consoleHeight;
-
-
-    public AbstractConsole()
-    {
-    }
-
     public AbstractConsole(String title)
     {
         super(title);
@@ -23,16 +13,7 @@ public abstract class AbstractConsole extends JFrame
     public AbstractConsole(String title, int consoleWidth, int consoleHeight)
     {
         this(title);
-        this.consoleWidth = consoleWidth;
-        this.consoleHeight = consoleHeight;
-    }
-
-
-    public abstract void drawConsole();
-
-    public void initConsoleBasics()
-    {
-        setSize(this.consoleWidth, this.consoleHeight);
+        setSize(consoleWidth, consoleHeight);
     }
 
     public void customiseFrameIcon(String file)

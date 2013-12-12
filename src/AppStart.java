@@ -1,5 +1,5 @@
 import gui.components.TextArea;
-import gui.consoles.CustomConsole;
+import gui.consoles.AbstractConsole;
 import gui.systemTray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
@@ -22,7 +22,7 @@ public class AppStart {
     mainPanel.setLayout(new BorderLayout());
     headerPanel.setLayout(new BorderLayout());
 
-    CustomConsole mainGui = new CustomConsole("J-Pad", 850, 700);
+    AbstractConsole mainGui = new AbstractConsole("J-Pad", 850, 700);
 
 
     headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
@@ -34,7 +34,7 @@ public class AppStart {
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
     mainPanel.add(BorderLayout.SOUTH, statusBar);
     mainGui.add(mainPanel);
-    mainGui.drawConsole();
+    mainGui.setVisible(true);
 
     mainGui.customiseFrameIcon("images/frameLogo.gif");
 
