@@ -29,7 +29,10 @@ public class AppStart {
     headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
     mainPanel.add(BorderLayout.NORTH, headerPanel);
 
-    tabbedPane.addTab("new.txt",TextArea.getTextArea());
+    JTextArea ta = TextArea.getTextArea();
+      ta.setFont(new Font("Times New Roman", Font.PLAIN, 16));
+    tabbedPane.addTab("new.txt",ta);
+
 
     mainPanel.add(BorderLayout.CENTER, tabbedPane);
     mainPanel.add(BorderLayout.SOUTH, statusBar);

@@ -27,7 +27,7 @@ public class FontDialog
 
     private void InitConsole()
     {
-        fontDialog = new JDialog();
+        fontDialog = new JDialog(this.fontDialog, true);
         fontDialog.setTitle(title);
         panelMain = new JPanel();
         panelSample = new JPanel();
@@ -47,7 +47,6 @@ public class FontDialog
 
     private void BuildConsole()
     {
-
         panelSample.add(lblFont);
         panelMain.add(BorderLayout.SOUTH, panelSample);
         panelMain.setBorder(BorderFactory.createTitledBorder("Set Font"));
@@ -58,7 +57,7 @@ public class FontDialog
         panelMain.add(btnOk);
         panelMain.add(btnCancel);
         panelMain.add(lblFont);
-        fontDialog.setVisible(true);
+        panelMain.setVisible(false);
         fontDialog.add(panelMain);
 
         fontDialog.setModal(true);
@@ -83,7 +82,6 @@ public class FontDialog
 
     public void drawConsole()
     {
-
         Runnable runner = new Runnable()
         {
             public void run()
@@ -95,6 +93,9 @@ public class FontDialog
             }
         };
         EventQueue.invokeLater(runner);
+        panelMain.setVisible(true);
+        fontDialog.setVisible(true);
+
     }
 
     public class ItemChangeListener implements ItemListener
@@ -115,8 +116,8 @@ public class FontDialog
         {
             if (c.getSource() == FontDialog.this.btnOk)
             {
-                textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 30));
-
+                textArea.setFont(new Font((String) comboBoxFont.getSelectedItem(), Font.PLAIN, 16));
+                fontDialog.dispose();
             }
         }
     }
@@ -127,7 +128,7 @@ public class FontDialog
         {
             if (c.getSource() == FontDialog.this.btnCancel)
             {
-
+                fontDialog.dispose();
             }
         }
     }
