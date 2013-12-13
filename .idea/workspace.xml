@@ -85,7 +85,7 @@
       <file leaf-file-name="DocumentFilter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/filters/DocumentFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="69" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.7364621">
+            <state line="7" column="4" selection-start="148" selection-end="148" vertical-scroll-proportion="0.20238096">
               <folding />
             </state>
           </provider>
@@ -442,10 +442,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="840" height="1010" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2994152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29391503" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -626,7 +626,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/filters/DocumentFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="69" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.7364621">
+        <state line="7" column="4" selection-start="148" selection-end="148" vertical-scroll-proportion="0.20238096">
           <folding />
         </state>
       </provider>

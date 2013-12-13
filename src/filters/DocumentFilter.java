@@ -23,11 +23,13 @@ public class DocumentFilter extends javax.swing.filechooser.FileFilter{
             ||(f.isFile()&&f.getName().toLowerCase().endsWith(".xhtml"))
             ||(f.isFile()&&f.getName().toLowerCase().endsWith(".c"))
             ||(f.isFile()&&f.getName().toLowerCase().endsWith(".py"))
-            ||(f.isFile()&&f.getName().toLowerCase().endsWith(".pl"));
+            ||(f.isFile()&&f.getName().toLowerCase().endsWith(".pl"))
+            ||(f.isFile()&&f.getName().toLowerCase().endsWith(".cshtml"))
+            ||(f.isFile()&&f.getName().toLowerCase().endsWith(".vbhtml"));
     }
 
     public String getDescription(){
 
-        return "avail files";
+        return "File types:";
     }
 }
