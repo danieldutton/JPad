@@ -44,13 +44,12 @@ public class OpenFileAction extends ApplicationAction
                 reader.close();
             } catch (FileNotFoundException e1)
             {
-                e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e1.printStackTrace();
             } catch (IOException e1)
             {
-                e1.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                e1.printStackTrace();
             }
         }
-
         //ToDo - Tidy up
     }
 }

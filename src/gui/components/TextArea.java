@@ -23,7 +23,7 @@ public class TextArea
     {
         textArea.setLineWrap(true);
         textArea.addCaretListener(new TextTypeListener());
-        textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 13));
+        textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
     }
 
     public static class TextTypeListener implements CaretListener

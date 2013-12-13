@@ -7,6 +7,8 @@ import actions.file.PrintFileAction;
 import actions.file.SaveFileAction;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ToolBar
 {
@@ -22,6 +24,8 @@ public class ToolBar
     private JButton btnCut;
     private JButton btnCopy;
     private JButton btnPaste;
+
+    private JComboBox<Integer> comboBoxFontSize;
 
     public ToolBar()
     {
@@ -40,6 +44,20 @@ public class ToolBar
         styleToolBar();
         removeTextValues();
         buildToolBar();
+        Integer[] comboArray = {8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72};
+        comboBoxFontSize = new JComboBox<Integer>(comboArray);
+        comboBoxFontSize.setMinimumSize(new Dimension(40, 20));
+        comboBoxFontSize.setMaximumSize(new Dimension(40, 20));
+        comboBoxFontSize.setSelectedIndex(5);
+        toolBar.add(comboBoxFontSize);
+        final Font currentFont = TextArea.getTextArea().getFont();
+
+        comboBoxFontSize.addActionListener (new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        JComboBox cb = (JComboBox) e.getSource();
+        TextArea.getTextArea().setFont(new Font(currentFont.getFontName(), currentFont.getStyle(), (Integer)cb.getSelectedItem() ));
+    }
+});
     }
 
     public JToolBar GetGuiToolBar()
