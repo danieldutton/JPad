@@ -1,3 +1,5 @@
+import actions.file.SaveAsFileAction;
+import actions.file.SaveFileAction;
 import gui.components.TextArea;
 import gui.consoles.ParentFrame;
 import gui.systemTray.SystemTray;
@@ -6,45 +8,60 @@ import gui.components.MenuBar;
 import javax.swing.*;
 import java.awt.*;
 
-public class AppStart {
-
+public class AppStart
+{
     public static void main(String[] args)
-  {
-    JPanel mainPanel = new JPanel();
-    JPanel headerPanel = new JPanel();
-    MenuBar menuBar = new gui.components.MenuBar();
-    ToolBar toolBar = new ToolBar();
+    {
+        //The containers
+        ParentFrame mainGui = new ParentFrame("J-Pad", 850, 700);
 
-    JTabbedPane tabbedPane = TabbedPane.getTabbedPane();
-    JPanel statusBar = StatusBar.getStatusBar();
+        JPanel mainPanel = new JPanel();
+        JPanel headerPanel = new JPanel();
 
-    mainPanel.setLayout(new BorderLayout());
-    headerPanel.setLayout(new BorderLayout());
+        //set the layouts
+        mainPanel.setLayout(new BorderLayout());
+        headerPanel.setLayout(new BorderLayout());
 
-    ParentFrame mainGui = new ParentFrame("J-Pad", 850, 700);
+        //The text pad components
+        MenuBar menuBar = new MenuBar();
+        ToolBar toolBar = new ToolBar();
+        JTabbedPane tabbedPane = TabbedPane.getTabbedPane();
+        JPanel statusBar = StatusBar.getStatusBar();
+        JTextArea textArea = TextArea.getTextArea();
+        JScrollPane scrollPane = new JScrollPane(textArea);
 
-    headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
-    headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
-    mainPanel.add(BorderLayout.NORTH, headerPanel);
+        //setup shared actions
+        SaveFileAction sfa = new SaveFileAction();
 
-    JTextArea ta = TextArea.getTextArea();
-      JScrollPane scrollPane = new JScrollPane(ta);
-     tabbedPane.addTab("new.txt", scrollPane);
+        menuBar.setSaveFileAction(sfa);
+        menuBar.setSaveFileAsAction(new SaveAsFileAction());
+        menuBar.init();
 
-    mainPanel.add(BorderLayout.CENTER, tabbedPane);
-    mainPanel.add(BorderLayout.SOUTH, statusBar);
-    mainGui.add(mainPanel);
-    mainGui.setVisible(true);
+        toolBar.setSaveFileAction(sfa);
+        toolBar.init();
 
-    mainGui.addCustomFrameIcon("images/frameLogo.gif");
+        //piece everything together
+        headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
+        headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
+        mainPanel.add(BorderLayout.NORTH, headerPanel);
+        tabbedPane.addTab("new.txt", scrollPane);
+        mainPanel.add(BorderLayout.CENTER, tabbedPane);
+        mainPanel.add(BorderLayout.SOUTH, statusBar);
+        mainGui.add(mainPanel);
+        mainGui.setVisible(true);
 
-    mainGui.centreConsoleToScreen();
+        mainGui.addCustomFrameIcon("images/frameLogo.gif");
 
-    SystemTray systemTray = new gui.systemTray.SystemTray("images/trayImage.gif");
-    try {
-      systemTray.loadSystemTray();
-    } catch (NullPointerException ex) {
-      ex.printStackTrace();
+        mainGui.centreConsoleToScreen();
+
+        SystemTray systemTray = new gui.systemTray.SystemTray("images/trayImage.gif");
+
+        try
+        {
+            systemTray.loadSystemTray();
+        } catch (NullPointerException ex)
+        {
+            ex.printStackTrace();
+        }
     }
-  }
 }

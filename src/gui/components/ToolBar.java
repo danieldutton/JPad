@@ -5,18 +5,17 @@ import actions.edit.CutTextAction;
 import actions.edit.PasteTextAction;
 import actions.file.PrintFileAction;
 import actions.file.SaveFileAction;
-
 import javax.swing.*;
 import java.awt.*;
 
 public class ToolBar
 {
     private JToolBar toolBar;
-    private SaveFileAction saveAction;
-    private PrintFileAction printAction;
-    private CutTextAction cutAction;
-    private CopyTextAction copyAction;
-    private PasteTextAction pasteAction;
+    private SaveFileAction actionSave;
+    private PrintFileAction actionPrint;
+    private CutTextAction actionCut;
+    private CopyTextAction actionCopy;
+    private PasteTextAction actionPaste;
 
     private JButton btnSave;
     private JButton btnPrint;
@@ -25,6 +24,11 @@ public class ToolBar
     private JButton btnPaste;
 
     public ToolBar()
+    {
+
+    }
+
+    public void init()
     {
         toolBar = new JToolBar();
 
@@ -45,20 +49,19 @@ public class ToolBar
 
     private void initActions()
     {
-        saveAction = new SaveFileAction();
-        printAction = new PrintFileAction();
-        cutAction = new CutTextAction();
-        copyAction = new CopyTextAction();
-        pasteAction = new PasteTextAction();
+        actionPrint = new PrintFileAction();
+        actionCut = new CutTextAction();
+        actionCopy = new CopyTextAction();
+        actionPaste = new PasteTextAction();
     }
 
     private void initButtons()
     {
-        btnSave = new JButton(saveAction);
-        btnPrint = new JButton(printAction);
-        btnCut = new JButton(cutAction);
-        btnCopy = new JButton(copyAction);
-        btnPaste = new JButton(pasteAction);
+        btnSave = new JButton(actionSave);
+        btnPrint = new JButton(actionPrint);
+        btnCut = new JButton(actionCut);
+        btnCopy = new JButton(actionCopy);
+        btnPaste = new JButton(actionPaste);
     }
 
     private void setButtonBorders()
@@ -117,5 +120,10 @@ public class ToolBar
         toolBar.add(btnCopy);
         toolBar.add(btnPaste);
         toolBar.setFloatable(false);
+    }
+
+    public void setSaveFileAction(SaveFileAction action)
+    {
+        actionSave = action;
     }
 }

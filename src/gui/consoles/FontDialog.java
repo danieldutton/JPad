@@ -64,7 +64,6 @@ public class FontDialog
         AddActionListeners();
         centreConsole();
         customiseFrameIcon();
-
     }
 
     private void centreConsole()

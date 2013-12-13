@@ -1,5 +1,6 @@
 package gui.components;
 
+import actions.ApplicationAction;
 import actions.edit.CopyTextAction;
 import actions.edit.CutTextAction;
 import actions.edit.DeleteTextAction;
@@ -59,6 +60,10 @@ public class MenuBar extends JMenuBar
 
     public MenuBar()
     {
+
+    }
+
+    public void init(){
         menuBar = new JMenuBar();
         initFileMenuActions();
         initMenus();
@@ -83,8 +88,6 @@ public class MenuBar extends JMenuBar
     private void initFileMenuActions()
     {
         actionOpenFile = new OpenFileAction();
-        actionSave = new SaveFileAction();
-        actionSaveAs = new SaveAsFileAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
         actionPaste = new PasteTextAction();
@@ -224,12 +227,10 @@ public class MenuBar extends JMenuBar
 
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         styleMenuText();
-
     }
 
     private void styleMenuText()
     {
-
         final String Font = "Verdana";
         final int FontStyle = 0;
         final int FontSize = 12;
@@ -239,6 +240,16 @@ public class MenuBar extends JMenuBar
         menuFormat.setFont(new Font(Font, FontStyle, FontSize));
         menuView.setFont(new Font(Font, FontStyle, FontSize));
         menuHelp.setFont(new Font(Font, FontStyle, FontSize));
+    }
+
+    public void setSaveFileAction(SaveFileAction action)
+    {
+        actionSave = action;
+    }
+
+    public void setSaveFileAsAction(SaveAsFileAction action)
+    {
+        actionSaveAs = action;
     }
 
     public JMenuBar getGuiMenuBar()
