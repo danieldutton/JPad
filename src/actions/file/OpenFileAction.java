@@ -1,10 +1,10 @@
 package actions.file;
 
 import actions.ApplicationAction;
+import filters.DocumentFilter;
 import gui.components.TabbedPane;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,8 +24,8 @@ public class OpenFileAction extends ApplicationAction
     {
         FileReader reader = null;
         JFileChooser chooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("text Files", "txt", "text");
-        chooser.setFileFilter(filter);
+        DocumentFilter docFilter = new DocumentFilter();
+        chooser.setFileFilter(docFilter);
         chooser.setAcceptAllFileFilterUsed(false);
         if (lastFilePathChosen != null)
             chooser.setCurrentDirectory(new File(lastFilePathChosen));

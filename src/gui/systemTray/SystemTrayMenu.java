@@ -34,23 +34,23 @@ public class SystemTrayMenu
 
     public PopupMenu getSysTrayMenu()
     {
-        this.homePageItem.setEnabled(false);
-        this.popup.add(this.closeItem);
-        this.popup.add(this.homePageItem);
+        homePageItem.setEnabled(false);
+        popup.add(closeItem);
+        popup.add(homePageItem);
 
-        this.homePageItem.addActionListener(new WebLinklistener());
-        this.closeItem.addActionListener(new ExitApplicationListener());
+        homePageItem.addActionListener(new WebLinklistener());
+        closeItem.addActionListener(new ExitApplicationListener());
 
         if (Desktop.isDesktopSupported())
         {
             enableOptions();
         }
-        return this.popup;
+        return popup;
     }
 
     private void enableOptions()
     {
-        this.homePageItem.setEnabled(true);
+        homePageItem.setEnabled(true);
     }
 
     private class WebLinklistener implements ActionListener
@@ -73,7 +73,7 @@ public class SystemTrayMenu
                     }
                 } else
                     JOptionPane.showMessageDialog(null,
-                            "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
+                    "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
             }
         }
     }

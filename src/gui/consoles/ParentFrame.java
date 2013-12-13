@@ -22,7 +22,7 @@ public class ParentFrame extends JFrame
         setIconImage(frameIcon);
     }
 
-    public Dimension centreConsoleToScreen()
+    public Dimension centreConsoleRelativeToScreen()
     {
         Dimension centreDimension = Toolkit.getDefaultToolkit().getScreenSize();
         setLocation((centreDimension.width - getSize().width) / 2, (centreDimension.height - getSize().height) / 2);

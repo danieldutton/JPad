@@ -23,13 +23,13 @@ public class AboutDialog
         centreConsole();
         customiseFrameIcon();
 
-        ImageIcon aboutIcon = new ImageIcon(this.image);
+        ImageIcon aboutIcon = new ImageIcon(image);
         panel.add(new JLabel(aboutIcon));
-        dialog.add(this.panel);
+        dialog.add(panel);
         dialog.setSize(305, 280);
         dialog.setResizable(false);
         dialog.setDefaultCloseOperation(2);
-        dialog.setTitle(this.title);
+        dialog.setTitle(title);
         dialog.setVisible(true);
     }
 
@@ -37,7 +37,7 @@ public class AboutDialog
     private void centreConsole()
     {
         Dimension d1 = Toolkit.getDefaultToolkit().getScreenSize();
-        dialog.setLocation((d1.width - this.dialog.getSize().width) / 2, (d1.height - this.dialog.getSize().height) / 2);
+        dialog.setLocation((d1.width - dialog.getSize().width) / 2, (d1.height - dialog.getSize().height) / 2);
     }
 
     private void customiseFrameIcon()
