@@ -2,15 +2,13 @@ package actions.file;
 
 import actions.ApplicationAction;
 import gui.components.TabbedPane;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class SaveFileAction extends ApplicationAction
 {
@@ -59,7 +57,7 @@ public class SaveFileAction extends ApplicationAction
             saveChooser.setCurrentDirectory(lastSaveFilePath);
 
         saveChooser.setDialogTitle("J-Pad Save");
-        saveChooser.setSelectedFile(new File("new.txt"));
+        saveChooser.setSelectedFile(new File("new"));
     }
 
     private void displayFileOverwriteOptionDialog(File file)

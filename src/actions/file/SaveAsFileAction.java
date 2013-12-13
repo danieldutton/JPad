@@ -13,6 +13,7 @@ public class SaveAsFileAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        //To change body of implemented methods use File | Settings | File Templates.
+        new SaveFileAction().actionPerformed(e);
+
     }
 }
