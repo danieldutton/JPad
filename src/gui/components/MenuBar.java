@@ -1,17 +1,14 @@
 package gui.components;
 
-import actions.ApplicationAction;
 import actions.edit.CopyTextAction;
 import actions.edit.CutTextAction;
 import actions.edit.DeleteTextAction;
 import actions.edit.PasteTextAction;
-
 import actions.file.*;
 import actions.format.FontSelectAction;
 import actions.format.WordWrapAction;
 import actions.help.OpenAboutDialogAction;
 import actions.view.ToggleStatusBarAction;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -20,7 +17,7 @@ public class MenuBar extends JMenuBar
     //actions
     private OpenFileAction actionOpenFile;
     private SaveFileAction actionSave;
-    private SaveAsFileAction actionSaveAs;
+    private SaveFileAsAction actionSaveAs;
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
@@ -60,7 +57,6 @@ public class MenuBar extends JMenuBar
 
     public MenuBar()
     {
-
     }
 
     public void init(){
@@ -247,7 +243,7 @@ public class MenuBar extends JMenuBar
         actionSave = action;
     }
 
-    public void setSaveFileAsAction(SaveAsFileAction action)
+    public void setSaveFileAsAction(SaveFileAsAction action)
     {
         actionSaveAs = action;
     }

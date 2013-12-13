@@ -1,12 +1,11 @@
 package actions.file;
 
 import actions.ApplicationAction;
-
 import java.awt.event.ActionEvent;
 
-public class SaveAsFileAction extends ApplicationAction
+public class SaveFileAsAction extends ApplicationAction
 {
-    public SaveAsFileAction()
+    public SaveFileAsAction()
     {
         super("Save As", null);
     }

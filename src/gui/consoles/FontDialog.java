@@ -27,7 +27,7 @@ public class FontDialog
 
     private void InitConsole()
     {
-        fontDialog = new JDialog(this.fontDialog, true);
+        fontDialog = new JDialog(fontDialog, true);
         fontDialog.setTitle(title);
         panelMain = new JPanel();
         panelSample = new JPanel();
@@ -36,13 +36,9 @@ public class FontDialog
         btnCancel = new JButton("Cancel");
         lblFont = new JLabel("Sample");
         BuildConsole();
-    }
-
-    private void AddActionListeners()
-    {
-        comboBoxFont.addItemListener(new ItemChangeListener());
-        btnCancel.addActionListener(new FontDialog.CancelFontChange());
-        btnOk.addActionListener(new FontDialog.ConfirmFontChange());
+        AddActionListeners();
+        centreConsole();
+        customiseFrameIcon();
     }
 
     private void BuildConsole()
@@ -61,9 +57,13 @@ public class FontDialog
         fontDialog.add(panelMain);
 
         fontDialog.setModal(true);
-        AddActionListeners();
-        centreConsole();
-        customiseFrameIcon();
+    }
+
+    private void AddActionListeners()
+    {
+        comboBoxFont.addItemListener(new FontSelectedListener());
+        btnCancel.addActionListener(new FontDialog.CancelFontChange());
+        btnOk.addActionListener(new FontDialog.ConfirmFontChange());
     }
 
     private void centreConsole()
@@ -92,13 +92,13 @@ public class FontDialog
             }
         };
         EventQueue.invokeLater(runner);
+
         panelMain.setVisible(true);
         fontDialog.setVisible(true);
         fontDialog.pack();
-
     }
 
-    public class ItemChangeListener implements ItemListener
+    public class FontSelectedListener implements ItemListener
     {
         public void itemStateChanged(ItemEvent event)
         {

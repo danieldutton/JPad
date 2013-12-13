@@ -14,11 +14,12 @@ public class SaveFileAction extends ApplicationAction
 {
     private static final ImageIcon saveEditIcon = new ImageIcon("images/saveFile.png");
 
-    private File lastSaveFilePath;
+    private File lastSavedFile;
 
     private boolean wasPrevSaved = false;
 
     private JFileChooser saveChooser;
+
 
     public SaveFileAction()
     {
@@ -35,26 +36,24 @@ public class SaveFileAction extends ApplicationAction
             {
                 File file = new File(saveChooser.getSelectedFile() + ".txt");
                 String fileName = saveChooser.getSelectedFile().getName();
-                lastSaveFilePath = file;
+                lastSavedFile = file;
                 TabbedPane.setTabText(fileName);
 
                 if (file.exists())
-                {
                     displayFileOverwriteOptionDialog(file);
-                } else
+                else
                     saveToFile(file);
             }
         } else
-            saveToFile(lastSaveFilePath);
+            saveToFile(lastSavedFile);
     }
-
 
     private void initFileChooser()
     {
         saveChooser = new JFileChooser();
 
-        if (lastSaveFilePath != null)
-            saveChooser.setCurrentDirectory(lastSaveFilePath);
+        if (lastSavedFile != null)
+            saveChooser.setCurrentDirectory(lastSavedFile);
 
         saveChooser.setDialogTitle("J-Pad Save");
         saveChooser.setSelectedFile(new File("new"));
@@ -66,6 +65,7 @@ public class SaveFileAction extends ApplicationAction
                 "File already Exists, Are you sure you wish to overwrite?",
                 "Choose",
                 JOptionPane.YES_NO_OPTION);
+
         if (selectedOption == JOptionPane.YES_OPTION)
         {
             saveToFile(file);

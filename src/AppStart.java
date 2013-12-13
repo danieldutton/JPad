@@ -1,4 +1,4 @@
-import actions.file.SaveAsFileAction;
+import actions.file.SaveFileAsAction;
 import actions.file.SaveFileAction;
 import gui.components.TextArea;
 import gui.consoles.ParentFrame;
@@ -34,7 +34,7 @@ public class AppStart
         SaveFileAction sfa = new SaveFileAction();
 
         menuBar.setSaveFileAction(sfa);
-        menuBar.setSaveFileAsAction(new SaveAsFileAction());
+        menuBar.setSaveFileAsAction(new SaveFileAsAction());
         menuBar.init();
 
         toolBar.setSaveFileAction(sfa);
@@ -52,7 +52,7 @@ public class AppStart
 
         mainGui.addCustomFrameIcon("images/frameLogo.gif");
 
-        mainGui.centreConsoleToScreen();
+        mainGui.centreConsoleRelativeToScreen();
 
         SystemTray systemTray = new gui.systemTray.SystemTray("images/trayImage.gif");
 

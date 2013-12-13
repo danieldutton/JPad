@@ -42,7 +42,7 @@ public class StatusBar
         lblRowColCount.setText("Line: 0" + " Column: 0");
     }
 
-    public static void updateStatus(int a, int b)
+    public static void updateCursorPositionText(int a, int b)
     {
         lblRowColCount.setText("Line: " + a + " Column: " + b);
     }

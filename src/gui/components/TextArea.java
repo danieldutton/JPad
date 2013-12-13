@@ -9,6 +9,10 @@ public class TextArea
 {
     private static JTextArea textArea = null;
 
+    private TextArea()
+    {
+    }
+
     public static JTextArea getTextArea()
     {
         if (textArea == null)
@@ -43,9 +47,9 @@ public class TextArea
                 lineNum += 1;
             } catch (Exception ex)
             {
-                StatusBar.updateStatus(0, 0);
+                StatusBar.updateCursorPositionText(0, 0);
             }
-            StatusBar.updateStatus(lineNum, columnnum);
+            StatusBar.updateCursorPositionText(lineNum, columnnum);
         }
     }
 }

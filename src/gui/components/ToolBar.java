@@ -5,10 +5,9 @@ import actions.edit.CutTextAction;
 import actions.edit.PasteTextAction;
 import actions.file.PrintFileAction;
 import actions.file.SaveFileAction;
+import actions.other.FontSizeChangeAction;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class ToolBar
 {
@@ -18,6 +17,7 @@ public class ToolBar
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
+    private FontSizeChangeAction actionFontSize;
 
     private JButton btnSave;
     private JButton btnPrint;
@@ -29,7 +29,6 @@ public class ToolBar
 
     public ToolBar()
     {
-
     }
 
     public void init()
@@ -44,20 +43,7 @@ public class ToolBar
         styleToolBar();
         removeTextValues();
         buildToolBar();
-        Integer[] comboArray = {8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72};
-        comboBoxFontSize = new JComboBox<Integer>(comboArray);
-        comboBoxFontSize.setMinimumSize(new Dimension(40, 20));
-        comboBoxFontSize.setMaximumSize(new Dimension(40, 20));
-        comboBoxFontSize.setSelectedIndex(5);
-        toolBar.add(comboBoxFontSize);
-        final Font currentFont = TextArea.getTextArea().getFont();
-
-        comboBoxFontSize.addActionListener (new ActionListener() {
-    public void actionPerformed(ActionEvent e) {
-        JComboBox cb = (JComboBox) e.getSource();
-        TextArea.getTextArea().setFont(new Font(currentFont.getFontName(), currentFont.getStyle(), (Integer)cb.getSelectedItem() ));
-    }
-});
+        buildFontSizeComboBox();
     }
 
     public JToolBar GetGuiToolBar()
@@ -71,6 +57,7 @@ public class ToolBar
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
         actionPaste = new PasteTextAction();
+        actionFontSize = new FontSizeChangeAction();
     }
 
     private void initButtons()
@@ -138,6 +125,21 @@ public class ToolBar
         toolBar.add(btnCopy);
         toolBar.add(btnPaste);
         toolBar.setFloatable(false);
+    }
+
+    private void buildFontSizeComboBox()
+    {
+        Integer[] availableFontSizes = {8, 9, 10, 11, 12, 14, 16, 18, 20, 22, 24, 26, 28, 36, 48, 72};
+
+        comboBoxFontSize = new JComboBox<Integer>(availableFontSizes);
+
+        comboBoxFontSize.setMinimumSize(new Dimension(40, 20));
+        comboBoxFontSize.setMaximumSize(new Dimension(40, 20));
+        comboBoxFontSize.setSelectedIndex(5);
+        comboBoxFontSize.setAction(actionFontSize);
+        comboBoxFontSize.setBackground(Color.WHITE);
+
+        toolBar.add(comboBoxFontSize);
     }
 
     public void setSaveFileAction(SaveFileAction action)
