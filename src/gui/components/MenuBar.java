@@ -15,6 +15,7 @@ import java.awt.*;
 public class MenuBar extends JMenuBar
 {
     //actions
+    private NewFileAction actionNewFile;
     private OpenFileAction actionOpenFile;
     private SaveFileAction actionSave;
     private SaveFileAsAction actionSaveAs;
@@ -57,6 +58,7 @@ public class MenuBar extends JMenuBar
 
     public MenuBar()
     {
+
     }
 
     public void init(){
@@ -83,6 +85,7 @@ public class MenuBar extends JMenuBar
 
     private void initFileMenuActions()
     {
+        actionNewFile = new NewFileAction();
         actionOpenFile = new OpenFileAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
@@ -99,7 +102,7 @@ public class MenuBar extends JMenuBar
     private void initMenuItems()
     {
         //file
-        menuItemNew = new JMenuItem("New");
+        menuItemNew = new JMenuItem(actionNewFile);
         menuItemOpen = new JMenuItem(actionOpenFile);
         menuItemSave = new JMenuItem(actionSave);
         menuItemSaveAs = new JMenuItem(actionSaveAs);

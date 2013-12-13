@@ -1,6 +1,5 @@
 package actions.file;
 
-
 import actions.ApplicationAction;
 import java.awt.event.ActionEvent;
 
