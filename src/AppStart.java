@@ -44,7 +44,7 @@ public class AppStart
         headerPanel.add(BorderLayout.CENTER, menuBar.getGuiMenuBar());
         headerPanel.add(BorderLayout.SOUTH, toolBar.GetGuiToolBar());
         mainPanel.add(BorderLayout.NORTH, headerPanel);
-        tabbedPane.addTab("new.txt", scrollPane);
+        tabbedPane.addTab("new", scrollPane);
         mainPanel.add(BorderLayout.CENTER, tabbedPane);
         mainPanel.add(BorderLayout.SOUTH, statusBar);
         mainGui.add(mainPanel);
@@ -53,7 +53,7 @@ public class AppStart
         mainGui.addCustomFrameIcon("images/frameLogo.gif");
 
         mainGui.centreConsoleRelativeToScreen();
-
+        mainGui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         SystemTray systemTray = new gui.systemTray.SystemTray("images/trayImage.gif");
 
         try

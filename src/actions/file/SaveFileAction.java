@@ -74,7 +74,7 @@ public class SaveFileAction extends ApplicationAction
 
     private void saveToFile(File file)
     {
-        BufferedWriter bw = null;
+        BufferedWriter bw;
 
         try
         {

@@ -136,6 +136,7 @@ public class ToolBar
         comboBoxFontSize.setMinimumSize(new Dimension(40, 20));
         comboBoxFontSize.setMaximumSize(new Dimension(40, 20));
         comboBoxFontSize.setSelectedIndex(5);
+
         comboBoxFontSize.setAction(actionFontSize);
         comboBoxFontSize.setBackground(Color.WHITE);
 
@@ -146,4 +147,5 @@ public class ToolBar
     {
         actionSave = action;
     }
+
 }

@@ -1,5 +1,8 @@
 package gui.consoles;
 
+import gui.components.TextArea;
+import gui.components.ToolBar;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -116,7 +119,8 @@ public class FontDialog
         {
             if (c.getSource() == FontDialog.this.btnOk)
             {
-                textArea.setFont(new Font(comboBoxFont.getSelectedItem().toString(), Font.PLAIN, 16));
+                Font f = TextArea.getTextArea().getFont();
+                textArea.setFont(new Font(comboBoxFont.getSelectedItem().toString(), f.getStyle(), f.getSize()));
                 fontDialog.dispose();
             }
         }

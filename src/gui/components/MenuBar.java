@@ -19,6 +19,8 @@ public class MenuBar extends JMenuBar
     private OpenFileAction actionOpenFile;
     private SaveFileAction actionSave;
     private SaveFileAsAction actionSaveAs;
+
+    //edit
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
