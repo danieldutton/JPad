@@ -5,6 +5,8 @@ import filters.DocumentFilter;
 import gui.components.TabbedPane;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -15,18 +17,21 @@ public class OpenFileAction extends ApplicationAction
 {
     private String lastFilePathChosen;
 
+    private DocumentFilter documentFilter;
+
     public OpenFileAction()
     {
         super("Open", null);
+        documentFilter = new DocumentFilter();
     }
 
     public void actionPerformed(ActionEvent e)
     {
         FileReader reader = null;
         JFileChooser chooser = new JFileChooser();
-        DocumentFilter docFilter = new DocumentFilter();
-        chooser.setFileFilter(docFilter);
-        chooser.setAcceptAllFileFilterUsed(false);
+
+        documentFilter.filter(chooser);
+
         if (lastFilePathChosen != null)
             chooser.setCurrentDirectory(new File(lastFilePathChosen));
         int option = chooser.showOpenDialog(chooser);
@@ -50,6 +55,5 @@ public class OpenFileAction extends ApplicationAction
                 e1.printStackTrace();
             }
         }
-        //ToDo - Tidy up
     }
 }

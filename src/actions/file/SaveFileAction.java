@@ -1,6 +1,7 @@
 package actions.file;
 
 import actions.ApplicationAction;
+import filters.DocumentFilter;
 import gui.components.TabbedPane;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,10 +21,13 @@ public class SaveFileAction extends ApplicationAction
 
     private JFileChooser saveChooser;
 
+    private DocumentFilter documentFilter;
+
 
     public SaveFileAction()
     {
         super("Save", saveEditIcon);
+        documentFilter = new DocumentFilter();
     }
 
     public void actionPerformed(ActionEvent e)
@@ -51,6 +55,8 @@ public class SaveFileAction extends ApplicationAction
     private void initFileChooser()
     {
         saveChooser = new JFileChooser();
+
+        documentFilter.filter(saveChooser);
 
         if (lastSavedFile != null)
             saveChooser.setCurrentDirectory(lastSavedFile);
