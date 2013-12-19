@@ -30,4 +30,5 @@ public class TabbedPane
     {
         tabbedPane.setTitleAt(0, text);
     }
+
 }

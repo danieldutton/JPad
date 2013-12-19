@@ -4,6 +4,7 @@ import actions.ApplicationAction;
 import filters.DocumentFilter;
 import gui.components.TabbedPane;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -38,7 +39,7 @@ public class SaveFileAction extends ApplicationAction
 
             if (saveChooser.showSaveDialog(null) == JFileChooser.APPROVE_OPTION)
             {
-                File file = new File(saveChooser.getSelectedFile() + ".txt");
+                File file = getSelectedFileWithExtension(saveChooser);
                 String fileName = saveChooser.getSelectedFile().getName();
                 lastSavedFile = file;
                 TabbedPane.setTabText(fileName);
@@ -55,7 +56,6 @@ public class SaveFileAction extends ApplicationAction
     private void initFileChooser()
     {
         saveChooser = new JFileChooser();
-
         documentFilter.filter(saveChooser);
 
         if (lastSavedFile != null)
@@ -77,6 +77,22 @@ public class SaveFileAction extends ApplicationAction
             saveToFile(file);
         }
     }
+
+    public File getSelectedFileWithExtension(JFileChooser c) {
+    File file = c.getSelectedFile();
+    if (c.getFileFilter() instanceof FileNameExtensionFilter) {
+        String[] exts = ((FileNameExtensionFilter)c.getFileFilter()).getExtensions();
+        String nameLower = file.getName().toLowerCase();
+        for (String ext : exts) { // check if it already has a valid extension
+            if (nameLower.endsWith('.' + ext.toLowerCase())) {
+                return file; // if yes, return as-is
+            }
+        }
+        // if not, append the first one from the selected filter
+        file = new File(file.toString() + '.' + exts[0]);
+    }
+    return file;
+}
 
     private void saveToFile(File file)
     {
