@@ -3,11 +3,16 @@ package gui.components;
 import javax.swing.*;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
+import javax.swing.event.UndoableEditEvent;
+import javax.swing.event.UndoableEditListener;
+import javax.swing.undo.UndoManager;
 import java.awt.*;
 
 public class TextArea
 {
     private static JTextArea textArea = null;
+
+    private static UndoManager undoManager = new UndoManager();
 
     private TextArea()
     {
@@ -28,6 +33,13 @@ public class TextArea
         textArea.setLineWrap(true);
         textArea.addCaretListener(new TextTypeListener());
         textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
+
+        textArea.getDocument().addUndoableEditListener(
+        new UndoableEditListener() {
+          public void undoableEditHappened(UndoableEditEvent e) {
+            undoManager.addEdit(e.getEdit());
+          }
+        });
     }
 
     public static class TextTypeListener implements CaretListener
@@ -51,5 +63,10 @@ public class TextArea
             }
             StatusBar.updateCursorPositionText(lineNum, columnnum);
         }
+    }
+
+    public static UndoManager getUndoManager()
+    {
+        return undoManager;
     }
 }

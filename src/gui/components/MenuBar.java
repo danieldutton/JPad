@@ -1,9 +1,6 @@
 package gui.components;
 
-import actions.edit.CopyTextAction;
-import actions.edit.CutTextAction;
-import actions.edit.DeleteTextAction;
-import actions.edit.PasteTextAction;
+import actions.edit.*;
 import actions.file.*;
 import actions.format.FontSelectAction;
 import actions.format.WordWrapAction;
@@ -21,6 +18,8 @@ public class MenuBar extends JMenuBar
     private SaveFileAsAction actionSaveAs;
 
     //edit
+    private UndoAction actionUndo;
+    private RedoAction actionRedo;
     private CutTextAction actionCut;
     private CopyTextAction actionCopy;
     private PasteTextAction actionPaste;
@@ -91,6 +90,8 @@ public class MenuBar extends JMenuBar
     {
         actionNewFile = new NewFileAction();
         actionOpenFile = new OpenFileAction();
+        actionUndo = new UndoAction();
+        actionRedo = new RedoAction();
         actionCut = new CutTextAction();
         actionCopy = new CopyTextAction();
         actionPaste = new PasteTextAction();
@@ -113,8 +114,8 @@ public class MenuBar extends JMenuBar
         menuItemExit = new JMenuItem(actionExitApplication);
 
         //edit
-        menuItemUndo = new JMenuItem("Undo");
-        menuItemRedo = new JMenuItem("Redo");
+        menuItemUndo = new JMenuItem(actionUndo);
+        menuItemRedo = new JMenuItem(actionRedo);
         menuItemCut = new JMenuItem(actionCut);
         menuItemCopy = new JMenuItem(actionCopy);
         menuItemPaste = new JMenuItem(actionPaste);
