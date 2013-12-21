@@ -73,7 +73,7 @@ public class SystemTrayMenu
                     }
                 } else
                     JOptionPane.showMessageDialog(null,
-                    "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
+                            "Default system browser not found.  Please manually navigate to http://www.danieldutton.org.uk/help ");
             }
         }
     }

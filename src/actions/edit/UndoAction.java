@@ -15,10 +15,13 @@ public class UndoAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        try {
+        try
+        {
           TextArea.getUndoManager().undo();
-        } catch (CannotUndoException cre) {
-          cre.printStackTrace();
+        }
+        catch (CannotUndoException cre)
+        {
+
         }
     }
 }

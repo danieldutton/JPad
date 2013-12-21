@@ -6,6 +6,7 @@ import actions.edit.PasteTextAction;
 import actions.file.PrintFileAction;
 import actions.file.SaveFileAction;
 import actions.other.FontSizeChangeAction;
+
 import javax.swing.*;
 import java.awt.*;
 

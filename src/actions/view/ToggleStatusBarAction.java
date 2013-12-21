@@ -2,6 +2,7 @@ package actions.view;
 
 import actions.ApplicationAction;
 import gui.components.StatusBar;
+
 import java.awt.event.ActionEvent;
 
 public class ToggleStatusBarAction extends ApplicationAction

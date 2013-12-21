@@ -1,6 +1,7 @@
 package actions.edit;
 
 import actions.ApplicationAction;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 

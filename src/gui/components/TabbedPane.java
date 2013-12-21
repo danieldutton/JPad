@@ -13,7 +13,7 @@ public class TabbedPane
 
     public static JTabbedPane getTabbedPane()
     {
-        if(tabbedPane == null)
+        if (tabbedPane == null)
         {
             tabbedPane = new JTabbedPane();
             initDefaultTab();

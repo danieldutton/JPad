@@ -2,6 +2,7 @@ package actions.help;
 
 import actions.ApplicationAction;
 import gui.consoles.AboutDialog;
+
 import java.awt.event.ActionEvent;
 
 public class OpenAboutDialogAction extends ApplicationAction

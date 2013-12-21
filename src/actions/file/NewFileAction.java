@@ -1,9 +1,9 @@
 package actions.file;
 
 import actions.ApplicationAction;
-import gui.components.MenuBar;
 import gui.components.TabbedPane;
 import gui.components.TextArea;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
@@ -24,9 +24,8 @@ public class NewFileAction extends ApplicationAction
             setupNewDocument();
         }
 
-        if(result == JOptionPane.NO_OPTION)
+        if (result == JOptionPane.NO_OPTION)
             setupNewDocument();
-
     }
 
     private int wishesToSave()

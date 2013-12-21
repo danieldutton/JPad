@@ -17,9 +17,10 @@ public class RedoAction extends ApplicationAction
         try
         {
             TextArea.getUndoManager().redo();
-        } catch (CannotRedoException cre)
+        }
+        catch (CannotRedoException cre)
         {
-            cre.printStackTrace();
+
         }
     }
 }

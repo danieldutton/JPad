@@ -3,6 +3,7 @@ package actions.file;
 import actions.ApplicationAction;
 import filters.DocumentFilter;
 import gui.components.TabbedPane;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
@@ -78,21 +79,25 @@ public class SaveFileAction extends ApplicationAction
         }
     }
 
-    public File getSelectedFileWithExtension(JFileChooser c) {
-    File file = c.getSelectedFile();
-    if (c.getFileFilter() instanceof FileNameExtensionFilter) {
-        String[] exts = ((FileNameExtensionFilter)c.getFileFilter()).getExtensions();
-        String nameLower = file.getName().toLowerCase();
-        for (String ext : exts) { // check if it already has a valid extension
-            if (nameLower.endsWith('.' + ext.toLowerCase())) {
-                return file; // if yes, return as-is
+    public File getSelectedFileWithExtension(JFileChooser c)
+    {
+        File file = c.getSelectedFile();
+        if (c.getFileFilter() instanceof FileNameExtensionFilter)
+        {
+            String[] exts = ((FileNameExtensionFilter) c.getFileFilter()).getExtensions();
+            String nameLower = file.getName().toLowerCase();
+            for (String ext : exts)
+            { // check if it already has a valid extension
+                if (nameLower.endsWith('.' + ext.toLowerCase()))
+                {
+                    return file; // if yes, return as-is
+                }
             }
+            // if not, append the first one from the selected filter
+            file = new File(file.toString() + '.' + exts[0]);
         }
-        // if not, append the first one from the selected filter
-        file = new File(file.toString() + '.' + exts[0]);
+        return file;
     }
-    return file;
-}
 
     private void saveToFile(File file)
     {

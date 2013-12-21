@@ -6,6 +6,7 @@ import actions.format.FontSelectAction;
 import actions.format.WordWrapAction;
 import actions.help.OpenAboutDialogAction;
 import actions.view.ToggleStatusBarAction;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -64,7 +65,8 @@ public class MenuBar extends JMenuBar
 
     }
 
-    public void init(){
+    public void init()
+    {
         menuBar = new JMenuBar();
         initFileMenuActions();
         initMenus();

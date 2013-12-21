@@ -2,6 +2,7 @@ package actions.format;
 
 import actions.ApplicationAction;
 import gui.consoles.FontDialog;
+
 import java.awt.event.ActionEvent;
 
 public class FontSelectAction extends ApplicationAction

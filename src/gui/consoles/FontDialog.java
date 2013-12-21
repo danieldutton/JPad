@@ -1,7 +1,6 @@
 package gui.consoles;
 
 import gui.components.TextArea;
-import gui.components.ToolBar;
 
 import javax.swing.*;
 import java.awt.*;

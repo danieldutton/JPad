@@ -5,6 +5,7 @@ import gui.consoles.ParentFrame;
 import gui.systemTray.SystemTray;
 import gui.components.*;
 import gui.components.MenuBar;
+
 import javax.swing.*;
 import java.awt.*;
 

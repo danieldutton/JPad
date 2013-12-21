@@ -35,11 +35,13 @@ public class TextArea
         textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
 
         textArea.getDocument().addUndoableEditListener(
-        new UndoableEditListener() {
-          public void undoableEditHappened(UndoableEditEvent e) {
-            undoManager.addEdit(e.getEdit());
-          }
-        });
+                new UndoableEditListener()
+                {
+                    public void undoableEditHappened(UndoableEditEvent e)
+                    {
+                        undoManager.addEdit(e.getEdit());
+                    }
+                });
     }
 
     public static class TextTypeListener implements CaretListener
