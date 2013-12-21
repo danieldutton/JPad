@@ -1,6 +1,7 @@
 package actions.file;
 
 import actions.ApplicationAction;
+import gui.components.MenuBar;
 import gui.components.TabbedPane;
 import gui.components.TextArea;
 import javax.swing.*;

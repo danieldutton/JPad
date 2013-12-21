@@ -5,8 +5,6 @@ import filters.DocumentFilter;
 import gui.components.TabbedPane;
 
 import javax.swing.*;
-import javax.swing.filechooser.FileFilter;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;

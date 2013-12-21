@@ -47,6 +47,8 @@ public class MenuBar extends JMenuBar
     private JMenuItem menuItemSave;
     private JMenuItem menuItemSaveAs;
     private JMenuItem menuItemExit;
+    private JMenuItem menuItemUndo;
+    private JMenuItem menuItemRedo;
     private JMenuItem menuItemCut;
     private JMenuItem menuItemCopy;
     private JMenuItem menuItemPaste;
@@ -111,6 +113,8 @@ public class MenuBar extends JMenuBar
         menuItemExit = new JMenuItem(actionExitApplication);
 
         //edit
+        menuItemUndo = new JMenuItem("Undo");
+        menuItemRedo = new JMenuItem("Redo");
         menuItemCut = new JMenuItem(actionCut);
         menuItemCopy = new JMenuItem(actionCopy);
         menuItemPaste = new JMenuItem(actionPaste);
@@ -138,6 +142,9 @@ public class MenuBar extends JMenuBar
         menuFile.add(new JSeparator());
         menuFile.add(menuItemExit);
 
+        //edit
+        menuEdit.add(menuItemUndo);
+        menuEdit.add(menuItemRedo);
         menuEdit.add(menuItemCut);
         menuEdit.add(menuItemCopy);
         menuEdit.add(menuItemPaste);
@@ -182,6 +189,8 @@ public class MenuBar extends JMenuBar
         menuItemExit.setAccelerator(KeyStroke.getKeyStroke(69, 2));
 
         //edit
+        menuItemUndo.setAccelerator(KeyStroke.getKeyStroke("control Z"));
+        menuItemRedo.setAccelerator(KeyStroke.getKeyStroke("control Y"));
         menuItemCut.setAccelerator(KeyStroke.getKeyStroke(88, 2));
         menuItemCopy.setAccelerator(KeyStroke.getKeyStroke(67, 2));
         menuItemPaste.setAccelerator(KeyStroke.getKeyStroke(86, 2));
@@ -206,25 +215,29 @@ public class MenuBar extends JMenuBar
         final int FontStyle = 0;
         final int FontSize = 12;
 
+        Font itemFont = new Font(Font, FontStyle, FontSize);
+
         menuBar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY, 1));
 
-        menuItemNew.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemOpen.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemSave.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemSaveAs.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemExit.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemNew.setFont(itemFont);
+        menuItemOpen.setFont(itemFont);
+        menuItemSave.setFont(itemFont);
+        menuItemSaveAs.setFont(itemFont);
+        menuItemExit.setFont(itemFont);
 
-        menuItemCut.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemCopy.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemPaste.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemDelete.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemSelectAll.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemUndo.setFont(itemFont);
+        menuItemRedo.setFont(itemFont);
+        menuItemCut.setFont(itemFont);
+        menuItemCopy.setFont(itemFont);
+        menuItemPaste.setFont(itemFont);
+        menuItemDelete.setFont(itemFont);
+        menuItemSelectAll.setFont(itemFont);
 
-        menuItemFont.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemWordWrap.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemFont.setFont(itemFont);
+        menuItemWordWrap.setFont(itemFont);
 
-        menuItemStatusBar.setFont(new Font(Font, FontStyle, FontSize));
-        menuItemAbout.setFont(new Font(Font, FontStyle, FontSize));
+        menuItemStatusBar.setFont(itemFont);
+        menuItemAbout.setFont(itemFont);
 
         menuItemNew.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
         styleMenuText();

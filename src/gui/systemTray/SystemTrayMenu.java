@@ -21,9 +21,9 @@ public class SystemTrayMenu
 
     public SystemTrayMenu()
     {
-        this.closeItem = new MenuItem("Close");
-        this.homePageItem = new MenuItem("Visit JPad.com");
-        this.popup = new PopupMenu();
+        closeItem = new MenuItem("Close");
+        homePageItem = new MenuItem("Visit JPad.com");
+        popup = new PopupMenu();
     }
 
     public SystemTrayMenu(String helpURI)
