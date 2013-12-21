@@ -3,7 +3,6 @@ package actions.edit;
 import actions.ApplicationAction;
 import gui.components.TextArea;
 
-import javax.swing.undo.CannotUndoException;
 import java.awt.event.ActionEvent;
 
 public class UndoAction extends ApplicationAction
@@ -15,13 +14,7 @@ public class UndoAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        try
-        {
-          TextArea.getUndoManager().undo();
-        }
-        catch (CannotUndoException cre)
-        {
-
-        }
+        if(TextArea.getUndoManager().canUndo())
+            TextArea.getUndoManager().undo();
     }
 }

@@ -2,7 +2,7 @@ package actions.edit;
 
 import actions.ApplicationAction;
 import gui.components.TextArea;
-import javax.swing.undo.CannotRedoException;
+
 import java.awt.event.ActionEvent;
 
 public class RedoAction extends ApplicationAction
@@ -14,13 +14,9 @@ public class RedoAction extends ApplicationAction
 
     public void actionPerformed(ActionEvent e)
     {
-        try
-        {
+        if (TextArea.getUndoManager().canRedo())
             TextArea.getUndoManager().redo();
-        }
-        catch (CannotRedoException cre)
-        {
 
-        }
+
     }
 }

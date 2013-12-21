@@ -42,5 +42,6 @@ public class NewFileAction extends ApplicationAction
     {
         TextArea.getTextArea().setText("");
         TabbedPane.setTabText("new");
+        TextArea.getUndoManager().discardAllEdits();
     }
 }

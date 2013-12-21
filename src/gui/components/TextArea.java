@@ -24,6 +24,7 @@ public class TextArea
         {
             textArea = new JTextArea();
             initTextArea();
+            initUndoManager();
         }
         return textArea;
     }
@@ -34,6 +35,10 @@ public class TextArea
         textArea.addCaretListener(new TextTypeListener());
         textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
 
+    }
+
+    private static void initUndoManager()
+    {
         textArea.getDocument().addUndoableEditListener(
                 new UndoableEditListener()
                 {

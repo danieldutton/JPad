@@ -3,6 +3,7 @@ package actions.file;
 import actions.ApplicationAction;
 import filters.DocumentFilter;
 import gui.components.TabbedPane;
+import gui.components.TextArea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -53,5 +54,7 @@ public class OpenFileAction extends ApplicationAction
                 e1.printStackTrace();
             }
         }
+
+        //TextArea.getUndoManager().discardAllEdits();
     }
 }
