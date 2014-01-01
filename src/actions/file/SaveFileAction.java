@@ -111,7 +111,8 @@ public class SaveFileAction extends ApplicationAction
             wasPrevSaved = true;
         } catch (IOException e)
         {
-            //add try again warning
+            JOptionPane.showConfirmDialog(null, "Save failed.  Try again.", "Save",
+                    JOptionPane.OK_OPTION);
         }
     }
 }

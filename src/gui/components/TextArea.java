@@ -34,10 +34,9 @@ public class TextArea
         textArea.setLineWrap(true);
         textArea.addCaretListener(new TextTypeListener());
         textArea.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 14));
-
     }
 
-    private static void initUndoManager()
+    public static void initUndoManager()
     {
         textArea.getDocument().addUndoableEditListener(
                 new UndoableEditListener()

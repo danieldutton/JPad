@@ -3,7 +3,6 @@ package actions.file;
 import actions.ApplicationAction;
 import filters.DocumentFilter;
 import gui.components.TabbedPane;
-import gui.components.TextArea;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -41,20 +40,21 @@ public class OpenFileAction extends ApplicationAction
             lastFilePathChosen = selectedFile;
             String fileName = chooser.getSelectedFile().getName();
             TabbedPane.setTabText(fileName);
+
             try
             {
                 reader = new FileReader(selectedFile);
                 getTextArea().read(reader, "/r/n");
                 reader.close();
-            } catch (FileNotFoundException e1)
+            }
+            catch (FileNotFoundException e1)
             {
                 e1.printStackTrace();
-            } catch (IOException e1)
+            }
+            catch (IOException e1)
             {
                 e1.printStackTrace();
             }
         }
-
-        //TextArea.getUndoManager().discardAllEdits();
     }
 }

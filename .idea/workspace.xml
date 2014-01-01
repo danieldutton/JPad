@@ -3,16 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="804c27c4-f922-4fa5-a06d-e0c9045dbe33" name="Default" comment="">
       <change type="MODIFICATION" beforePath="C:\Users\Danny\Documents\GitHub\JPad\src\input\filters\TextFileFilter.java" afterPath="C:\Users\Danny\Documents\GitHub\JPad\src\input\filters\TextFileFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/edit/CutTextAction.java" afterPath="$PROJECT_DIR$/src/actions/edit/CutTextAction.java" />
+      <change type="MODIFICATION" beforePath="C:\Users\Danny\Documents\GitHub\JPad\src\input\readers\FileReader.java" afterPath="C:\Users\Danny\Documents\GitHub\JPad\src\input\readers\FileReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" afterPath="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/file/PrintFileAction.java" afterPath="$PROJECT_DIR$/src/actions/file/PrintFileAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppStart.java" afterPath="$PROJECT_DIR$/src/AppStart.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/MenuBar.java" afterPath="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/edit/PasteTextAction.java" afterPath="$PROJECT_DIR$/src/actions/edit/PasteTextAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/consoles/ParentFrame.java" afterPath="$PROJECT_DIR$/src/gui/consoles/ParentFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppStart.java" afterPath="$PROJECT_DIR$/src/AppStart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/file/PrintFileAction.java" afterPath="$PROJECT_DIR$/src/actions/file/PrintFileAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" afterPath="$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/edit/PasteTextAction.java" afterPath="$PROJECT_DIR$/src/actions/edit/PasteTextAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/TextArea.java" afterPath="$PROJECT_DIR$/src/gui/components/TextArea.java" />
-      <change type="MODIFICATION" beforePath="C:\Users\Danny\Documents\GitHub\JPad\src\input\readers\FileReader.java" afterPath="C:\Users\Danny\Documents\GitHub\JPad\src\input\readers\FileReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/edit/CutTextAction.java" afterPath="$PROJECT_DIR$/src/actions/edit/CutTextAction.java" />
     </list>
     <ignored path="JPad.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +70,64 @@
     <favorites_list name="JPad" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SaveFileAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="113" column="12" selection-start="3264" selection-end="3379" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpenFileAction.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/actions/file/OpenFileAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="5" selection-start="122" selection-end="122" vertical-scroll-proportion="0.1007109">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SaveFileAsAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAsAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FontSizeChangeAction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/actions/other/FontSizeChangeAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="16" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SystemTrayMenu.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="21" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppStart.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppStart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -84,10 +141,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/actions/file/SaveFileAsAction.java" />
         <option value="$PROJECT_DIR$/src/actions/format/FontSelectAction.java" />
         <option value="$PROJECT_DIR$/src/actions/edit/CopyTextAction.java" />
-        <option value="$PROJECT_DIR$/src/actions/file/SaveFileAction.java" />
         <option value="$PROJECT_DIR$/src/actions/file/SelectAllTextAction.java" />
         <option value="$PROJECT_DIR$/src/actions/help/OpenAboutDialogAction.java" />
         <option value="$PROJECT_DIR$/src/actions/view/ToggleStatusBarAction.java" />
@@ -95,10 +150,12 @@
         <option value="$PROJECT_DIR$/src/gui/components/MenuBar.java" />
         <option value="$PROJECT_DIR$/src/gui/components/TabbedPane.java" />
         <option value="$PROJECT_DIR$/src/gui/consoles/FontDialog.java" />
-        <option value="$PROJECT_DIR$/src/gui/components/TextArea.java" />
         <option value="$PROJECT_DIR$/src/actions/edit/RedoAction.java" />
         <option value="$PROJECT_DIR$/src/actions/edit/UndoAction.java" />
         <option value="$PROJECT_DIR$/src/actions/file/NewFileAction.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/TextArea.java" />
+        <option value="$PROJECT_DIR$/src/actions/other/FontSizeChangeAction.java" />
+        <option value="$PROJECT_DIR$/src/actions/file/SaveFileAction.java" />
         <option value="$PROJECT_DIR$/src/actions/file/OpenFileAction.java" />
       </list>
     </option>
@@ -133,8 +190,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,7 +239,179 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="systemTray" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consoles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="other" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="help" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="actions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="format" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -231,7 +461,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -242,15 +471,15 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Wrapping and Braces" />
+    <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -361,23 +590,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="840" height="1010" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28187135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35162094" sideWeight="0.7181287" order="0" side_tool="false" content_ui="tabs" x="69" y="211" width="360" height="610" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20868516" sideWeight="0.7187141" order="0" side_tool="false" content_ui="tabs" x="69" y="211" width="360" height="610" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39150402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30643275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3053961" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28128588" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -416,31 +645,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/actions/format/FontSelectAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/format/WordWrapAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.12085308" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/help/OpenAboutDialogAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/other/FontSizeChangeAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/view/ToggleStatusBarAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/filters/DocumentFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="13" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" />
@@ -456,58 +660,79 @@
         <state line="4" column="13" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/actions/edit/RedoAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="238" selection-end="238" vertical-scroll-proportion="0.20858896" />
+        <state line="4" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="0.11584327" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/edit/UndoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/file/NewFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="8" selection-start="1040" selection-end="1084" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gui/components/TextArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="5" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
+        <state line="35" column="68" selection-start="881" selection-end="881" vertical-scroll-proportion="0.7049763" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/edit/CopyTextAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="337" selection-end="337" vertical-scroll-proportion="0.28199053" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/file/ExitApplicationAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="106" selection-end="106" vertical-scroll-proportion="0.1007109" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/file/PrintFileAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.16113745" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/systemTray/SystemTrayMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="187" selection-end="187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/edit/RedoAction.java">
+    <entry file="file://$PROJECT_DIR$/src/actions/other/FontSizeChangeAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="0.11584327">
-          <folding />
-        </state>
+        <state line="23" column="16" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/edit/UndoAction.java">
+    <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAsAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/file/NewFileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="1040" selection-end="1084" vertical-scroll-proportion="0.0">
+        <state line="6" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/file/SaveFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="358" selection-end="358" vertical-scroll-proportion="-2.0731707">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/actions/file/PrintFileAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.1184669">
+        <state line="113" column="12" selection-start="3264" selection-end="3379" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/file/OpenFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="10" selection-start="1595" selection-end="1595" vertical-scroll-proportion="0.7859712">
+        <state line="5" column="5" selection-start="122" selection-end="122" vertical-scroll-proportion="0.1007109">
           <folding />
         </state>
       </provider>
